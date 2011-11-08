@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="toolbar" name="nederlands" code="nl" encoding="utf-8" translatorname="Christian Baerends" contact="Chris@fullxml.nl" version="0">
+	<strings>
+		<string id="toolbareditor">Werkbalk editor</string>
+		<string id="toolbar">Werkbalk</string>
+		<string id="toolbaritem">Werkbalk item</string>
+		<string id="itemname">Item naam</string>
+		<string id="externallink">Externe koppeling</string>
+		<string id="internallink">Interne koppeling</string>
+		<string id="fxpage">Fullxml Pagina</string>
+		<string id="link">Koppeling</string>
+		<string id="target">Doel</string>
+		<string id="samewindow">Open in dit venster</string>
+		<string id="newwindow">Open in een nieuw venster</string>
+		<string id="deletedpage">Verwijzing naar een verwijderde pagina</string>
+		<string id="login">Aanmelden</string>
+	</strings>
+</culture>

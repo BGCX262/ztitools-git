@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<culture code="pt-br" module="search" contact="eduardo.azambuja@uol.com.br" encoding="iso-8859-1" name="brazilian" translatorname="Eduardo Azambuja" version="2">
+	<section id="contenttypes">
+		<string id="box">Caixa de Busca</string>
+		<string id="results">Resultados da Busca</string>
+	</section>
+	<section id="contenttype_box">
+		<string id="defaultname">Buscar:</string>
+		<string id="search_button_label">ok</string>
+	</section>
+	<section id="contenttype_results">
+		<string id="defaultname">Resultados da Busca</string>
+		<string id="search_results_title">Resultados da busca</string>
+		<string id="search_too_short">A busca deve conter no mínimo 4 caracteres !</string>
+		<string id="pagesfound">página(s) encontradas para sua busca:</string>
+		<string id="searchtook">Busca realizada em</string>
+		<string id="seconds">segundos</string>
+		<string id="noresults">Não foram encontradas páginas contendo</string>
+	</section>
+</culture>

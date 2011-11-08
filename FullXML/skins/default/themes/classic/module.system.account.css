@@ -1,0 +1,10 @@
+/* Register contenttype */
+table.register {border: 0px; margin: 0px; width: 600px}
+table.register caption {font: 8pt verdana; color: #990000; font-weight: bold; text-align: right; height: 30px}
+table.register td.message {background-color: #FBFBF0; font: 8pt Verdana; color: red; text-align: center; }
+table.register td.label {width: 200px; background-color: #FFFBF0;padding-left: 4px;}
+table.register td.input {width: 400px; }
+table.register td.buttons {text-align: right;}
+table.register input {width: 400px; font: 8pt verdana; border-top: 1px black solid; border-left: 1px black solid; border-bottom: 1px #f0f0f0 solid; border-right: 1px #f0f0f0 solid;}
+table.register input.password {width: 200px; font: 8pt verdana; border-top: 1px black solid; border-left: 1px black solid; border-bottom: 1px #f0f0f0 solid; border-right: 1px #f0f0f0 solid;}
+table.register input.buttons {width: 75px; font: 8pt verdana; border: 1px outset}

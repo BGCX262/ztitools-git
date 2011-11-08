@@ -1,0 +1,10 @@
+/* search box */
+table.searchbox input.text {width: 90px; font: 8pt verdana; border-top: 1px black solid; border-left: 1px black solid; border-bottom: 1px #f0f0f0 solid; border-right: 1px #f0f0f0 solid;}
+table.searchbox input.submit {width: 30px; font: 7pt verdana; font-weight: normal; border-bottom: 1px black solid; border-right: 1px black solid; border-top: 1px #f0f0f0 solid; border-left: 1px #f0f0f0 solid; text-transform: uppercase}
+
+
+/* search results */
+table.searchresults {width: 100%; }
+table.searchresults td a.item {font: 11px tahoma; font-weight: bold;}
+table.searchresults td span.link {font-size: 10px; color: green; }
+table.searchresults td span.message {font-size: 11px; font-weight: bold; color: black; }

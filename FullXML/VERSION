@@ -1,0 +1,13 @@
+<application name="fullxml4" major="0" minor="0" revision="0">
+	<friendlyname>Fullxml4 - 0.0.0</friendlyname>
+	<changes>
+		<change date="20040208">
+			<category>permission system</category>
+			<description>the "view", "contribute" and "publish" roles are implemented</description>
+		</change>
+		<change date="20040208">
+			<category>refactoring</category>
+			<description>the functions name are now homogenous (webform, do_)</description>
+		</change>
+	</changes>
+</application>

@@ -1,0 +1,4 @@
+table.sitemap {width: 100%; background: white;}
+table.sitemap span.menu { font: 9pt verdana; text-transform: uppercase; color: 505050; font-weight: bold;}
+table.sitemap a.page, table.sitemap a.page:active, table.sitemap a.page:visited {font: 8pt verdana;  text-decoration: none; color: 808080;}
+table.sitemap a.page:hover {color: orange;}

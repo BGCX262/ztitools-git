@@ -1,0 +1,27 @@
+<!-- ********************** -->
+<!-- global text stylesheet -->
+<!-- ********************** -->
+
+body {font: 8pt Verdana; color: black; background: #ffffff; border: 1px outset; margin: 0px;}
+td {font: 8pt Verdana;}
+
+hr {border: 1px #404040 dashed; height: 1px; }
+
+<!-- Link stylesheet -->
+a.normal, a.normal:visited, a.normal:active {text-decoration: none; font: 8pt Verdana; color: #336699}
+a.normal:hover {font: 8pt Verdana; color: #cccccc}
+
+
+<!-- Various SPAN stylesheet which can be used by the modules -->
+span.small {font: 7pt Verdana; color: black}
+span.normal {font: 8pt Verdana; color: black}
+span.large {font: 9pt Verdana; color: black}
+span.smallbold {font: 7pt Verdana; color: black;font-weight: bold;}
+span.normalbold {font: 8pt Verdana; color: black;font-weight: bold;}
+span.largebold {font: 9pt Verdana; color: black;font-weight: bold;}
+span.caption {font: 9pt Verdana; color:#003366; font-weight: bold;}
+span.message {font: 8pt Verdana; color: red; font-style: italic; background-color: #FBFBF0; text-align: center;}
+
+<!-- todo: clean -->
+a.paging, a.paging:active, a.paging:visited {color: blue; text-decoration: none;}
+a.paging:hover {color: red; text-decoration: none;}

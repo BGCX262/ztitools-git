@@ -1,0 +1,265 @@
+<html>
+<head>
+	<title>Teste do Navegador</title>
+<html>
+<head>
+<script language=JavaScript>
+<!--
+bName = navigator.appName;
+bVer = navigator.appVersion;
+
+if (((bName == "Netscape" && bVer > "3.0") && (bName == "Netscape" && bVer  < "4.01"))
+  ||
+  ((bName == "Netscape" && bVer >= "4.03"))
+  ||
+  (bName == "Microsoft Internet Explorer" && bVer >= "4.0"))
+
+  br = "n3";
+  
+else br = "n2";
+
+  if (br == "n3") {
+    cmd = new Array();
+    
+    cmd[1]  = "onlypage";
+    cmd[2]  = "bookmarkandpage";
+    cmd[3]  = "thumbnailsandpage";
+    cmd[4]  = "hand";
+    cmd[5]  = "zoomin";
+    cmd[6]  = "zoomout";
+    cmd[7]  = "textselection";
+    cmd[8]  = "firstpage";
+    cmd[9]  = "previuspage";
+    cmd[10] = "nextpage";
+    cmd[11] = "lastpage";
+    cmd[12] = "previusview";
+    cmd[13] = "nextview";
+    cmd[14] = "zoompage100";
+    cmd[15] = "currentpageinsidewindow";
+    cmd[16] = "wisiblewidthcurrentpageinsidewindow";
+    cmd[17] = "finddialog";
+    cmd[18] = "searchdialog";
+    cmd[19] = "searchresults";
+    cmd[20] = "searchprevius";
+    cmd[21] = "searchnext";
+    cmd[22] = "print";
+
+}
+
+cmdon = new Array();
+cmdoff = new Array();
+cmdclick = new Array();
+
+for ( x in cmd ) {
+    cmdon[x] = new Image();
+    cmdon[x].src = cmd[x] + "ActiveColor.gif"
+
+    cmdoff[x] = new Image();
+    cmdoff[x].src = cmd[x] + "Active.gif"
+
+    cmdclick[x] = new Image();
+    cmdclick[x].src = cmd[x] + "Down.gif"
+}
+  
+function cmdA(cmdNumber) {
+  if (br == "n3") {
+    cmdName = "cmd" + cmdNumber
+    document[cmdName].src = cmdon[cmdNumber].src;
+
+  }
+}
+
+function cmdI(cmdNumber) {
+  if (br == "n3") {
+    cmdName = "cmd" + cmdNumber
+    document[cmdName].src = cmdoff[cmdNumber].src;
+  
+  }
+}
+
+function cmdC(cmdNumber) {
+  if (br == "n3") {
+    cmdName = "cmd" + cmdNumber
+    document[cmdName].src = cmdclick[cmdNumber].src;
+
+  }
+}
+//-->
+</script>
+<body>
+<a href="default.htm" onmouseover=cmdA("1") onmouseout=cmdI("1") onclick=cmdC("1")><img src="onlypageactive.gif" border=0 alt=OnlyPage name=cmd1></a
+><img src="bookmarkandpageinactive.gif" border=0 alt=BookmarkPage name=cmd2></a
+><a href="default.htm" onmouseover=cmdA("3") onmouseout=cmdI("3") onclick=cmdC("3")><img src="thumbnailsandpageactive.gif" border=0 alt=Thumbnail name=cmd3></a
+><img src="space.gif" border=0
+><a href="default.htm" onmouseover=cmdA("4") onmouseout=cmdI("4") onclick=cmdC("4")><img src="handactive.gif" border=0 alt=Hand name=cmd4></a
+><a href="default.htm" onmouseover=cmdA("5") onmouseout=cmdI("5") onclick=cmdC("5")><img src="zoominactive.gif" border=0 alt=ZoonIn name=cmd5></a
+><a href="default.htm" onmouseover=cmdA("6") onmouseout=cmdI("6") onclick=cmdC("6")><img src="zoomoutactive.gif" border=0 alt=ZoonOut name=cmd6></a
+><img src="textselectiondown.gif" border=0 alt=TextSelection name=cmd7></a
+><img src="space.gif" border=0
+><a href="default.htm" onmouseover=cmdA("8") onmouseout=cmdI("8") onclick=cmdC("8")><img src="firstpageactive.gif" border=0 alt=FirstPage name=cmd8></a
+><a href="default.htm" onmouseover=cmdA("9") onmouseout=cmdI("9") onclick=cmdC("9")><img src="previuspageactive.gif" border=0 alt=PreviousPage name=cmd9></a
+><a href="default.htm" onmouseover=cmdA("10") onmouseout=cmdI("10") onclick=cmdC("10")><img src="nextpageactive.gif" border=0 alt=NextPage name=cmd10></a
+><a href="default.htm" onmouseover=cmdA("11") onmouseout=cmdI("11") onclick=cmdC("11")><img src="lastpageactive.gif" border=0 alt=LastPage name=cmd11></a
+><img src="space.gif" border=0
+><a href="default.htm" onmouseover=cmdA("12") onmouseout=cmdI("12") onclick=cmdC("12")><img src="previusviewactive.gif" border=0 alt=PreviousView name=cmd12></a
+><a href="default.htm" onmouseover=cmdA("13") onmouseout=cmdI("13") onclick=cmdC("13")><img src="nextviewactive.gif" border=0 alt=NextView name=cmd13></a
+><img src="space.gif" border=0
+><a href="default.htm" onmouseover=cmdA("14") onmouseout=cmdI("14") onclick=cmdC("14")><img src="zoompage100active.gif" border=0 alt=ZoomPage100 name=cmd14></a
+><a href="default.htm" onmouseover=cmdA("15") onmouseout=cmdI("15") onclick=cmdC("15")><img src="currentpageinsidewindowactive.gif" border=0 alt=InsideWindow name=cmd15></a
+><a href="default.htm" onmouseover=cmdA("16") onmouseout=cmdI("16") onclick=cmdC("16")><img src="wisiblewidthcurrentpageinsidewindowactive.gif" border=0 alt=VisibleCurrent name=cmd16></a
+><img src="space.gif" border=0
+><a href="default.htm" onmouseover=cmdA("17") onmouseout=cmdI("17") onclick=cmdC("17")><img src="finddialogactive.gif" border=0 alt=FindDialog name=cmd17></a
+><img src="space.gif" border=0
+><a href="default.htm" onmouseover=cmdA("18") onmouseout=cmdI("18") onclick=cmdC("18")><img src="searchdialogactive.gif" border=0 alt=SearchDialog name=cmd18></a
+><a href="default.htm" onmouseover=cmdA("19") onmouseout=cmdI("19") onclick=cmdC("19")><img src="searchresultsactive.gif" border=0 alt=SearchResult name=cmd19></a
+><img src="space.gif" border=0
+><a href="default.htm" onmouseover=cmdA("20") onmouseout=cmdI("20") onclick=cmdC("20")><img src="searchpreviusactive.gif" border=0 alt=SearchPrevious name=cmd20></a
+><a href="default.htm" onmouseover=cmdA("21") onmouseout=cmdI("21") onclick=cmdC("21")><img src="searchnextactive.gif" border=0 alt=SearchNext name=cmd21></a
+><img src="space.gif" border=0
+><a href="default.htm" onmouseover=cmdA("22") onmouseout=cmdI("22") onclick=cmdC("22")><img src="printactive.gif" border=0 alt=Print name=cmd22></a>
+
+
+<hr>
+
+<img src="inicio.gif" border=0 alt=OnlyPage
+><img src="onlypageinactive.gif" border=0 alt=OnlyPage
+><img src="bookmarkandpageinactive.gif" border=0 alt=BookmarkPage
+><img src="thumbnailsandpageinactive.gif" border=0 alt=Thumnail
+><img src="space.gif" border=0
+><img src="handinactive.gif" border=0 alt=Hand
+><img src="zoomininactive.gif" border=0 alt=ZoonIn
+><img src="zoomoutinactive.gif" border=0 alt=ZoonOut
+><img src="textselectioninactive.gif" border=0 alt=TextSelection
+><img src="space.gif" border=0
+><img src="firstpageinactive.gif" border=0 alt=FirstPage
+><img src="previuspageinactive.gif" border=0 alt=PreviousPage
+><img src="nextpageinactive.gif" border=0 alt=NextPage
+><img src="lastpageinactive.gif" border=0 alt=LastPage
+><img src="space.gif" border=0
+><img src="previusviewinactive.gif" border=0 alt=PreviousView
+><img src="nextviewinactive.gif" border=0 alt=NextView
+><img src="space.gif" border=0
+><img src="zoompage100inactive.gif" border=0 alt=ZoomPage100
+><img src="currentpageinsidewindowinactive.gif" border=0 alt=InsideWindow
+><img src="wisiblewidthcurrentpageinsidewindowinactive.gif" border=0 alt=VisibleCurrent
+><img src="space.gif" border=0
+><img src="finddialoginactive.gif" border=0 alt=FindDialog
+><img src="space.gif" border=0
+><img src="searchdialoginactive.gif" border=0 alt=SearchDialog
+><img src="searchresultsinactive.gif" border=0 alt=SearchResult
+><img src="searchpreviusinactive.gif" border=0 alt=SearchPrevious
+><img src="searchnextinactive.gif" border=0 alt=SearchNext
+><img src="space.gif" border=0
+><img src="printinactive.gif" border=0 alt=Print
+><img src="gotoinactive.gif" border=0 alt=Print
+><img src="background.gif" border=0
+><img src="background.gif" border=0
+><img src="background.gif" border=0
+><br
+><img src="inicio.gif" border=0 alt=OnlyPage
+><img src="onlypageactive.gif" border=0 alt=OnlyPage
+><img src="bookmarkandpageactive.gif" border=0 alt=BookmarkPage
+><img src="thumbnailsandpageactive.gif" border=0 alt=Thumnail
+><img src="space.gif" border=0
+><img src="handactive.gif" border=0 alt=Hand
+><img src="zoominactive.gif" border=0 alt=ZoonIn
+><img src="zoomoutactive.gif" border=0 alt=ZoonOut
+><img src="textselectionactive.gif" border=0 alt=TextSelection
+><img src="space.gif" border=0
+><img src="firstpageactive.gif" border=0 alt=FirstPage
+><img src="previuspageactive.gif" border=0 alt=PreviousPage
+><img src="nextpageactive.gif" border=0 alt=NextPage
+><img src="lastpageactive.gif" border=0 alt=LastPage
+><img src="space.gif" border=0
+><img src="previusviewactive.gif" border=0 alt=PreviousView
+><img src="nextviewactive.gif" border=0 alt=NextView
+><img src="space.gif" border=0
+><img src="zoompage100active.gif" border=0 alt=ZoomPage100
+><img src="CurrentPageInsideWindowActive.gif" border=0 alt=InsideWindow
+><img src="WisibleWidthCurrentPageInsideWindowActive.gif" border=0 alt=VisibleCurrent
+><img src="space.gif" border=0
+><img src="finddialogactive.gif" border=0 alt=FindDialog
+><img src="space.gif" border=0
+><img src="searchdialogactive.gif" border=0 alt=SearchDialog
+><img src="searchresultsactive.gif" border=0 alt=SearchResult
+><img src="searchpreviusactive.gif" border=0 alt=SearchPrevious
+><img src="searchnextactive.gif" border=0 alt=SearchNext
+><img src="space.gif" border=0
+><img src="printactive.gif" border=0 alt=Print
+><img src="gotoactive.gif" border=0
+><img src="background.gif" border=0
+><img src="background.gif" border=0
+><img src="background.gif" border=0
+><img src="background.gif" border=0
+><br
+><img src="inicio.gif" border=0 alt=OnlyPage
+><img src="onlypageactivecolor.gif" border=0 alt=OnlyPage
+><img src="bookmarkandpageactivecolor.gif" border=0 alt=BookmarkPage
+><img src="thumbnailsandpageactivecolor.gif" border=0 alt=Thumnail
+><img src="space.gif" border=0
+><img src="handactivecolor.gif" border=0 alt=Hand
+><img src="zoominactivecolor.gif" border=0 alt=ZoonIn
+><img src="zoomoutactivecolor.gif" border=0 alt=ZoonOut
+><img src="textselectionactivecolor.gif" border=0 alt=TextSelection
+><img src="space.gif" border=0
+><img src="firstpageactivecolor.gif" border=0 alt=FirstPage
+><img src="previuspageactivecolor.gif" border=0 alt=PreviousPage
+><img src="nextpageactivecolor.gif" border=0 alt=NextPage
+><img src="lastpageactivecolor.gif" border=0 alt=LastPage
+><img src="space.gif" border=0
+><img src="previusviewactivecolor.gif" border=0 alt=PreviousView
+><img src="nextviewactivecolor.gif" border=0 alt=NextView
+><img src="space.gif" border=0
+><img src="zoompage100activecolor.gif" border=0 alt=ZoomPage100
+><img src="CurrentPageInsideWindowActivecolor.gif" border=0 alt=InsideWindow
+><img src="WisibleWidthCurrentPageInsideWindowActivecolor.gif" border=0 alt=VisibleCurrent
+><img src="space.gif" border=0
+><img src="finddialogactivecolor.gif" border=0 alt=FindDialog
+><img src="space.gif" border=0
+><img src="searchdialogactivecolor.gif" border=0 alt=SearchDialog
+><img src="searchresultsactivecolor.gif" border=0 alt=SearchResult
+><img src="searchpreviusactivecolor.gif" border=0 alt=SearchPrevious
+><img src="searchnextactivecolor.gif" border=0 alt=SearchNext
+><img src="space.gif" border=0
+><img src="printactivecolor.gif" border=0 alt=Print
+><img src="gotoactivecolor.gif" border=0 alt=Print
+><img src="background.gif" border=0
+><img src="background.gif" border=0
+><br
+><img src="inicio.gif" border=0 alt=OnlyPage
+><img src="onlypagedown.gif" border=0 alt=OnlyPage
+><img src="bookmarkandpagedown.gif" border=0 alt=BookmarkPage
+><img src="thumbnailsandpagedown.gif" border=0 alt=Thumnail
+><img src="space.gif" border=0
+><img src="handdown.gif" border=0 alt=Hand
+><img src="zoomindown.gif" border=0 alt=ZoonIn
+><img src="zoomoutdown.gif" border=0 alt=ZoonOut
+><img src="textselectiondown.gif" border=0 alt=TextSelection
+><img src="space.gif" border=0
+><img src="firstpagedown.gif" border=0 alt=FirstPage
+><img src="previuspagedown.gif" border=0 alt=PreviousPage
+><img src="nextpagedown.gif" border=0 alt=NextPage
+><img src="lastpagedown.gif" border=0 alt=LastPage
+><img src="space.gif" border=0
+><img src="previusviewdown.gif" border=0 alt=PreviousView
+><img src="nextviewdown.gif" border=0 alt=NextView
+><img src="space.gif" border=0
+><img src="zoompage100down.gif" border=0 alt=ZoomPage100
+><img src="CurrentPageInsideWindowDown.gif" border=0 alt=InsideWindow
+><img src="WisibleWidthCurrentPageInsideWindowDown.gif" border=0 alt=VisibleCurrent
+><img src="space.gif" border=0
+><img src="finddialogdown.gif" border=0 alt=FindDialog
+><img src="space.gif" border=0
+><img src="searchdialogdown.gif" border=0 alt=SearchDialog
+><img src="searchresultsdown.gif" border=0 alt=SearchResult
+><img src="searchpreviusdown.gif" border=0 alt=SearchPrevious
+><img src="searchnextdown.gif" border=0 alt=SearchNext
+><img src="space.gif" border=0
+><img src="printdown.gif" border=0 alt=Print
+><img src="gotodown.gif" border=0 alt=Print
+><img src="background.gif" border=0
+><img src="background.gif" border=0
+><img src="background.gif" border=0>
+
+</body>
+</html>

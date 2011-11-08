@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<culture module="dbms" code="tr" contact="eminantalya@hotmail.com" encoding="iso-8859-9" name="turkish" translatorname="Emin CAKI" version="0">
+	
+	<section id="help">
+	</section>
+	
+	<section id="general">
+	</section>
+	
+	<section id="contenttypes">
+		<string id="adoxsl">Ado Xsl</string>
+	</section>
+	
+	<section id="contenttype_adoxsl">
+		<string id="defaultname">Yeni ado xsl</string>
+		<string id="connectionstring">ADO Bağlantı Stringi</string>
+		<string id="sqlquery">SQL Sorgu</string>
+		<string id="xsltemplate">XSL tema dizini</string>
+	</section>
+
+</culture>

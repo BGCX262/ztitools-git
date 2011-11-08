@@ -1,0 +1,6 @@
+table.menu { width: 100%; border: 0px;}
+table.menu th.menu {background: #FF8080; font: 10px verdana; font-weight: bold; color: white; text-align: left; padding-left: 6px; text-transform: uppercase;}
+table.menu tr {border-bottom: 1px white solid;}
+table.menu td.menu {padding-left: 12px; padding-bottom: 2px; background: #FFC0C0; border-bottom: 1px white solid;}
+a.menu, a.menu:active, a.menu:visited {font: 10px verdana; font-weight: bold; text-decoration: none; color: #ffffff;}
+a.menu:hover {color: #808080;}

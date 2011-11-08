@@ -1,0 +1,15 @@
+date,pageid,username,ipaddress,script_name,querystring,browser,language,exec
+22/07/2004 00:37:03,home,,"201.9.238.248",/fullxml/Default.asp,,IE 6.0,en-us,172
+22/07/2004 00:38:36,home,,"201.9.238.248",/fullxml/Default.asp,,IE 6.0,en-us,79
+22/07/2004 00:38:39,private,,"201.9.238.248",/fullxml/default.asp,mID=main&pID=private,IE 6.0,en-us,62
+22/07/2004 00:38:47,dbms,,"201.9.238.248",/fullxml/default.asp,mID=samples&pID=dbms,IE 6.0,en-us,1641
+22/07/2004 00:38:57,home,,"201.9.238.248",/fullxml/default.asp,mID=main&pID=home,IE 6.0,en-us,93
+22/07/2004 00:39:22,home,,"201.9.238.248",/fullxml/default.asp,mID=main&pID=home,IE 6.0,en-us,77
+22/07/2004 00:39:37,home,,"201.9.238.248",/fullxml/default.asp,mID=main&pID=home,IE 6.0,en-us,93
+22/07/2004 00:39:46,home,,"201.9.238.248",/fullxml/default.asp,mID=main&pID=home,IE 6.0,en-us,93
+22/07/2004 00:43:06,home,,"201.9.238.248",/fullxml/default.asp,mID=main&pID=home,IE 6.0,en-us,77
+22/07/2004 00:43:23,home,,"201.9.238.248",/fullxml/default.asp,mID=main&pID=home,IE 6.0,en-us,79
+22/07/2004 00:44:04,home,,"201.9.238.248",/fullxml/default.asp,mID=main&pID=home,IE 6.0,en-us,78
+22/07/2004 00:47:10,home,,"201.9.238.248",/fullxml/default.asp,mID=main&pID=home,IE 6.0,en-us,93
+22/07/2004 00:47:10,private,,"201.9.238.248",/fullxml/default.asp,mID=main&pID=private,IE 6.0,en-us,47
+22/07/2004 00:47:11,private,,"201.9.238.248",/fullxml/default.asp,mID=main&pID=private,IE 6.0,en-us,46

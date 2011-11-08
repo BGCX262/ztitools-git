@@ -1,0 +1,4 @@
+/* HEADLINE CONTENT TYPE CSS */
+span.system_announcement_title {padding-left: 4px; font: 8pt verdana; font-weight: bold; color:#505050; color: red; width: 100%; border-bottom: 1px #c0c0c0 dashed; margin-bottom: 2px;}
+a.system_announcement_subtitle, a.system_announcement_subtitle:visited, a.system_announcement_subtitle:active {font: 8pt verdana; font-weight: bold; text-decoration: none; color: black; }
+span.system_announcement_text {font: 8pt verdana}

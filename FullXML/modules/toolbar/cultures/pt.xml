@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="toolbar" code="pt" contact="Pedgsilva@portugalmail.pt" encoding="iso-8859-1" name="portuguese" translatorname="Pedro Silva" version="0">
+	<strings>
+		<string id="toolbareditor">Editor da Barra de Ferramentas</string>
+		<string id="toolbar">Barra de Ferramentas</string>
+		<string id="toolbaritem">Item da Barra de Ferramentas</string>
+		<string id="itemname">Nome do Item</string>
+		<string id="externallink">Link Externo</string>
+		<string id="internallink">Link Interno</string>
+		<string id="fxpage">Página no Fullxml</string>
+		<string id="link">Link</string>
+		<string id="target">Destino</string>
+		<string id="samewindow">Abrir nesta janela</string>
+		<string id="newwindow">Abrir numa nova janela</string>
+		<string id="deletedpage">Referenciar a uma página apagada</string>
+		<string id="login">Login</string>
+	</strings>
+</culture>

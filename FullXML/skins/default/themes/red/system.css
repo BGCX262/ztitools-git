@@ -1,0 +1,4 @@
+/* HEADLINE CONTENT TYPE CSS */
+span.system_headline_title {font: 12px tahoma; font-weight: bold; color:#336699; text-transform: uppercase}
+a.system_headline_subtitle, a.system_article_subtitle:visited, a.system_article_subtitle:active {font: 11px tahoma, font-weight: bold; text-decoration: none; color: blue; font-weight: bold;}
+span.system_headline_text {font: 11px verdana}

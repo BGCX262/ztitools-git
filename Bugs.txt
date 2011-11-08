@@ -1,0 +1,4 @@
+Bugs do ZTITools
+
+Ao utilizar o sistema de localização do EditForm por um campo do tipo BIT, o
+EditForm passou como parametro TRUE ou FALSE quando na verdade deveria ser 1 ou 0

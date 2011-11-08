@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="navigation" code="tr" contact="eminantalya@hotmail.com" encoding="iso-8859-9" name="turkish" translatorname="Emin CAKI" version="1">
+	
+	<!-- Content type list, used by contextual menu -->
+	<section id="contenttypes">
+		<string id="allmenu">Tüm menü bloklarý</string>
+		<string id="singlemenu">Tek menü bloðu</string>
+		<string id="horizontalmenu">Yatay menü</string>
+		<string id="subpagelist">Alt-sayfa listesi</string>
+		<string id="sitemap">Site haritasý</string>
+	</section>
+	<section id="contenttype_singlemenu">
+		<string id="defaultname">Tek menü</string>
+		<string id="menu">Menü</string>
+	</section>
+	<section id="contenttype_allmenu">
+		<string id="defaultname">Tüm menüler</string>
+	</section>
+	<section id="contenttype_horizontalmenu">
+		<string id="defaultname">Yatay menü</string>
+	</section>
+	
+	<section id="contenttype_subpagelist">
+		<string id="defaultname">Altsayfa Listesi</string>
+	</section>
+	
+	<section id="contenttype_sitemap">
+		<string id="defaultname">Site haritasý</string>
+	</section>
+</culture>

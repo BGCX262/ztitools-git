@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="navigation" author="John Roland" version="1.0" url="http://www.fullxml.com" independant="false" enabled="true">
+	<contenttypes>
+		<contenttype name="allmenu" filename="contenttype_allmenu.asp" caching="false" boxing="false"/>
+		<contenttype name="singlemenu" filename="contenttype_singlemenu.asp" caching="false" boxing="false" />
+		<contenttype name="horizontalmenu" filename="contenttype_horizontalmenu.asp" caching="false" boxing="false"/>
+		<contenttype name="subpagelist" filename="contenttype_subpagelist.asp" caching="false" boxing="false" />
+		<contenttype name="sitemap" filename="contenttype_sitemap.asp" caching="true" boxing="true" />
+	</contenttypes>
+</module>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-7"?>
+<culture module="poll" code="el" contact="info@ploegos.net" encoding="iso-8859-7" name="greek" translatorname="Christos Delivorias"  version="0">
+	<strings>
+		<string id="modulehelp">βοήθεια πάνω στις δημοσκοπήσεις</string>
+		<!-- Content type : poll -->
+		<string id="polls">Δημοσκοπήσεις</string>
+		<string id="poll">Δημοσκόπηση</string>
+		<string id="pollquestion">Ερώτηση δημοσκόπησης</string>
+		<string id="pollchoice">Επιλογή</string>
+		<string id="pollvote">Ψήφισε!</string>
+		<string id="selectapoll">Επιλογή δημοσκόπησης:</string>
+		<string id="newpoll">Δημιουργία νέας δημοσκόπησης</string>
+		<string id="editpoll">Διαμόρφωση επιλεγμένης δημοσκόπησης</string>
+		<!-- Content type :: existingpoll -->
+		<string id="existingpoll">Υπάρχουσα δημοσκόπηση</string>
+	</strings>
+</culture>

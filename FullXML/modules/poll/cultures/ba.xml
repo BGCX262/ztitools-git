@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="poll" code="ba" contact="postmaster@bosna.dk" encoding="utf-8" name="bosnian" translatorname="Rasim Duraković"  version="0">
+	<strings>
+		<string id="modulehelp">Pomoć za anketa - modul</string>
+		<!-- Content type : poll -->
+		<string id="poll">Anketa</string>
+		<string id="pollquestion">Pitanje</string>
+		<string id="pollchoice">Izaberi</string>
+		<string id="pollvote">Glasaj!</string>
+		<string id="selectapoll">Izaberi anketu:</string>
+		<string id="newpoll">Napravi novu anketu</string>
+		<string id="editpoll">Ispravi izabranu anketu</string>
+		<!-- Content type :: existingpoll -->
+		<string id="existingpoll">Postojeće ankete</string>
+	</strings>
+</culture>

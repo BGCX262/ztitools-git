@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="toolbar" code="fr" contact="john@fullxml.com" encoding="iso-8859-1" name="french" translatorname="John Roland" version="0">
+	<strings>
+		<string id="toolbareditor">Editeur de barre d&#39;outil</string>
+		<string id="toolbar">Barre d&#39;outil</string>
+		<string id="toolbaritem">Element de la barre d&#39;outil</string>
+		<string id="itemname">Nom de l&#39;élement</string>
+		<string id="externallink">Lien externe</string>
+		<string id="internallink">Lien interne</string>
+		<string id="fxpage">Page Fullxml</string>
+		<string id="link">Lien</string>
+		<string id="target">Target</string>
+		<string id="samewindow">Ouvrir dans la même fenetre</string>
+		<string id="newwindow">Ouvrir dans une nouvelle fenetre</string>
+		<string id="deletedpage">Reference à une page supprimée</string>
+		<string id="login">authentification</string>
+	</strings>
+</culture>

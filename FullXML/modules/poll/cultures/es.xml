@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="poll" code="es" contact="john@fullxml.com" encoding="utf-8" name="spanish" translatorname="Joaquin Toro"  version="0">
+	<strings>
+		<string id="modulehelp">ayuda en m—dulo de encuesta</string>
+		
+		<!--  Content type : poll -->
+		<string id="polls">Encuestas</string>
+		<string id="poll">Encuesta</string>
+		<string id="pollquestion">Pregunta de la Encuesta</string>
+		<string id="pollchoice">Alternativas</string>
+		<string id="pollvote">Votar!</string>
+		<string id="selectapoll">Selecciona una encuesta:</string>
+		<string id="newpoll">Crear una nueva encuesta</string>
+		<string id="editpoll">Editar encuesta seleccionada</string>
+		
+		<!--  Content type :: existingpoll -->
+		<string id="existingpoll">Encuesta existente</string>
+	</strings>
+</culture>

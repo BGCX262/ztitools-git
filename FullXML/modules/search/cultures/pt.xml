@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="search" code="pt" contact="pedgsilva@portugalmail.pt" encoding="iso-8859-1" name="portuguese" translatorname="Pedro Silva"  version="0">
+	<strings>
+		<!-- content type names -->
+		<string id="results">Resultados da Pesquisa</string>
+		<string id="box">Caixa de Pesquisa</string>
+		<!-- search box relates strings -->
+		<string id="search_button_label">ok</string>
+		<!-- search results relates strings -->
+		<string id="search_results_title">Resultados da pesquisa: </string>
+		<string id="search_too_short">A pesquisa deve conter no mínimo 4 caracteres !</string>
+		<string id="pagesfound">página(s) encontradas para sua pesquisa:</string>
+		<string id="searchtook">Pesquisa realizada em</string>
+		<string id="seconds">segundos</string>
+		<string id="noresults">Não foram encontradas páginas contendo </string>
+	</strings>
+</culture>

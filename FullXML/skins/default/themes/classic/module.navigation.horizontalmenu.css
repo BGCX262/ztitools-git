@@ -1,0 +1,90 @@
+/* CSS du menu horizontal, bieler batiste, www.magnin-sante.ch/journal
+   attention au hack IEPC ça fait buger IE5 mac */
+
+.hmenu{
+    position:relative;   
+    display:block;
+    margin:0;
+    padding:0;
+    width:100%; /* important pour Opera7 */
+    }
+
+.hmenu ul{
+    position:absolute;
+    width:152px;
+    border-top: 1px #999000 solid;
+    margin:0;
+    margin-left:-1px;
+    padding:0;
+    height:10em; /* pour  debugger ie5 mac => pas de bordure |_| */
+    }
+    
+.hmenu ul li{
+    border-left: 1px #999 solid;
+    border-right: 1px #999 solid;
+    }
+
+.hmenu li ul{
+    visibility:hidden;
+    }
+    
+
+.hmenu li li ul{
+    margin-top:-23px;
+    /* box model hack here for border */
+    margin-left: 150px; 
+    margin-left/* */:/**/152px; 
+    margin-left: /**/152px;
+    }
+
+.hmenu a{
+    text-align:center;
+    background-color: #fff;
+    border: 1px #f0f0f0 solid;
+    color:#000;
+    display:block;
+    width:150px;
+    text-decoration:none;
+    padding:2px 0;
+    margin:0;
+    font-weight: normal;
+    }
+    
+.hmenu a:hover{
+    background-color: #eee;
+    border: 1px #ccc solid;
+    }
+    
+/* for a mozilla better display with key nav */
+.hmenu a:focus{
+    background-color: #aaf;
+}
+
+/* hide some accessibility stuff */
+.hmenu span{
+    display:none;
+    }
+
+.hmenu li{
+    width:152px;
+    display:inline;
+    float:none;
+    list-style:none;
+    margin:0;
+    padding:0;
+    border-bottom: 1px #777 solid;
+    }
+    
+/* commented backslash hack v2 for IE mac \*/
+.hmenu li{
+    display:block;
+    float:left;    
+    }
+/* end hack */
+    
+/* IE PC selector */
+* html .hmenu li {
+    display:inline; /* solve a IE PC list bug */
+    float:none; /* solve a IE5 clav nav bug */
+    float/**/:left; /* for IE6 and IE5.5 */
+    }

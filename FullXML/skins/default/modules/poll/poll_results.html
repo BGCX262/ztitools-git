@@ -1,0 +1,18 @@
+<table class=poll cellpadding=0 cellspacing=0>	
+	<tr class=question>
+		<th>{{poll_question}}</th>
+	</tr>
+	
+	<tr>
+		<td class=bar>
+			<!--#BeginBlock poll_item_block-->
+			<img width={{choice_vote}} height=10 src=skins/{{skin_name}}/modules/poll/vote.gif> <b>{{choice_vote}}</b>%<br>
+			{{choice_text}}<br height=10>
+			<!--#EndBlock poll_item_block-->
+		</td>
+	</tr>
+	
+	<tr class=bottom>
+		<td><b>Total votes: {{total_votes}}</b></td>
+	</tr>
+</form></table>

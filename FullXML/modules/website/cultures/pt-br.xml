@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<culture code="pt-br" module="website" contact="eduardo.azambuja@uol.com.br" encoding="iso-8859-1" name="brazilian" translatorname="Eduardo Azambuja" version="1">
+	<section id="general">
+		<string id="modulehelp">Ajuda no módulo Enquetes</string>
+	</section>
+	<section id="contenttypes">
+		<string id="name">Nome do Website</string>
+		<string id="slogan">Slogan do Website</string>
+		<string id="copyright">Copyright do Website</string>
+		<string id="pagename">Nome de Página da Web</string>
+	</section>
+	<section id="contenttype_name">
+		<string id="defaultname">Nome do Website</string>
+	</section>
+	<section id="contenttype_slogan">
+		<string id="defaultname">Slogan do Website</string>
+	</section>
+	<section id="contenttype_copyright">
+		<string id="defaultname">Copyright do Website</string>
+	</section>
+	<section id="contenttype_pagename">
+		<string id="defaultname">Nome de Página da Web</string>
+	</section>
+</culture>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="website" author="John Roland" version="1.0" url="http://www.fullxml.com" independant="false" enabled="true">
+	<contenttypes>
+		<contenttype name="name" filename="contenttype_name.asp" caching="true" boxing="false"/>
+		<contenttype name="slogan" filename="contenttype_slogan.asp" caching="true" boxing="false"/>
+		<contenttype name="copyright" filename="contenttype_copyright.asp" caching="true" boxing="false"/>
+		<contenttype name="pagename" filename="contenttype_pagename.asp" caching="true" boxing="false"/>			
+	</contenttypes>
+</module>

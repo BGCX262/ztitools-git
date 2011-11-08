@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<culture code="da" module="dbms" contact="fullxml@coyle.dk" encoding="UFT-8" name="danish" translatorname="Jan Borup Coyle" version="1">
+	<section id="help"/>
+	<section id="general"/>
+	<section id="contenttypes">
+		<string id="adoxsl">ADO XSL</string>
+	</section>
+	<section id="contenttype_adoxsl">
+		<string id="defaultname">Ny ADO XSL</string>
+		<string id="connectionstring">ADO forbindelses kommando</string>
+		<string id="sqlquery">SQL Forespørgsel</string>
+		<string id="xsltemplate">XSL Skabelon sti</string>
+	</section>
+</culture>

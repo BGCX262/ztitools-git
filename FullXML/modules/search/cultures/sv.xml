@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="search" code="sv" contact="anders.landenstad@telia.com" encoding="ISO 8859-1" name="Swedish" translatorname="A Landenstad"  version="0">
+	<strings>
+		<!-- content type names -->
+		<string id="results">Sökresultat</string>
+		<string id="box">Sökruta</string>
+		<!-- search box relates strings -->
+		<string id="search_button_label">Ok</string>
+		<!-- search results relates strings -->
+		<string id="search_results_title">Sökresultat: </string>
+		<string id="search_too_short">Sökningen måste bestå av minst 4 tecken !</string>
+		<string id="pagesfound">sida(or) hittades med sökningen:</string>
+		<string id="searchtook">Sökningen tog</string>
+		<string id="seconds">sekunder</string>
+		<string id="noresults">Ingen sida funnen med sökningen </string>
+	</strings>
+</culture>

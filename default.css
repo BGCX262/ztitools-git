@@ -1,0 +1,135 @@
+<style type="text/css">
+/*
+REM -------------------------------------------------------------------------
+REM Definicoes dos estilos:
+REM -------------------------------------------------------------------------
+REM background:
+REM color: black, silver, gray, white, maroon, red, purple, fuchsia, green,
+REM        lime, olive, yellow, navy, blue, teal, aqua
+REM
+REM text-align: right, center, left
+REM
+REM text-decoration: underline, line-through
+REM
+REM -------------------------------------------------------------------------
+*/
+
+BODY {
+	background: white;
+	}
+
+A:hover	{color:red;}
+
+.marquee { 
+  color: red;
+  font-style: italic;
+  font: bold 14pt Arial, Helvetica, sans-serif, Verdana;
+  }
+
+TABLE.Menu {
+  color: white;
+  background: #666699;
+  text-align: center;
+  font: bold 8pt Arial, Helvetica, sans-serif, Verdana;
+  }
+
+TD.welcome {
+  color: teal;
+  font: bold 12pt Arial, Helvetica, sans-serif, Verdana;
+  }
+
+TD.Title {
+  color: white;
+  background: black;
+  text-align: center;
+  font: bold 10pt Arial, Helvetica, sans-serif, Verdana;
+  }
+
+A.Menu {
+  color: white;
+  text-align: left;
+  text-decoration: none;
+  font: bold 9pt Arial, Helvetica, sans-serif, Verdana;
+  }
+
+A:hover	{color:red;}
+
+TD.End {
+  color: white;
+  text-align: center;
+  font: bold 8pt Arial, Helvetica, sans-serif, Verdana;
+  }
+
+.newstitle {
+  color: navy;
+  font: bold 12pt Arial, Helvetica, sans-serif, Verdana;
+  }
+
+.newsbody {
+  font: 10pt Arial, Helvetica, sans-serif, Verdana;
+  }
+
+.visitante {
+  text-align: center;
+  font: bold 10pt Arial, Helvetica, sans-serif, Verdana;
+  }
+
+.ruben {
+  text-align: center;
+  font: 10pt Arial, Helvetica, sans-serif, Verdana;
+  }
+
+.ntFront {
+  color: Orange;
+  margin-top: -16pt;
+  margin-left: -1pt;
+  font: bold 12pt Arial, Helvetica, sans-serif, Verdana;
+  }
+
+.ntBack {
+  color: Navy;
+  margin-top: 0pt;
+  margin-left: 0pt;
+  font: bold 12pt Arial, Helvetica, sans-serif, Verdana;
+  }
+
+.PgHeaderFront {
+  color: Navy;
+  margin-top: -7pt;
+   text-align: center;
+  font: bold 16pt Arial, Helvetica, sans-serif, Verdana;
+  }
+
+
+.PgHeaderMiddle {
+  color: Gray;
+  margin-top: -8pt;
+   text-align: center;
+  font: bold 14pt Arial, Helvetica, sans-serif, Verdana;
+  }
+
+.PgHeaderBack {
+  color: LightSteelBlue;
+  margin-top: 0pt;
+  text-align: center;
+  font: bold 12pt Arial, Helvetica, sans-serif, Verdana;
+  }
+
+P	{
+        font: 10pt Arial, Helvetica, sans-serif, Verdana;
+	}
+
+H1, H2 {
+        font: bold 18pt Arial, Helvetica, sans-serif, Verdana;
+	}
+
+H3, H4 {
+        font: bold 12pt Arial, Helvetica, sans-serif, Verdana;
+	}
+	
+.footer {
+	text-align: center;
+  font: 7pt Arial, Helvetica, sans-serif, Verdana;
+	}
+
+</style>

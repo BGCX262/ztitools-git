@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="system" code="en" contact="john@fullxml.com" encoding="utf-8" name="english" translatorname="John Roland" version="2">
+	<section id="common">
+		<string id="yes">Yes</string>
+		<string id="no">No</string>
+		<string id="true">True</string>
+		<string id="false">False</string>
+		<string id="ok"> OK </string>
+		<string id="cancel">Cancel</string>
+		<string id="edit">Edit...</string>
+		<string id="moveup">Move up</string>
+		<string id="movedown">Move down</string>
+		<string id="add">Add...</string>
+		<string id="create">Create...</string>
+		<string id="delete">Delete</string>
+		<string id="confirmdelete">Do you really want to delete ? </string>
+		<string id="back">Back</string>
+		<string id="next">Next</string>
+		<string id="close">Close</string>
+		<string id="enter">Enter</string>
+		<string id="browse">Browse</string>
+		<string id="default">Default</string>
+		<string id="online">Online</string>
+		<string id="culture">Culture</string>
+		<string id="exectime">Execution time</string>
+		<string id="id">ID</string>
+		<string id="name">Name</string>
+		<string id="startdatetime">Start DateTime</string>
+		<string id="enddatetime">End DateTime</string>
+		<string id="writer">Writer</string>
+		<string id="published">Published</string>
+		<string id="enable">Enable</string>
+		<string id="skin">Skin</string>
+		<string id="inprogress">In progress</string>
+		<string id="activeusers">active user(s)</string>
+		<string id="type">Type</string>
+		<string id="description">Description</string>
+		<string id="url">URL</string>dit...
+		<string id="help">Help</string>
+		<string id="version">Version</string>
+		<string id="logoff">Log off</string>
+		<string id="myprofile">My profile</string>
+	</section>
+	<section id="interface">
+		<string id="goadmin">Admin console</string>
+		<string id="controlpanel">Control Panel</string>
+		<string id="websitemanager">Website Manager</string>
+		<string id="settings">Settings</string>
+		<string id="authenticated">authenticated</string>
+		<string id="placeholder_on">View placeholders</string>
+		<string id="placeholder_off">Hide placeholders</string>
+	</section>
+	<section id="website">
+		<string id="website">Website</string>
+		<string id="name">Website name</string>
+		<string id="copyright">Website copyright</string>
+		<string id="slogan">Website slogan</string>
+		<string id="model">Website model</string>
+		<string id="publicmodel">The public model</string>
+		<string id="signupmodel">The signup model</string>
+		<string id="privatemodel">The private model</string>
+		<!--<string id="customerservicemodel">The Customer-Service model</string>-->
+		<!--<string id="forprofitmodel">The for-profit model</string>-->
+		<!--<string id="websitetree">Website tree</string>-->
+		<string id="emailcomponent">Email component</string>
+		<string id="smtpserver">SMTP server</string>
+		<string id="userstorage">User storage</string>
+		<string id="internal">Internal</string>
+		<string id="external:nt">External Active directory</string>
+		<string id="external:ldap">External LDAP</string>
+		<string id="external:db">External Database</string>
+		<string id="external:ws">External Webservice</string>
+		<string id="userstorageoption">User storage options</string>
+		<string id="internal:registratedgroup">Role for the new registrated users</string>
+		<string id="external:nt:domain">WinNT domain short name</string>
+		<string id="external:nt:admgrp">External administrators group name</string>
+		<string id="external:db:cnn">ADO connectionstring</string>
+		<string id="external:db:table">USERS Table (or view)</string>
+		<string id="external:db:userfield">Username field</string>
+		<string id="external:db:passwordfield">Password field</string>
+		<string id="external:db:groupfield">Group field</string>
+		<string id="external:db:admgrp">External administrators group name</string>
+		<string id="settings">Website settings</string>
+		<string id="permissions">Website permissions</string>
+		<string id="menus">Website menus &amp; pages</string>
+	</section>
+	<section id="menus">
+		<string id="menus">Menus</string>
+		<string id="menu">Menu</string>
+		<string id="menuid">Menu ID (optional)</string>
+		<string id="menuiderror">This menuID is already used.</string>
+		<string id="addmenu">Add menu</string>
+		<string id="editmenu">Edit menu</string>
+		<string id="settings">Menu settings</string>
+		<string id="permissions">Menu permissions</string>
+	</section>
+	<section id="webpages">
+		<string id="pages">Pages</string>
+		<string id="subpages">Sub-pages</string>
+		<string id="page">Page</string>
+		<string id="pageid">Page ID (optional)</string>
+		<string id="pageiderror">This pageID is already used.</string>
+		<string id="name">Page name</string>
+		<string id="webpages">Web pages</string>
+		<string id="webpage">Web page</string>
+		<string id="addpage">Add a page</string>
+		<string id="editpage">Edit page</string>
+		<string id="deletepage">Delete page</string>
+		<string id="metatitle">META Title</string>
+		<string id="metakeywords">META Keywords</string>
+		<string id="metadescription">META Description</string>
+		<string id="usenewpagetemplate">Use "new page" template ?</string>
+		<string id="link">Link</string>
+		<string id="target">Target</string>
+		<string id="specialpages">Special pages</string>
+		<string id="pagesettings">Page settings</string>
+		<string id="pagepermissions">Page permissions</string>
+		<string id="pagecontents">Page contents</string>
+		<string id="template">Page skeleton</string>
+		<string id="theme">Theme</string>
+		<string id="specialpages">Special pages</string>
+	</section>
+	<section id="placeholders">
+		<string id="placeholders">Placeholders</string>
+		<string id="placeholder">Placeholder</string>
+		<string id="paging">Paging</string>
+		<string id="pagesize">Page size</string>
+	</section>
+	<section id="contents">
+		<string id="insertcontent">Insert content</string>
+		<string id="contents">Contents</string>
+		<string id="content">Content</string>
+		<string id="confirmdeletecontent">Do you want to delete this content ?</string>
+		<string id="confirmmoveupcontent">Do you want to move up this content ?</string>
+		<string id="confirmmovedowncontent">Do you want to move down this content ?</string>
+		<string id="confirmchangebox">Do you want to change this content box ?</string>
+		<string id="cachetimeout">Cache timeout (min.)</string>
+		<string id="box">Box</string>
+		<string id="nobox">No box</string>
+		<string id="refresh">Refresh</string>
+		<string id="unavailable">Unvailable for this content</string>
+		<string id="submitcontent">Submit content</string>		
+		<string id="mycontents">My contents</string>
+		<string id="pendingcontents">Pending contents</string>
+		<string id="rejectedcontents">Rejected contents</string>
+	</section>
+	<section id="contenttypes">
+		<string id="allmenu">All menus block</string>
+		<string id="singlemenu">Single menu block</string>
+		<string id="horizontalmenu">Horizontal menu</string>
+		<string id="text">Text</string>
+		<string id="html">HTML</string>
+		<string id="image">Image</string>
+		<string id="announcement">Announcement</string>
+		<string id="xmlxsl">XML / XSL</string>
+		<string id="sitemap">Site map</string>
+		<string id="iframe">Iframe</string>
+		<string id="login">Login box</string>
+		<string id="account">Account manager</string>
+		<string id="quicklinks">Quick links</string>
+	</section>
+	<section id="contenttype_quicklinks">
+		<string id="defaultname">Quick links</string>
+		<string id="editlinks">Edit Links</string>
+		<string id="links">Links</string>
+		<string id="trackedlinks">Tracked links</string>
+		<string id="label">Label</string>
+		<string id="link">Hyperlinks</string>
+		<string id="target">Target</string>
+		<string id="self">Current window</string>
+		<string id="blank">New window</string>
+		<string id="popup">Popup window</string>
+		<string id="popupparameters">Popup parameters</string>
+		<string id="trackedlinkshelp">You can easy track the number of click on this link in the admin console: website manager/Tracked Links</string>
+	</section>
+	<section id="contenttype_login">
+		<string id="defaultname">Account Login</string>
+		<string id="logindetails">Please Enter Your Login Details</string>
+		<string id="login">Login</string>
+		<string id="password">Password</string>
+		<string id="rememberlogin">Remember login</string>
+		<string id="register">register</string>
+		<string id="forgotpassword">Forgot password ?</string>
+		<string id="loggedas">You are logged as</string>
+		<string id="profile">Edit your profile</string>
+		<string id="logoff">Log off</string>
+		<string id="loginfailed">Wrong login/password.</string>
+		<string id="submit">OK</string>
+	</section>
+	<section id="contenttype_account">
+		<string id="defaultname">Account manager</string>
+		<string id="submit">Go</string>
+		<string id="create">Create account</string>
+		<string id="modify">Modify account</string>
+		<string id="changepassword">Fill the fields below only if you want to change your password:</string>
+		<string id="emailisnotavailable">This Email is already used by another user (you ?).</string>
+		<string id="aliasisnotavailable">This screen name is already used by another user. Please try another one.</string>
+		<string id="alreadyregister">Already got an account ? Click here to open a session.</string>
+		<string id="uncompleteform">Email, screen name and password are mandotary fields!</string>
+		<string id="unmatchingpassword">The passwords are not matching.</string>
+		<string id="sucessfullyregistrated">Registration sucessfull.</string>
+		<string id="sucessfullymodified">Your modifications were successfully applied.</string>
+		<string id="incorrectpassword">The password is incorrect.</string>
+	</section>
+	<section id="contenttype_singlemenu">
+		<string id="defaultname">Single menu</string>
+		<string id="menu">Menu</string>
+	</section>
+	<section id="contenttype_allmenu">
+		<string id="defaultname">All menus</string>
+	</section>
+	<section id="contenttype_horizontalmenu">
+		<string id="defaultname">Horizontal menu</string>
+	</section>
+	<section id="contenttype_text">
+		<string id="defaultname">new text</string>
+		<string id="text">Text</string>
+	</section>
+	<section id="contenttype_html">
+		<string id="defaultname">new html</string>
+		<string id="html">HTML</string>
+	</section>
+	<section id="contenttype_image">
+		<string id="defaultname">New image</string>
+		<string id="path">Path</string>
+		<string id="width">Width</string>
+		<string id="height">Height</string>
+		<string id="align">Align</string>
+		<string id="valign">VAlign</string>
+		<string id="border">Border</string>
+		<string id="hspace">HSpace</string>
+		<string id="vspace">VSpace</string>
+		<string id="preview">Preview</string>
+		<string id="link">Link</string>
+		<string id="target">Target</string>
+	</section>
+	<section id="contenttype_announcement">
+		<string id="defaultname">New annoucement</string>
+		<string id="subtitle">Sub title</string>
+		<string id="headlines">Headlines</string>
+		<string id="image">Image</string>
+		<string id="link">Link</string>
+		<string id="more">More...</string>
+	</section>
+	<section id="contenttype_xmlxsl">
+		<string id="defaultname">New XML / XSL</string>
+		<string id="xml">Xml source</string>
+		<string id="xsl">Xsl source</string>
+		<!--<string id="cachetimeout">Cache timeout (min.)</string>-->
+	</section>
+	<section id="contenttype_iframe">
+		<string id="defaultname">New Iframe</string>
+		<string id="frameborder">Frame border</string>
+		<string id="scrolling">Scrolling (yes / no)</string>
+		<string id="marginwidth">Margin width</string>
+		<string id="marginheight">Margin height</string>
+		<string id="bordercolor">Border color</string>
+		<string id="url">Url</string>
+		<string id="width">Width</string>
+		<string id="height">Height</string>
+	</section>
+	<section id="contenttype_sitemap">
+		<string id="defaultname">Site map</string>
+	</section>
+	<section id="tools">
+		<string id="fileexplorer">File explorer</string>
+		<string id="links">Links</string>
+		<string id="trackedlinks">Tracked links</string>
+	</section>
+	<section id="tool_fileexplorer">
+		<string id="fileexplorer">File explorer</string>
+		<string id="filename">Name</string>
+		<string id="filesize">Size</string>
+		<string id="filetype">Type</string>
+		<string id="filemodified">Modified</string>
+		<string id="fileupload">File upload</string>
+		<string id="upload">Upload</string>
+		<string id="uploadfiles">Upload Files</string>
+		<string id="foldercreated">folder created</string>
+		<string id="parentfolder">Parent folder</string>
+		<string id="newfolder">New Folder</string>
+		<string id="deletefolder">Delete Folder</string>
+		<string id="file">File</string>
+	</section>
+	
+	<section id="tool_trackedlinks">
+		<string id="trackedlinks">Tracked links</string>
+		<string id="trackedlink">Tracked link</string>
+		<string id="url">Url</string>
+		<string id="count">Count</string>
+	</section>
+	
+	<section id="tool_links">
+		<string id="links">Links</string>
+		<string id="link">Link</string>
+		<string id="label">Label</string>
+		<string id="url">Url</string>
+		<string id="count">Count</string>
+	</section>
+	<section id="modules">
+		<string id="modules">Modules</string>
+		<string id="module">Module</string>
+		<string id="modulelist">Here the list of modules detected on your installation. Check those you want to use.</string>
+		<string id="update">Update installed modules</string>
+		<string id="contenttype">Content type</string>
+	</section>
+	<section id="skins">
+		<string id="skins">Skins</string>
+		<string id="skin">Skin</string>
+		<string id="templates">Templates</string>
+		<string id="template">Template</string>
+		<string id="themes">Themes</string>
+		<string id="theme">Theme</string>
+		<string id="autodetect">Automatic detection</string>
+		<string id="boxes">Boxes</string>
+		<string id="box">Box</string>
+	</section>
+	<section id="groups">
+		<string id="title">Groups</string>
+		<string id="group">Group</string>
+		<string id="groupid">Group identifier</string>
+		<string id="canupload">Authorize upload</string>
+		<string id="uploadlimit">Upload limit (kb)</string>
+	</section>
+	<section id="users">
+		<string id="title">Users</string>
+		<string id="user">User</string>
+		<string id="usersmanager">Users manager</string>
+		<string id="firstname">First name</string>
+		<string id="lastname">Last name</string>
+		<string id="address">Address</string>
+		<string id="city">City</string>
+		<string id="zipcode">Zip code</string>
+		<string id="country">Country</string>
+		<string id="phone">Phone</string>
+		<string id="screenname">Screen name</string>
+		<string id="email">Email</string>
+		<string id="signature">Signature</string>
+		<string id="password">Password</string>
+		<string id="confirmpassword">Confirm password</string>
+			
+	</section>
+	
+	<section id="authentication">
+		<string id="create">Create account</string>
+		<string id="modify">Modify account</string>
+		<string id="forgottenpassword">Forgotten your password ?</string>
+		<string id="alreadyregister">Already got an account ? Click here to login.</string>
+		
+		
+		<string id="changepassword">Fill the fields below only if you want to change your password:</string>
+		<string id="emailisnotavailable">This Email is already used by another user!!!</string>
+		<string id="screennameisnotavailable">This screen name is already used by another user. Please try another one.</string>
+		<string id="uncompleteform">Email, screen name and password are mandotary fields!</string>
+		<string id="unmatchingpassword">The passwords are not matching.</string>
+		<string id="sucessfullyregistrated">Registration sucessfull.</string>
+		<string id="sucessfullymodified">Your modifications were successfully applied.</string>
+		<string id="incorrectpassword">The password is incorrect.</string>
+		
+	</section>
+	
+	<section id="Logs">
+		<string id="logs">Logs</string>
+	</section>
+	<section id="webtraffic">
+		<string id="webtraffic">Web Traffic</string>
+		<string id="summary">Summary</string>
+		<string id="webtrafficsummarydesc">This report shows an executive summary of your web traffic statistics.</string>
+		<string id="pageviews">Page views</string>
+		<string id="totalusers">Total users</string>
+		<string id="mostpopularpages">Most popular pages</string>
+		<string id="mostactiveusers">Most active users</string>
+		<string id="mostusedlanguages">Most used languages</string>
+		<string id="mostusedbrowsers">Most used browsers</string>
+		<string id="ipaddress">IP Address</string>
+		<string id="hits">Hits</string>
+		<string id="languages">Languages</string>
+		<string id="language">Language</string>
+		<string id="browsers">Browsers</string>
+		<string id="browser">Browser</string>
+		<string id="date">Date</string>
+		<string id="selectadate">Select a date</string>
+		<string id="pages">Pages</string>
+		<string id="users">Users</string>
+	</section>
+	<section id="fullxmlupdates">
+		<string id="fullxmlupdate">Fullxml Update</string>
+		<string id="welcomefullxmlupdate">Welcome to Fullxml Update</string>
+		<string id="fullxmlupdatemsg">Get the latest updates available for Fullxml. Fullxml Update scans your installation and provides you with a selection of updates tailored just for you.</string>
+		<string id="scanupdates">Scan for updates</string>
+		<string id="noversion">Fullxml Update cannot find local information about your installation.</string>
+		<string id="downloadsize">Download size: </string>
+		<string id="startdownload">download</string>
+		<string id="kilobyte">Kb</string>
+		<string id="fullxmlupdatedown">Fullxml Update website could not be contacted, please check back later.</string>
+		<string id="noupdate">Your fullxml installation is up-to-date.</string>
+		<string id="formerversions">Former versions</string>
+	</section>
+	<section id="permissions">
+		<string id="title">Permissions</string>
+		<string id="forbidden">Not enough permission</string>
+		<string id="accessdenied">Access denied.</string>
+		<string id="accessdeniedmsg">You do not have the permission to view this page. Please contact the website administrator.</string>
+		<string id="help">Use this grid to set the roles for this page .</string>
+		<!-- level of action on objects -->
+		<string id="default">Default</string>
+		<string id="denied">Deny</string>
+		<string id="viewer">View</string>
+		<string id="contributor">Contribute</string>
+		<string id="author">Publish</string>
+		<string id="moderator">Moderate</string>
+		<string id="administrator">Administrate</string>
+		<string id="usernotfound">User not found !</string>
+		<string id="adduserpermission">Add special permission for a user (enter email)</string>
+	</section>
+	<!--
+	<section id="tipsoftheday">
+		<string id="fullxmlupdate">Click on 'fullxml update' to check for the latest version.</string>
+		<string id="webtraffic">With the webtraffic reports you can see how many visitors you have, with additional infos like languages and browsers.</string>
+		<string id="quicklinks_overview">The quick links module is used to create a list of links, which can be related with the main topic of the page. The links created are tracked, that's mean that you can see the number of click in the admin: Website manager / Tracked links</string>
+	</section>
+	-->
+</culture>

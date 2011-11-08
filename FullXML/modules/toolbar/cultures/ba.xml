@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="toolbar" code="ba" contact="postmaster@bosna.com" encoding="utf-8" name="bosnian" translatorname="Rasim Duraković" version="0">
+	<strings>
+		<string id="toolbareditor">Toolbar editor</string>
+		<string id="toolbar">Toolbar</string>
+		<string id="toolbaritem">Toolbar item</string>
+		<string id="itemname">Item name</string>
+		<string id="externallink">External link</string>
+		<string id="internallink">Internal link</string>
+		<string id="fxpage">Fullxml Strana</string>
+		<string id="link">Link</string>
+		<string id="target">Target</string>
+		<string id="samewindow">Otvori u ovom prozoru</string>
+		<string id="newwindow">Otvori u novom prozoru</string>
+		<string id="deletedpage">Referira na obrisanu stranu</string>
+		<string id="login">Login</string>
+	</strings>
+</culture>

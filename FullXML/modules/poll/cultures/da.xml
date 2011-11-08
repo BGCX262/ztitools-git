@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<culture code="da" module="poll" contact="fullxml@coyle.dk" encoding="UTF-8" name="Danish" translatorname="Jan Borup Coyle" version="1">
+	<section id="general">
+		<string id="modulehelp">Hjælp til afstemnings modul</string>
+	</section>
+	<section id="contenttypes">
+		<string id="poll">Afstemning</string>
+	</section>
+	<section id="contenttype_poll">
+		<string id="defaultname">Ny afstemning</string>
+		<string id="pollvote">Stem!</string>
+		<string id="selectapoll">Vælg afstemning:</string>
+		<string id="newpoll">Lav en ny afstemning</string>
+		<string id="editpoll">Ret den valgte afstemning</string>
+	</section>
+	<section id="tools">
+		<string id="polls">Afstemninger</string>
+	</section>
+	<section id="tool_polls">
+		<string id="polls">Afstemninger</string>
+		<string id="poll">Afstemning</string>
+		<string id="pollquestion">Afstemnings spørgsmål</string>
+		<string id="pollchoice">Valg</string>
+	</section>
+</culture>

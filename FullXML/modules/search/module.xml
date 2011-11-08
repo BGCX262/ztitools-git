@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="search" author="John Roland" version="1.0" url="http://www.fullxml.com" independant="false" enabled="true">
+	<contenttypes>
+		<contenttype name="box" filename="contenttype_box.asp" caching="true" boxing="true"/>
+		<contenttype name="results" filename="contenttype_results.asp" caching="false" boxing="true"/>
+	</contenttypes>
+</module>

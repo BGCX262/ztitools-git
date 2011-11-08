@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<culture module="search" code="tr" contact="eminantalya@hotmail.com" encoding="iso-8859-9" name="turkish" translatorname="Emin CAKI" version="0">
+	
+	<section id="contenttypes">
+		<string id="box">Arama Kutusu</string>
+		<string id="results">Arama Sonuçları</string>
+	</section>
+	<section id="contenttype_box">
+		<string id="defaultname">Arama:</string>
+		<string id="search_button_label">ok</string>
+	</section>
+	<section id="contenttype_results">
+		<string id="defaultname">Arama sonuçları</string>
+		<string id="search_results_title">Arama sonuçları</string>
+		<string id="search_too_short">Arama kriterinde en az 4 karakter olmalıdır!</string>
+		<string id="pagesfound">sayfa aranan kriterde bulunmuştur:</string>
+		<string id="searchtook">arama</string>
+		<string id="seconds">saniye sürdü</string>
+		<string id="noresults">Belirtilen kriterle ilgili görüntülenecek sayfa bulunamadı </string>
+	</section>
+</culture>

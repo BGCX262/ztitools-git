@@ -1,0 +1,31 @@
+/* menu contextuel */
+/* v1
+.contextmenu { cursor: auto; width: 155px; display: none; position: absolute;  top: 0; left: 0; overflow: hidden; background-color: menu; border: 2px outset; font: menu; margin:0pt; padding-left: 2px; padding-top: 1px; padding-bottom: 5px}				
+.contextmenu SPAN {width: 148px; height: 17px; cursor: auto; padding-left: 10pt; color: menutext; padding-top: 1px;}
+.contextmenu SPAN.selected {background: highlight; color:highlighttext; }
+.contextmenu hr {width: 146px; border: 1px; padding-top: 0px; padding-bottom: 0px; margin: 0px	} 
+.contextmenu big {width: 148px; height: 17px; font: smallcaption; width: 100%;padding-left: 10pt; }
+.contextmenu SPAN.checked {color: 000000; font-weight: bold;}
+*/
+
+
+/* v2
+.contextmenu { cursor: auto; width: 155px; display: none; position: absolute;  top: 0; left: 0; overflow: hidden; background-color: white; border: 1px #8A867A solid; font: menu; margin:0pt; padding-left: 2px; padding-right: 2px; padding-top: 1px; padding-bottom: 5px; background-image: url(media/contextmenu_bg.png)}				
+.contextmenu SPAN {width: 150px; height: 22px; cursor: auto; padding-top: 1px; color: black; border: 1px white transparent;}
+.contextmenu SPAN td.icon {width: 25px; text-align:center}
+.contextmenu SPAN td.text {font: menu; padding-left: 3px;}
+.contextmenu SPAN.selected {height: 20px; background: #C6D3EF; border: 1px #3169C6 solid; }
+.contextmenu hr {width: 120px; height: 1px; background: #808080 solid; margin: 0px; border: 0px; text-align: right; padding-right: 2px;} 
+.contextmenu big {width: 148px; height: 17px; font: smallcaption; width: 100%;padding-left: 10pt; }
+.contextmenu SPAN.checked {color: 000000; font-weight: bold;}
+*/
+
+.contextmenu { cursor: auto; width: 155px; display: none; position: absolute;  top: 0; left: 0; overflow: hidden; background-color: white; border: 1px #8A867A solid; font: menu; margin:0pt; padding-left: 2px; padding-right: 2px; padding-top: 2px; padding-bottom: 5px; background-image: url(../../media/contextmenu_bg.png);}				
+.contextmenu SPAN {width: 150px; cursor: auto; color: black; border: 0px; margin: 0px; padding:1px; height: 20px}
+.contextmenu SPAN td.icon {width: 25px; text-align:center}
+.contextmenu SPAN td.text {font: menu; padding-left: 3px;}
+.contextmenu SPAN.selected {background: #C6D3EF; border: 1px #3169C6 solid; padding: 0px; }
+.contextmenu table.separator {width: 120px; background: #808080 solid; margin-top: 2px; margin-bottom: 2px; border: 0px; text-align: right; padding-right: 2px;} 
+
+.contextmenu big {width: 148px; height: 17px; font: smallcaption; width: 100%;padding-left: 10pt; }
+.contextmenu SPAN.checked {color: 000000; font-weight: bold;}

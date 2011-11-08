@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="poll" code="en" contact="john@fullxml.com" encoding="utf-8" name="english" translatorname="John Roland" version="2">
+	<section id="general">
+		<string id="modulehelp">help on poll module</string>
+	</section>
+	<section id="contenttypes">
+		<string id="poll">Poll</string>
+	</section>
+	<section id="contenttype_poll">
+		<string id="defaultname">New poll</string>
+		<string id="pollvote">Vote!</string>
+		<string id="selectapoll">Select a poll:</string>
+		<string id="newpoll">Create a new poll</string>
+		<string id="editpoll">Edit the selected poll</string>
+	</section>
+	<section id="tools">
+		<string id="polls">Polls</string>
+	</section>
+	<section id="tool_polls">
+		<string id="polls">Polls</string>
+		<string id="poll">Poll</string>
+		<string id="pollquestion">Poll question</string>
+		<string id="pollchoice">Choice</string>
+	</section>
+</culture>

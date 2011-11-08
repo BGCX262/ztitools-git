@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<culture code="da" module="search" contact="fullxml@coyle.dk" encoding="UTF-8" name="Danish" translatorname="Jan Borup Coyle" version="1">
+	<section id="contenttypes">
+		<string id="box">Søge boks</string>
+		<string id="results">Søge resultater</string>
+	</section>
+	<section id="contenttype_box">
+		<string id="defaultname">Søg:</string>
+		<string id="search_button_label">OK</string>
+	</section>
+	<section id="contenttype_results">
+		<string id="defaultname">Søge resultater</string>
+		<string id="search_results_title">Søge resultat</string>
+		<string id="search_too_short">Søgningen skal indeholde 4 karakterer!</string>
+		<string id="pagesfound">side(r) fundet i søgningen:</string>
+		<string id="searchtook">Søgningen tog</string>
+		<string id="seconds">sekunder</string>
+		<string id="noresults">Ingen sider fundet i søgningen</string>
+	</section>
+</culture>

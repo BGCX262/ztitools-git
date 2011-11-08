@@ -1,0 +1,5 @@
+date,pageid,username,ipaddress,script_name,querystring,browser,language,exec
+02/02/2004 09:30:32,home,,"10.33.34.30",/fullxml4/Default.asp,,IE 6.0,fr,359
+02/02/2004 09:30:43,home,,"10.33.34.30",/fullxml4/Default.asp,,IE 6.0,fr,218
+02/02/2004 09:30:48,home,test@fullxml.com,"10.33.34.30",/fullxml4/Default.asp,,IE 6.0,fr,250
+02/02/2004 09:30:52,{a4773c12-6b3d-4e4a-8e95-77e0405486df},test@fullxml.com,"10.33.34.30",/fullxml4/default.asp,mID=samples&pID={a4773c12-6b3d-4e4a-8e95-77e0405486df},IE 6.0,fr,171

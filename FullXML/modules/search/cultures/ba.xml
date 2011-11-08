@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture code="ba" contact="postmaster@bosna.dk" encoding="utf-8" name="bosnian" translatorname="Rasim Duraković"  version="0">
+	<strings>
+		<!-- content type names -->
+		<string id="results">Traženi rezultati</string>
+		<string id="box">Traži</string>
+		<!-- search box relates strings -->
+		<string id="search_button_label">OK</string>
+		<!-- search results relates strings -->
+		<string id="search_results_title">Traženi rezultati: </string>
+		<string id="search_too_short">Traži funkcija morati imati najmanje 4 znaka!</string>
+		<string id="pagesfound">nadjene stran(ic)e:</string>
+		<string id="searchtook">Traženje uzelo</string>
+		<string id="seconds">sekundi</string>
+		<string id="noresults">Tražena riječ ne postoji</string>
+	</strings>
+</culture>

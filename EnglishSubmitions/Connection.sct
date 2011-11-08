@@ -1,0 +1,172 @@
+<scriptlet>
+<comment>
+-------------------------------------------------------------------------
+ /Connection.sct
+-------------------------------------------------------------------------
+ Descricao   : ScripLet ASP Object create ConnectionString
+ Criacao     : 1/30/99 2:23AM
+ Local       : Brasilia/DF/Brazil
+ Elaborado   : Ruben Zevallos Jr. - zevallos@zevallos.com.br
+ Versao      : 1.0.0
+ Copyright   : 1999 by Zevallos(r) Tecnologia em Informacao
+             : http://www.zevallos.com.br
+-------------------------------------------------------------------------
+ The ZTITools.Connection ScriptLet is part of ZTITools 2.5 a complet tool
+ that search to abstract the HTML to ASP programers.
+ You can use the following code as you want, but we will glad if you 
+ notice us and/or save some information about us.
+ The author is not responsible for any damage or problem related with 
+ part or the entire source of ZTItools.Connection.
+-------------------------------------------------------------------------
+</comment>
+
+<Registration
+	Description="ZTITools.Connection - ConnectionString Manager - 1/31/99 10:47AM"
+	ProgID="ZTITools.Connection"
+	Version="1.01"
+	ClassID="{E0408FF0-B920-11d2-B163-00A0C923ECAE}"
+>
+</Registration>
+
+<public>
+	<property name=ConnectionType internalName=sintConnectionType/>
+	<property name=DriverID internalName=sintDriverID/>
+	<property name=DBQ internalName=sstrDBQ/>
+	<property name=ServerAddress internalName=sstrServerAddress/>
+	<property name=DataBase internalName=sstrDataBase/>
+	<property name=DefaultDir internalName=sstrDefaultDir/>
+	<property name=UserId internalName=sstrUserId/>
+	<property name=Password internalName=sstrPassword/>
+	<property name=ConnectionTimeout internalName=sintConnectionTimeout/>
+	<property name=CommandTimeout internalName=sintCommandTimeout/>
+
+	<method name=Connection internalName=GetConn/>
+	<method name=Clear internalName=ConnClear/>
+
+</public>
+
+<implements type="ASP"/>
+
+<script language=VBScript>
+REM -------------------------------------------------------------------------
+REM System constants
+REM -------------------------------------------------------------------------
+Const conConnSQL     = 1
+Const conConnDBase   = 2
+Const conConnAccess  = 3
+Const conConnExcel   = 4
+Const conConnFoxPro  = 5
+Const conConnText    = 6
+Const conConnParadox = 7
+
+REM -------------------------------------------------------------------------
+REM Global vars
+REM -------------------------------------------------------------------------
+Dim sintConnectionType
+Dim sintDriverID
+Dim sstrDBQ
+Dim sstrServerAddress
+Dim sstrDataBase
+Dim sstrUserId
+Dim sstrPassword
+Dim sstrDefaultDir
+
+ConnClear
+
+REM -------------------------------------------------------------------------
+REM Method to Clear all vars
+REM -------------------------------------------------------------------------
+Sub ConnClear
+  sintConnectionType = 0
+  sintDriverID       = 0
+  sstrDBQ            = ""
+  sstrServerAddress  = ""
+  sstrDataBase       = ""
+  sstrUserId         = ""
+  sstrPassword       = ""
+  sstrDefaultDir     = ""
+
+End Sub
+REM -------------------------------------------------------------------------
+REM End of Method Clear
+
+REM -------------------------------------------------------------------------
+REM Return the complete Connection String
+REM -------------------------------------------------------------------------
+Function GetConn
+  Dim strCS
+
+  strCS = ""
+  
+  Select Case sintConnectionType
+    Case conConnSQL
+      strCS = "{SQL Server}"
+                            
+    Case conConnAccess
+      strCS = "{Microsoft Access Driver (*.mdb)}"
+
+    Case conConnDBase
+      strCS = "{Microsoft dBASE Driver (*.dbf)}"
+ 
+    Case conConnFoxPro
+      strCS = "{Microsoft FoxPro Driver (*.dbf)}"
+
+    Case conConnParadox
+      strCS = "{Microsoft Paradox Driver (*.db )}"
+
+    Case conConnText
+      strCS = "{Microsoft Text Driver (*.txt;*.csv)}"
+                            
+    Case conConnExcel
+      strCS = "{Microsoft Excel Driver (*.xls)}"
+
+  End Select
+
+  If strCS > "" Then
+    strCS  = "DRIVER=" & strCS
+  
+    If sstrDBQ > "" Then
+      strCS  = strCS & ";DBQ=" & sstrDBQ
+  
+    End If
+  
+    If sstrServerAddress > "" Then
+      strCS  = strCS & ";SERVER=" & sstrServerAddress
+  
+    End If
+
+    If sstrUserId > "" Then
+      strCS  = strCS & ";UID=" & sstrUserId
+  
+    End If
+  
+    If sstrPassword > "" Then
+      strCS  = strCS & ";PWD=" & sstrPassword
+  
+    End If
+
+    If sintDriverID > 0 Then
+      strCS  = strCS & ";DriverID=" & sintDriverID
+  
+    End If
+  
+    If sstrDefaultDir > "" Then
+      strCS  = strCS & ";DefaultDir=" & sstrDefaultDir
+  
+    End If
+
+    If sstrDataBase > "" Then
+      strCS  = strCS & ";DATABASE=" & sstrDataBase
+  
+    End If
+  
+    strCS = strCS & ";"
+  End If  
+
+  GetConn = strCS
+
+End Function
+REM -------------------------------------------------------------------------
+REM End of Method GetConn
+</script>
+</scriptlet>

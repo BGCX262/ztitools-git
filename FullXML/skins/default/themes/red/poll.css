@@ -1,0 +1,5 @@
+table.poll {border: 0px; width: 100%; background: white;}
+table.poll tr, table.poll th, table.poll td  {background: white;}
+table.poll tr.question th {font-weight: bold; color: black; text-transform: normal;}
+table.poll tr.choice th {font-weight: normal; }
+table.poll tr.buttons input.btnvote {background: #FF8080; border: 0px black solid; }

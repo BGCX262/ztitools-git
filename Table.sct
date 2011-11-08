@@ -1,0 +1,869 @@
+<scriptlet>
+
+<?scriptlet error="true" debug="true"?>
+<comment>
+-------------------------------------------------------------------------
+ /Table.sct
+-------------------------------------------------------------------------
+ Descricao : Objeto da Gerencia as Tabelas
+ Criacao   : 1/30/99 3:34AM
+ Local     : Brasilia/DF
+ Elaborado : Ruben Zevallos Jr. - zevallos@zevallos.com.br
+ Versao    : 1.0.0
+ Copyright : 1999 by Zevallos(r) Tecnologia em Informacao
+-------------------------------------------------------------------------
+</comment>
+
+<registration
+	Description="ZTITools.Table - Sistema de Tabelas - 1/30/99 3:34AM"
+	ProgID="ZTITools.Table"
+	Version="2.00"
+	ClassID="{D415AEF0-B881-11d2-B37A-002035B165DC}"
+>
+</Registration>
+
+<public>
+	<property name="HeadRowBGColor" internalName="sstrHeadRowBGColor"/>
+	<property name="RowBGColor" internalName="sstrRowBGColor"/>
+	<property name="RowFontSize" internalName="sstrRowFontSize"/>
+	<property name="Border" internalName="sstrBorder"/>
+	<property name="ColumnWidth" internalName="sstrColumnWidth"/>
+	<property name="ColumnHeight" internalName="sstrColumnHeight"/>
+	<property name="ColumnAlign" internalName="sstrColumnAlign"/>
+	<property name="ColumnColSpan" internalName="sstrColumnColSpan"/>
+	<property name="ColumnRowSpan" internalName="sstrColumnRowSpan"/>
+	<property name="ColumnVAlign" internalName="sstrColumnVAlign"/>
+	<property name="ColumnBGColor" internalName="sstrColumnBGColor"/>
+	<property name="ColumnNoWrap" internalName="sstrColumnNoWrap"/>
+	<property name="ColumnColor" internalName="sstrColumnColor"/>
+	<property name="Spacing" internalName="sstrSpacing"/>
+	<property name="Padding" internalName="sstrPadding"/>
+
+	<method name=Clear/>
+
+	<method name="Begin" internalName="TableBegin">
+	  <PARAMETER name="strMessage"/>
+	  <PARAMETER name="intColumns"/>
+	  <PARAMETER name="strWidth"/>
+  </method>
+
+  <method name="End" internalName="TableEnd"/>
+
+	<method name="NormalBegin" internalName="TableNormalBegin">
+	  <PARAMETER name="strWidth"/>
+	</method>	
+	
+	<method name="NormalEnd" internalName="TableNormalEnd"/>
+
+	<method name="BeginRow" internalName="TableBeginRow">
+	  <PARAMETER name="intFontSize"/>
+	</method>	
+	
+	<method name="EndRow" internalName="TableEndRow"/>
+	
+	<method name="BeginHeadRow" internalName="TableBeginHeadRow">
+	  <PARAMETER name="intFontSize"/>
+	</method>	
+
+	<method name="EndHeadRow" internalName="TableEndHeadRow"/>
+
+	<method name="HeadColumn" internalName="TableHeadColumn">
+	  <PARAMETER name="strText"/>
+	</method>	
+
+	<method name="BeginHeadColumn" internalName="TableBeginHeadColumn"/>
+	
+	<method name="EndHeadColumn" internalName="TableEndHeadColumn"/>
+	
+	<method name="BeginColumn" internalName="TableBeginColumn"/>
+	
+	<method name="EndColumn" internalName="TableEndColumn"/>
+	
+  <method name="GraphColor" internalName="TableGraphColor"/>
+  
+	<method name="ColumnGraph" internalName="TableColumnGraph"/>
+	
+	<method name="GraphLegend" internalName="TableGraphLegend">
+	  <PARAMETER name="IntMax"/>
+	  <PARAMETER name="intTotal"/>
+	</method>	
+
+	<method name="CompleteColumn" internalName="TableCompleteColumn">
+	  <PARAMETER name="strText"/>
+	</method>	
+</public>
+
+<implements type="ASP" id="ASP"/>
+
+<script language="VBScript">
+Dim sstrHeadRowBGColor
+Dim sstrRowBGColor
+Dim sstrRowFontSize
+Dim sstrBorder
+Dim sstrColumnWidth
+Dim sstrColumnHeight
+Dim sstrColumnAlign
+Dim sstrColumnColSpan
+Dim sstrColumnRowSpan
+Dim sstrColumnVAlign
+Dim sstrColumnBGColor
+Dim sstrColumnNoWrap
+Dim sstrColumnColor
+DIM sstrSpacing
+DIM sstrPadding
+
+DIM sintCor
+DIM sintR
+DIM sintG
+DIM sintB
+
+Clear
+
+REM -------------------------------------------------------------------------
+REM Diretorio Default onde estao os arquivos
+REM -------------------------------------------------------------------------
+Sub Clear
+  sstrBorder = "0"
+  sstrSpacing = "0"
+  sstrPadding = "0"
+
+  sstrHeadRowBGColor = ""
+  sstrRowBGColor = ""
+  sstrRowFontSize = ""
+  sstrBorder = ""
+  sstrColumnWidth = ""
+  sstrColumnHeight = ""
+  sstrColumnAlign = ""
+  sstrColumnColSpan = ""
+  sstrColumnRowSpan = ""
+  sstrColumnVAlign = ""
+  sstrColumnBGColor = ""
+  sstrColumnNoWrap = ""
+  sstrColumnColor = ""
+  sstrSpacing = ""
+  sstrPadding = ""
+  
+  sintCor = ""
+  sintR = ""
+  sintG = ""
+  sintB = ""
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Metodo Clear
+
+REM -------------------------------------------------------------------------
+REM Inicio da tabela
+REM -------------------------------------------------------------------------
+Function TableBegin(strMessage, intColumns, strWidth)
+
+  On Error Resume Next
+
+  If Not sstrHeadsstrRowBGColor > "" Then
+    sstrHeadRowBGColor = "#CCCCFF"
+    sstrHeadRowBGColor = conTableHeadBGColor
+
+  End If
+
+  If Not sstrRowBGColor > "" Then
+    sstrRowBGColor = "#ECECFF"
+    sstrRowBGColor = conTableBGColor
+
+  End if
+
+  On Error Goto 0
+  
+  Response.Write "<TABLE BGCOLOR=Black CELLSPACING=0 CELLPADDING=0"
+REM White CELLSPACING=0 CELLPADDING=0" 
+REM Black CELLSPACING=0 CELLPADDING=0"
+
+  
+  If strWidth > "" Then
+    Response.Write " WIDTH=""" & strWidth & """"
+  
+  End If
+  
+  Response.Write " BORDER=" & Session("TableBorder") & ">"
+  
+  Response.Write "<TR><TD VALIGN=TOP>"
+
+  Response.Write "<TABLE WIDTH=100  BORDER=" & Session("TableBorder") & " CELLSPACING=1 CELLPADDING=3>"
+  
+  If strMessage > "" Then
+    Response.Write "<TR BGCOLOR=White><TD ALIGN=CENTER"
+    REM " & sstrHeadsstrRowBGColor & "><TD ALIGN=CENTER"
+    REM White><TD ALIGN=CENTER"
+  
+    If intColumns > 1 Then
+      Response.Write " COLSPAN=" & intColumns
+    
+    End If
+    
+    Response.Write "><FONT SIZE=3><B>" & strMessage & "</B></FONT></TD></TR>"
+  
+  End If
+
+  sstrColumnAlign = ""
+  sstrColumnVAlign = ""
+  sstrColumnBGColor = ""
+  sstrColumnColSpan = ""
+  sstrColumnWidth = ""
+  sstrColumnHeight = ""
+
+End Function
+REM -------------------------------------------------------------------------
+REM Final da Metodo TableBegin
+
+REM -------------------------------------------------------------------------
+REM Fim da tabela
+REM -------------------------------------------------------------------------
+Sub TableEnd
+
+  Response.Write "</TABLE></TD></TR></TABLE>"
+
+  sstrBorder = "0"
+  sstrSpacing = "0"
+  sstrPadding = "0"
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Sub TableEnd
+
+REM -------------------------------------------------------------------------
+REM Inicio da tabela
+REM -------------------------------------------------------------------------
+Sub TableNormalBegin(ByVal strWidth)
+
+  On Error Resume Next
+
+  If Not sstrHeadsstrRowBGColor > "" Then
+    sstrHeadsstrRowBGColor = conTableHeadBGColor
+  
+  End If
+
+  If Not sstrRowBGColor > "" Then
+    sstrRowBGColor = conTableBGColor
+  
+  End if
+
+  On Error Goto 0
+
+  Response.Write "<TABLE"
+  
+  If strWidth > "" Then 
+    Response.Write " WIDTH=" & strWidth
+  
+  End If
+
+  If Session("TableBorder") > "" And Session("TableBorder") <> "0" Then
+    Response.Write " BORDER=" & Session("TableBorder")
+  
+  Else
+  If sstrBorder > "" Then
+    Response.Write " BORDER=" & sstrBorder
+
+  Else
+    Response.Write " BORDER=0"
+
+  End If
+  
+  End IF 
+
+  If sstrSpacing > "" Then
+    Response.Write " CELLSPACING=" & sstrSpacing
+  
+  End If
+
+  If sstrPadding > "" Then
+    Response.Write " CELLPADDING=" & sstrPadding
+  
+  End If
+
+  Response.Write ">"
+  
+  sstrColumnAlign = "" 
+  sstrColumnVAlign = "" 
+  sstrColumnBGColor = ""
+  sstrColumnColSpan = ""
+  sstrColumnWidth = ""
+  sstrColumnHeight = ""
+  
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Sub TableBegin
+
+REM -------------------------------------------------------------------------
+REM Fim da tabela
+REM -------------------------------------------------------------------------
+Sub TableNormalEnd
+
+  Response.Write "</TABLE>"
+
+  sstrBorder = "0"
+  sstrSpacing = "0"
+  sstrPadding = "0"
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Sub TableEnd
+
+REM -------------------------------------------------------------------------
+REM Inicio de uma linha
+REM -------------------------------------------------------------------------
+REM conTableColumnBGColor
+
+Sub TableBeginRow(ByVal intFontSize)
+
+  sstrRowFontSize = intFontSize
+
+  Response.Write "<TR"
+
+  If sstrRowBGColor > "" Then
+    Response.Write " BGCOLOR=" & sstrRowBGColor
+  
+  End If
+  
+  Response.Write ">"
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Sub TableBeginRow
+
+REM -------------------------------------------------------------------------
+REM Fim de uma linha
+REM -------------------------------------------------------------------------
+Sub TableEndRow
+
+  Response.Write "</TR>"
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Sub TableEndRow
+
+REM -------------------------------------------------------------------------
+REM Inicio de uma linha
+REM -------------------------------------------------------------------------
+REM conTableHeadBGColor
+
+Sub TableBeginHeadRow(ByVal intFontSize)
+
+  sstrRowFontSize = intFontSize
+
+  Response.Write "<TR"
+
+  If sstrHeadsstrRowBGColor > "" Then
+    Response.Write " BGCOLOR=" & sstrHeadsstrRowBGColor
+  
+  End If
+  
+  Response.Write ">"
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Sub TableBeginHeadRow
+
+REM -------------------------------------------------------------------------
+REM Fim de uma linha
+REM -------------------------------------------------------------------------
+Sub TableEndHeadRow
+
+  Response.Write "</TR>"
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Sub TableEndHeadRow
+
+REM -------------------------------------------------------------------------
+REM Fim da tabela
+REM -------------------------------------------------------------------------
+Sub TableHeadColumn(ByVal strText)
+
+  Response.Write "<TH"
+
+  If sstrColumnHeight > "" Then
+    Response.Write " HEIGHT=" & sstrColumnHeight
+  
+  End If
+
+  If sstrColumnWidth > "" Then
+    Response.Write " WIDTH=" & sstrColumnWidth
+  
+  End If
+
+  If sstrColumnAlign > "" Then
+    Response.Write " ALIGN=" & sstrColumnAlign
+  
+  End If
+
+  If sstrColumnColSpan > "" Then
+    Response.Write " COLSPAN=" & sstrColumnColSpan
+  
+  End If
+
+  If sstrColumnVAlign > "" Then
+    Response.Write " VALIGN=" & sstrColumnVAlign
+  
+  End If
+
+  If sstrColumnBGColor > "" Then
+    Response.Write " BGCOLOR=" & sstrColumnBGColor
+  
+  End If
+  
+  Response.Write ">"
+
+  If sstrRowFontSize > "" Then
+    Response.Write "<FONT SIZE=" & sstrRowFontSize & ">"
+  
+  End If
+
+  Response.Write strText
+  
+  If sstrRowFontSize > "" Then
+    Response.Write "</FONT>"
+  
+  End If
+
+  Response.Write "</TD>"
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Sub TableHeadColumn
+
+REM -------------------------------------------------------------------------
+REM Fim da tabela
+REM -------------------------------------------------------------------------
+Sub TableBeginHeadColumn
+
+  Response.Write "<TH"
+
+  If sstrColumnHeight > "" Then
+    Response.Write " HEIGHT=" & sstrColumnHeight
+  
+  End If
+
+  If sstrColumnWidth > "" Then
+    Response.Write " WIDTH=" & sstrColumnWidth
+  
+  End If
+
+  If sstrColumnAlign > "" Then
+    Response.Write " ALIGN=" & sstrColumnAlign
+  
+  End If
+
+  If sstrColumnColSpan > "" Then
+    Response.Write " COLSPAN=" & sstrColumnColSpan
+  
+  End If
+
+  If sstrColumnVAlign > "" Then
+    Response.Write " VALIGN=" & sstrColumnVAlign
+  
+  End If
+
+  If sstrColumnBGColor > "" Then
+    Response.Write " BGCOLOR=" & sstrColumnBGColor
+  
+  End If
+
+  
+  Response.Write ">"
+
+  If sstrRowFontSize > "" Then
+    Response.Write "<FONT SIZE=" & sstrRowFontSize & ">"
+  
+  End If
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Sub TableHeadColumn
+
+REM -------------------------------------------------------------------------
+REM Fim da tabela
+REM -------------------------------------------------------------------------
+Sub TableEndHeadColumn
+
+  If sstrRowFontSize > "" Then
+    Response.Write "</FONT>"
+  
+  End If
+
+  Response.Write "</TD>"
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Sub TableHeadColumn
+
+REM -------------------------------------------------------------------------
+REM Inicio de uma coluna
+REM -------------------------------------------------------------------------
+Sub TableBeginColumn
+
+  Response.Write "<TD"
+
+  If sstrColumnHeight > "" Then
+    Response.Write " HEIGHT=" & sstrColumnHeight
+  
+  End If
+
+  If sstrColumnWidth > "" Then
+    Response.Write " WIDTH=" & sstrColumnWidth
+  
+  End If
+
+  If sstrColumnAlign > "" Then
+    Response.Write " ALIGN=" & sstrColumnAlign
+  
+  End If
+
+  If sstrColumnColSpan > "" Then
+    Response.Write " COLSPAN=" & sstrColumnColSpan
+  
+  End If
+
+  If sstrColumnRowSpan > "" Then
+    Response.Write " ROWSPAN=" & sstrColumnRowSpan
+  
+  End If
+
+  If sstrColumnVAlign > "" Then
+    Response.Write " VALIGN=" & sstrColumnVAlign
+  
+  End If
+
+  If sstrColumnBGColor > "" Then
+    Response.Write " BGCOLOR=" & sstrColumnBGColor
+  
+  End If
+
+  If sstrColumnNoWrap Then
+    Response.Write " NOWRAP=NOWRAP"
+  
+  End If
+
+  Response.Write ">"
+  
+  If sstrRowFontSize > "" OR Session("TableSetColumnColor") > "" Then
+    Response.Write "<FONT"
+  
+  If Session("TableSetColumnColor") > "" Then
+    Response.Write " COLOR=" & Session("TableSetColumnColor")
+  
+  End If
+
+  If sstrRowFontSize > "" Then
+    Response.Write " SIZE=" & sstrRowFontSize
+  
+  End If
+  
+  Response.Write ">"
+  
+  End If
+
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Sub TableBeginColumn
+
+REM -------------------------------------------------------------------------
+REM Fim da tabela
+REM -------------------------------------------------------------------------
+Sub TableEndColumn
+
+  If sstrRowFontSize > "" Then
+    Response.Write "</FONT>"
+  
+  End If
+
+  Response.Write "</TD>"
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Sub TableEndColumn
+
+REM -------------------------------------------------------------------------
+REM Retorna cores sequenciais
+REM -------------------------------------------------------------------------
+Function TableGraphColor
+
+  If (sintCor \ 3) = 6 Then
+    sintCor = 0 
+  
+  End If 
+
+  Select Case (sintCor \ 3)
+    Case 0
+      sintG = sintG + 85
+  
+    Case 1
+      sintR = sintR - 85
+  
+    Case 2
+      sintB = sintB + 85
+  
+    Case 3
+      sintG = sintG - 85
+    
+    Case 4
+      sintR = sintR + 85
+    
+    Case 5
+      sintB = sintB - 85
+
+  End Select 
+
+  sintCor = sintCor + 1
+
+  TableGraphColor = "#" & LeadingZeroes(Hex(sintR), 2) & LeadingZeroes(Hex(sintG), 2) & LeadingZeroes(Hex(sintB), 2)
+  
+End Function
+REM -------------------------------------------------------------------------
+REM Final da Sub TableGraphColor
+
+REM -------------------------------------------------------------------------
+REM Desenha as Barras do Graficos
+REM -------------------------------------------------------------------------
+Sub TableColumnGraph(intParc, strLink)
+Dim strCor, intLargura
+
+  TableBeginColumn
+  
+  If sintTotal > 0 Then
+    TableNormalBegin 250
+  
+  Else
+    TableNormalBegin 190
+  
+  End If
+
+  sstrColumnWidth = 60
+
+  sstrColumnAlign = "Right" 
+  
+  TableBeginRow 1 
+
+  If strLink > "" Then
+    TableCompleteColumn strLink
+REM TableCompleteColumn "&nbsp;&nbsp;<a href=" & sstrThisScriptName & "?" & conPOption & "=" & conOptionSession & strLink & "><FONT SIZE=-1><B>" & ZTINumber(100 * intParc / sintTotal) & "%" & "</a>&nbsp;&nbsp;"
+  
+  Else
+    TableCompleteColumn "&nbsp;<B>" & intParc & "<B>&nbsp;"
+  
+  End If 
+
+  If sintTotal > 0 Then
+    TableCompleteColumn "&nbsp;<B><FONT SIZE=-1>" & ZTINumber(100 * intParc / sintTotal) & "%" & "<B>&nbsp;"
+  
+  End If
+
+  sstrColumnAlign = "Left" 
+
+  sstrBorder = 1
+
+  sstrColumnWidth = ""
+
+  TableBeginColumn
+
+  Randomize
+  
+  strCor = sstrRowBGColor
+  
+  sstrRowBGColor = TableGraphColor
+  sstrBorder = ""
+  intLargura = 120 * intParc \ sintMax
+
+  If intLargura < 1 Then
+    intLargura = 1
+  
+  End If
+  
+  TableNormalBegin = intLargura
+
+  TableBeginRow = "" 
+  sstrColumnHeight = "15"
+  sstrCompleteColumn = ""
+  TableEndRow
+  
+  TableNormalEnd
+
+  TableEndRow
+
+  TableNormalEnd
+  
+  TableEndColumn
+  
+  sstrColumnAlign = ""
+  
+  sstrBorder = ""
+  sstrRowBGColor = strCor
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Sub TableColumnGraph
+
+REM -------------------------------------------------------------------------
+REM Desenha a Legenda do Grafico de Barras
+REM -------------------------------------------------------------------------
+Sub TableGraphLegend(ByVal intMax, ByVal intTotal)
+Dim strCor
+Dim i
+  
+  If sintCor = "" Then
+    sintCor = -1
+    sintR = 255
+    sintG = -85
+    sintB = 0 
+  
+  End If
+
+  strCor = sstrRowBGColor
+  sstrRowBGColor = sstrHeadsstrRowBGColor
+
+  sintTotal = intTotal
+  sintMax = intMax
+  
+  TableBeginColumn
+
+  If sintTotal > 0 Then
+    TableNormalBegin 240
+
+  Else
+    TableNormalBegin 180
+
+  End If
+
+  TableBeginRow 1
+  
+  sstrColumnWidth = 60 
+  sstrColumnAlign = "Center"
+
+  If intTotal > 0 Then
+    TableCompleteColumn "Total"
+  
+  End If 
+
+  TableCompleteColumn "&nbsp;"
+
+  sstrColumnAlign = "Left"
+  
+  If intMax > 2 Then
+    sstrColumnWidth = 40
+    sstrColumnAlign = "Left"
+
+    TableCompleteColumn "0"
+
+    sstrColumnAlign = "Center"
+    
+    If intMax < 10 Then
+      TableCompleteColumn Round(intMax / 2, 1)
+    
+    Else
+      TableCompleteColumn intMax \ 2
+  
+    End If 
+
+    strColumnAlign = "Right"
+    
+    TableCompleteColumn intMax
+    TableEndRow
+
+    TableBeginRow 1 
+  
+    sstrColumnWidth 60
+
+    If intTotal > 0 Then
+      TableCompleteColumn "&nbsp;<B>" & ZTIInt(sintTotal) & "<B>&nbsp;"
+  
+    End If 
+  
+    TableCompleteColumn "&nbsp;"
+
+    sstrColumnWidth = 40
+    sstrColumnAlign = "Left"
+    
+    TableCompleteColumn "|"
+    
+    sstrColumnAlign = "Center"
+    
+    TableCompleteColumn "|"
+    
+    sstrColumnAlign = "Right"
+    
+    TableCompleteColumn "|"
+  
+  Else
+    sstrColumnWidth = 120 \ (intMax + 1)
+    
+    TableColumnAlign "Left"
+
+    For i = 0 to intMax - 1
+      TableCompleteColumn i
+      
+      sstrColumnAlign "Center"
+  
+    Next
+
+    sstrColumnAlign = "Right"
+    
+    TableCompleteColumn intMax
+    TableEndRow
+  
+    TableBeginRow 1
+  
+    sstrColumnWidth 60
+
+    If intTotal > 0 Then
+      TableCompleteColumn "&nbsp;<B>" & ZTIInt(sintTotal) & "<B>&nbsp;"
+    
+    End If 
+  
+    TableCompleteColumn "&nbsp;"
+    
+    sstrColumnAlign = "Left"
+    sstrColumnWidth = 120 \ (intMax + 1)
+    
+    For i = 0 to intMax - 1
+      TableCompleteColumn "|"
+
+      sstrColumnAlign = "Center"
+    
+    Next
+  
+    sstrColumnAlign = "Right"
+
+    TableCompleteColumn "|"
+
+  End If 
+
+  TableEndRow
+  
+  TableNormalEnd
+  
+  TableEndColumn
+  
+  sstrColumnAlign = ""
+  sstrColumnWidth = ""
+  sstrRowBGColor = strCor
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Sub TableGraphLegend
+
+REM -------------------------------------------------------------------------
+REM Mostra a Lista de Acessos
+REM -------------------------------------------------------------------------
+Sub TableCompleteColumn(ByVal strText)
+
+  TableBeginColumn
+
+  Response.Write strText
+
+  TableEndColumn
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Sub TableCompleteColumn
+</script>
+
+</scriptlet>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-7"?>
+<culture module="search" code="el" contact="info@ploegos.net" encoding="iso-8859-7" name="greek" translatorname="Christos Delivorias"  version="0">
+	<strings>
+		<!-- content type names -->
+		<string id="results">Αποτελέσματα έρευνας</string>
+		<string id="box">Περιοχή έρευνας</string>
+		<!-- search box relates strings -->
+		<string id="search_button_label">Έρευνα</string>
+		<!-- search results relates strings -->
+		<string id="search_results_title">Αποτελέσματα έρευνας: </string>
+		<string id="search_too_short">Η λέξη της έρευνας πρέπει να είναι τουλάχιστον 4 χαρακτήρες μήκος !</string>
+		<string id="pagesfound">σελίδα(ες) βρέθηκαν κατα την έρευνα:</string>
+		<string id="searchtook">Η έρευνα διάρκησε:</string>
+		<string id="seconds">δευτερόλεπτα</string>
+		<string id="noresults">Δεν βρέθηκαν σελίδες που να περιέχουν </string>
+	</strings>
+</culture>

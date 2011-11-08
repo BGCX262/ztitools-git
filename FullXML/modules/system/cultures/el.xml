@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="iso-8859-7"?>
+<culture module="system" code="el" contact="info@ploegos.net"  encoding="iso-8859-7" name="greek" translatorname="Christos Delivorias" version="0">
+	<strings>
+		<string id="type">Πληκτρολόγησε</string>
+		<string id="description">Περιγραφή</string>
+		<string id="url">Διεύθυνση</string>
+		<string id="help">Βοήθεια</string>
+		<string id="version">Έκδοση</string>
+		<!-- FULLXML 4 general vocable -->
+		<string id="goadmin">Κονσόλα Διαχείρησης</string>
+		<string id="controlpanel">Πίνακας Ελέγχου</string>
+		<string id="websitemanager">Διαχειριστής Ιστοσελίδας</string>
+		<string id="settings">Ρυθμίσεις</string>
+		<string id="authenticated">πιστοποιήθηκε</string>
+		<string id="create">Δημιουργία...</string>
+		<string id="delete">Διαγραφή</string>
+		<string id="edit">Επεξεργασία...</string>
+		<string id="ok"> OK </string>
+		<string id="cancel">’κυρο</string>
+		<string id="confirmdelete">Σίγουρα θέλετε να το διαγράψετε ; </string>
+		<string id="yes">Ναι</string>
+		<string id="no">Όχι</string>
+		<string id="back">Προηγούμενο</string>
+		<string id="next">Επόμενο</string>
+		<string id="close">Κλείσιμο</string>
+		<string id="enter">Είσοδος</string>
+		<string id="add">Προσθήκη...</string>
+		<string id="default">Αρχικό</string>
+		<string id="online">Online</string>
+		<string id="false">Λάθος</string>
+		<string id="true">Σωστό</string>
+		<string id="culture">Γλώσσα</string>
+		<string id="exectime">Χρόνος εκτέλεσης</string>
+		<string id="id">ID</string>
+		<string id="name">Όνομα</string>
+		<string id="startdatetime">Αρχή ημερομηνίας</string>
+		<string id="enddatetime">Τέλος ημερομηνίας</string>
+		<string id="writer">Συγγραφέας</string>
+		<string id="browse">Ξεφύλλισμα</string>
+		<string id="published">Δημοσιευμένο</string>
+		<string id="inprogress">Σε εξέλιξη</string>
+		<string id="activeusers">ενεργός χρήστης/ες</string>
+		<!-- webmasters -->
+		<!--
+		<string id="administrators">Διαχειριστές</string>
+		<string id="administrator">Διαχειριστής</string>
+		
+		<string id="debug">Κατάσταση διόρθωσης</string>
+		<string id="type_administrator"> Διαχειριστής Fullxml</string>
+		<string id="type_webmaster">Διαχειριστής</string>
+		<string id="type_poweruser">Υπερχρήστης</string>
+		-->
+		<!-- websites -->
+		<string id="websites">Ιστοσελίδες</string>
+		<string id="website">Ιστοσελίδα</string>
+		<string id="websitename">Όνομα Ιστοσελίδας</string>
+		<string id="copyright">Πνευματικά Δικαιώματα</string>
+		<string id="slogan">Slogan</string>
+		<string id="model">Μοντέλο ιστοσελίδας</string>
+		<string id="publicmodel">Κοινόχρηστο μοντέλο</string>
+		<string id="customerservicemodel">Υπηρεσιακό-Πελατειακό μοντέλο</string>
+		<string id="signupmodel">Μοντέλο εγγραφής</string>
+		<string id="privatemodel">Ιδιωτικό μοντέλο</string>
+		<string id="forprofitmodel">Κερδοσκοπικό μοντέλο</string>
+		<!-- Website tree -->
+		<string id="websitetree">Δέντρο ιστοσελίδας</string>
+		<!-- Menus -->
+		<string id="menus">Κατάλογοι</string>
+		<string id="menu">Κατάλογος</string>
+		<string id="addmenu">Προσθήκη Μενού</string>
+		<string id="editmenu">Επεξεργασία Μενού</string>
+		<!-- Webpages -->
+		<string id="pages">Σελίδες</string>
+		<string id="page">Σελίδα</string>
+		<string id="webpages">Ιστοσελίδες</string>
+		<string id="webpage">Ιστοσελίδα</string>
+		<string id="addpage">Προσθήκη σελίδας</string>
+		<string id="editpage">Επεξεργασία σελίδας</string>
+		<string id="deletepage">Διαγραφή σελίδας</string>
+		<string id="metatitle">META Τίτλος</string>
+		<string id="metakeywords">META Λέξεις κλειδιά</string>
+		<string id="metadescription">META Περιγραφή</string>
+		<string id="presentation">Παρουσίαση</string>
+		<string id="automenu">Εμφάνιση αυτόματου καταλόγου</string>
+		<string id="menuoff">Χωρίς αυτόματο κατάλογο</string>
+		<string id="menuleft">Αυτόματοι κατάλογοι στο αριστερό περιθώριο</string>
+		<string id="menuright">Αυτόματοι κατάλογοι στο δεξιό περιθώριο</string>
+		<string id="inmenu">Προσθήκη της σελίδας στον αυτόματο κατάλογο</string>
+		<string id="link">Σύνδεση</string>
+		<string id="target">Προορισμός</string>
+		<string id="specialpages">Ειδικές σελίδες</string>
+		<!-- placeholders -->
+		<string id="placeholders">Placeholders</string>
+		<string id="placeholder">Placeholder</string>
+		<string id="paging">Σεδλιδοποίηση</string>
+		<string id="pagesize">Μέγεθος σελίδας</string>
+		<!-- Content -->
+		<string id="insertcontent">Προσθήκη περιεχομένου</string>
+		<string id="contents">Περιεχόμενα</string>
+		<string id="content">Περιεχόμενο</string>
+		<string id="moveup">’νοδος θέσης</string>
+		<string id="movedown">Κάθοδος θέσης</string>
+		<string id="confirmdeletecontent">Θέλετε να διαγράψετε αυτό το περιεχόμενο ;</string>
+		<string id="confirmmoveupcontent">Θέλετε να μετακινήσετε προς τα πάνω αυτό το περιεχόμενο ;</string>
+		<string id="confirmmovedowncontent">Θέλετε να μετακινήσετε προς τα κάτω αυτό το περιεχόμενο ;</string>
+		<string id="confirmchangebox">Θέλετε να αλλάξετε αυτό το κουτί περιεχομένου ;</string>
+		<!-- content type : Html Text -->
+		<string id="text">Κείμενο</string>
+		<string id="html">HTML</string>
+		<string id="asp">ASP</string>
+		<string id="announcement">Ανακοινώσεις</string>
+		<string id="xmlxsl">XML / XSL</string>
+		<!-- Content type : Image -->
+		<string id="image">Εικόνα</string>
+		<string id="path">Διαδρομή</string>
+		<string id="width">Πλάτος</string>
+		<string id="height">Ύψος</string>
+		<string id="align">Στοίχιση</string>
+		<string id="valign">Κατακόρυφη στοίχηση</string>
+		<string id="border">Περιθώριο</string>
+		<string id="hspace">Οριζόντιος χώρος</string>
+		<string id="vspace">Κατακόρυφος χώρος</string>
+		<string id="preview">Προεπισκόπιση</string>
+		<!-- content type : headlines -->
+		<string id="more">Περισσότερα...</string>
+		<!-- Content type : Article -->
+		<string id="title">Τίτλος</string>
+		<string id="subtitle">Υπότιτλος</string>
+		<string id="headlines">Επικεφαλίδα</string>
+		<!--  Content type : Syndication -->
+		<string id="xml">Πηγή Xml</string>
+		<string id="xsl">Πηγή Xsl</string>
+		<string id="cachetimeout">Cache timeout (min.)</string>
+		<!-- Content type : Sitemap -->
+		<string id="sitemap">Περιεχόμενα</string>
+		<!-- Content type : Iframe -->
+		<string id="iframe">Iframe</string>
+		<string id="frameborder">Όρια πλαισίου</string>
+		<string id="scrolling">Συρώμενη μπάρα (ναι / όχι)</string>
+		<string id="marginwidth">Μήκος περιθώριου</string>
+		<string id="marginheight">Ύψος περιθώριου</string>
+		<string id="bordercolor">Χρώμα ορίου</string>
+		<!-- Modules -->
+		<string id="modules">Υποεφαρμογές</string>
+		<string id="module">Υποεφαρμογή</string>
+		<string id="contenttype">Content type</string>
+		<!-- Skins -->
+		<string id="skins">Κέλυφη</string>
+		<string id="skin">Κέλυφος</string>
+		<string id="templates">Πρότυπα</string>
+		<string id="template">Πρότυπο</string>
+		<string id="themes">Θέματα</string>
+		<string id="theme">Θέματ</string>
+		<string id="autodetect">Αυτόματη ανίχνευση</string>
+		<string id="boxes">Κουτιά</string>
+		<string id="box">Κουτί</string>
+		<string id="nobox">Χωρίς κουτί</string>
+		<!---->
+		<!--Tool : fileexplorer -->
+		<string id="fileexplorer">Διαχείρηση αρχείων</string>
+		<string id="filename">Όνομα</string>
+		<string id="filesize">Μέγεθος</string>
+		<string id="filetype">Πληκτρολόγηση</string>
+		<string id="filemodified">Αλλαγμένο</string>
+		<string id="fileupload">’νέβασμα αρχείου</string>
+		<string id="upload">Ανέβασμα</string>
+		<string id="uploadfiles">’νέβασμα αρχείων</string>
+		<string id="foldercreated">δημιουργήθηκε ο φάκελος</string>
+		<string id="parentfolder">Προερχόμενος φάκελος</string>
+		<string id="newfolder">Νεός φάκελος</string>
+		<string id="deletefolder">Διαγραφή φακέλου</string>
+		<string id="file">Αρχείο</string>
+		<!-- Users -->
+		<string id="users">Χρήστες</string>
+		<string id="user">Χρήστης</string>
+		<string id="usersmanager">Διαχειριστής χρηστών</string>
+		<string id="firstname">Όνομα</string>
+		<string id="lastname">Επώνυμο</string>
+		<string id="address">Διεύθυνση</string>
+		<string id="city">Πόλη</string>
+		<string id="zipcode">Τ.Κ.</string>
+		<string id="country">Χώρα</string>
+		<string id="phone">Τηλέφωνο</string>
+		<string id="role">Διακαιώματα</string>
+		<string id="administrator">Διαχειριστή</string>
+		<string id="webmaster">Webmaster</string>
+		<string id="author">Συγγραφέα</string>
+		<string id="moderator">Μεσολαβητή</string>
+		<string id="contributor">Συνεισφορέα</string>
+		<string id="anonymous">Ανώνυμου</string>
+		<string id="alias">Ψευδώνυμο</string>
+		<string id="email">Email</string>
+		<string id="signature">Υπογραφή</string>
+		<string id="password">Συνθηματικό</string>
+		<string id="opensession">Open session</string>
+		<string id="createaccount">Δημιουργία λογαριασμού</string>
+		<string id="myprofile">Το προφίλ μου</string>
+		<string id="closesession">Έξοδος</string>
+		<string id="logindetails">Παρακαλώ, δώστε τις πληροφορίες εισόδου σας.</string>
+		<string id="keepmelogged">Διατήρηση της εισόδου σε αυτόν τον υπολογιστή.</string>
+		<string id="loginfailed">Η προσπάθεια εισόδου απέτυχε. Παρακαλώ δοκιμάστε ξανά.</string>
+		<string id="forgottenpassword">Ξεχάσατε το συνθηματικό ;</string>
+		<string id="emailisnotavailable">Το συγκεκριμένο email χρησιμοποιείται ήδη από άλλο χρήστη (εσάς;).</string>
+		<string id="aliasisnotavailable">Το συγκεκριμένο ψευδώνυμο χρησιμοποιείται ήδη από άλλο χρήστη. Παρακαλώ δοκιμάστε κάποιο άλλο.</string>
+		<string id="alreadyregister">Έχετε ήδη λογαριασμό; Κάντε είσοδο στοιχείων από εδώ.</string>
+		<string id="uncompleteform">Το email, το ψευδώνυμο και το συνθηματικό, είναι υποχρεωτικά πεδία!</string>
+		<string id="sucessfullyregistered">Έχετε εγγραφεί επιτυχώς. Τώρα μπορείτε να εισέλθετε.</string>
+		<!-- Logs -->
+		<string id="logs">Αρχεία</string>
+		<!-- STATS -->
+		<string id="webtraffic">Κίνηση ιστοσελίδας</string>
+		<string id="summary">Περίληψη</string>
+		<string id="webtrafficsummarydesc">Αυτή η αναφορά εμφανίζει μια εκτενή αναφορά των στατιστικών κίνησης της ιστοσελίδας.</string>
+		<string id="pageviews">Θεάσεις σελίδων</string>
+		<string id="totalusers">Συνολικοί χρήστες</string>
+		<string id="mostpopularpages">Δημοφιλέστερες σελίδες</string>
+		<string id="mostactiveusers">Πιο δραστήριοι χρήστες</string>
+		<string id="mostusedlanguages">Περισσότερο χρησιμοποιούμενες γλώσσες</string>
+		<string id="mostusedbrowsers">Περισσότερο χρησιμοποιούμενοι browsers</string>
+		<string id="ipaddress">IP Διυθύνσεις</string>
+		<string id="hits">Επισκέψεις</string>
+		<string id="languages">Γλώσσες</string>
+		<string id="language">Γλώσσα</string>
+		<string id="browsers">Browsers</string>
+		<string id="browser">Browser</string>
+		<string id="date">Ημερομηνία</string>
+		<string id="selectadate">Επιλέξτε ημερομηνία</string>
+		<!-- Fullxml updates -->
+		<string id="fullxmlupdate">Αναβάθμιση Fullxml</string>
+		<string id="welcomefullxmlupdate">Καλώς ήρθατε στο χώρο αναβαθμίσεων του Fullxml</string>
+		<string id="fullxmlupdatemsg">Κατεβάστε την τελευταία έκδοση του FULLXML. Η Αναβάθμιση του Fullxml ανιχνεύει την έκδοσή σας και σας παρέχει μια γκάμα αναβαθμίσεων ειδικά για εσάς.</string>
+		<string id="scanupdates">Ανίχνευσή για Αναβαθμίσεις</string>
+		<string id="noversion"> Η Αναβάθμιση του Fullxml δεν μπορεί να συλλέξει πληροφορίες για την τρέχουσα αγκατάστασή σας.</string>
+		<string id="downloadsize">Μέγεθος αρχείων: </string>
+		<string id="startdownload">κατέβασμα</string>
+		<string id="kilobyte">Kb</string>
+		<string id="fullxmlupdatedown">Η Αναβάθμιση του Fullxml δεν μπόρεσε να ολοκληρωθεί λόγω αδυναμίας επαφής με την κεντρική ιστοσελίδα. Παρακαλώ δοκιμάστε αργότερα.</string>
+		<string id="noupdate">Η εγκατάστασή σας είναι η τελευταία υπάρχουσα.</string>
+		<string id="formerversions">Προηγούμενες εκδόσεις</string>
+		<!-- tool :: links -->
+		<string id="links">Συνδέσεις</string>
+		<string id="link.label">Ετικέτα</string>
+		<string id="link.url">Διεύθυνση</string>
+		<string id="link.count">Μετρητής</string>
+	</strings>
+</culture>

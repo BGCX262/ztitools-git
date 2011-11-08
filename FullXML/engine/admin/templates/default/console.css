@@ -1,0 +1,99 @@
+/* PAGE STYLES */
+body {color: #000000; font: messagebox;  border: 1px outset; background: #ffffff; margin: 0px;}
+th {font: smallcaption; text-align: left;}
+td {font: messagebox;}
+a.smallcommand {font-size: 9px}
+
+span.error {border: 1px black solid; backgound: #ffffef; color: red; font: 8pt arial; padding: 4px}
+
+input.buttons {width: 75px; height: 23px; border: 1px outset;}
+
+/* WORKSPACE STYLES */
+table.workspace {border-top: 1px white solid; width: 100%; height: 600px; background: #ffffff}
+table.workspace td.margin {width: 200px; background: #8cade7; text-align: center; padding-top: 11px;}
+table.workspace td.separator { background: #2459C3; width: 3px;}
+table.workspace td.main { padding-left: 2px; text-align: left; }
+
+/* HEADER STYLES */
+table.header {border-top: 1px white solid; width: 100%; height: 20px; background: #8cade7; text-align: left; color: White;}
+table.header td {font: messagebox;}
+
+/* LEFT PANEL STYLES */
+table.menu {width: 175px; border: 1px #5284d6 solid; background: #EDF2FC;}
+table.menu caption {padding-left: 12px; color: white; background: #0148B2; height: 24px; font-weight: bold; font-family: arial; font-size: 12px}
+table.menu caption a, table.menu caption a:visited, table.menu caption a:active {color: white; font-weight: bold; font-family: arial; font-size: 12px; text-decoration: none;}
+table.menu tr.separator td { border-top: 1px #808080 solid; border-bottom: 1px white solid; height: 0px; }
+table.menu a, table.menu a:visited, table.menu a:active {font: 11px tahoma; text-decoration: none; color: blue;}
+table.menu a:hover {text-decoration: none; color: orange;}
+
+/*
+table.project th {text-align: left; font: 11px tahoma; font-weight: bold;}
+table.project td {font: tahoma 10px;}
+
+table.project td a, table.project td a:active, table.project td a:visited {font: 10px tahoma; text-decoration: none; color: blue;}
+table.project td a:hover {font: messagebox; text-decoration: none; color: #aa0000}
+
+table.project th a, table.project th a:active, table.project th a:visited {font: 12px tahoma;  text-decoration: none; color: black;}
+table.project th a:hover {font: smallcaption; text-decoration: none; color: #666666}
+*/
+
+
+/* TOOLBAR STYLES */
+table.toolbar {width: 100%; height: 80px; background: #6487DC; border-bottom: 1px white solid;}
+table.toolbar tr.title td {padding-left: 24px;font-family: arial; font-size: 26px; color: white; font-weight: bold;}
+table.toolbar tr.links td {font-size: 11px; padding-left: 15px; padding-right: 15px;}
+table.toolbar a {font-weight: bold; font-family: arial; color: white; text-decoration: none;}
+table.toolbar a:hover {color: #AEB2FE}
+
+/* ACTION FORM */
+span.actiontitle {height: 35px; width: 100%; color: #5A7EDC; font: 18px arial; text-align: left; font-weight: bold;}
+
+/*  DATAGRIDS STYLES */
+table.datagrid {width: 650px; padding: 1px; behavior: url(../../tblSort.htc)} 
+table.datagrid caption {font-family: arial; border: 0px; height: 20px; font-size: 12px; text-align: left; padding-left: 4px; background: #0148B2; color: white; font-weight: bold;}
+table.datagrid a, table.datagrid a:active, table.datagrid a:visited {text-decoration: none; color: blue;}
+table.datagrid a:hover {color: red;}
+
+tr.datagrid_column th {font-weight: normal; text-align: left; padding-left: 4px; font-size: 12px; font-family: arial; height: 20px; background: #D4D0C8; border-top: 1px #ffffff solid; border-left: 1px #ffffff solid; border-bottom: 1px #808080 solid; border-right: 1px #808080 solid;}
+
+/*tr.datagrid_row {BEHAVIOR: url(engine/admin/datagrid_row.htc);}*/
+tr.datagrid_row th {  width: 16px;text-align: left; padding-left: 4px; font-weight: normal; font-size: 12px; font-family: arial; height: 18px; background: #D4D0C8; border-top: 1px #ffffff solid; border-left: 1px #ffffff solid; border-bottom: 1px #808080 solid; border-right: 1px #808080 solid;}
+tr.datagrid_row td {text-align: left; padding-left: 2px; font-weight: normal; font-size: 12px; font-family: arial; height: 18px;  border-top: 1px #ffffff solid; border-left: 1px #ffffff solid; border-bottom: 1px #D4D0C8 solid; border-right: 1px #D4D0C8 solid;}
+tr.datagrid_newrow th {text-align: center; padding-left: 4px; font-weight: normal; font-size: 14px; font-family: arial; height: 18px; background: #D4D0C8; border: 1px #D4D0C8 solid; }
+tr.datagrid_newrow td {text-align: left; padding-left: 2px; font-weight: normal; font-size: 12px; font-family: arial; height: 18px; background: #ffffff; border-top: 1px #ffffff solid; border-left: 1px #ffffff solid; border-bottom: 1px #D4D0C8 solid; border-right: 1px #D4D0C8 solid;}
+tr.datagrid_editrow th {width: 150px; font-weight: normal; text-align: left; padding-left: 4px; font-size: 12px; font-family: arial; height: 18px; background: #D4D0C8; border-top: 1px #ffffff solid; border-left: 1px #ffffff solid; border-bottom: 1px #808080 solid; border-right: 1px #808080 solid;}
+tr.datagrid_editrow td {text-align: left; padding-left: 2px; font-weight: normal; font-size: 12px; font-family: arial; height: 25px; background: #ffffff; border-top: 1px #ffffff solid; border-left: 1px #ffffff solid; border-bottom: 1px #D4D0C8 solid; border-right: 1px #D4D0C8 solid;}
+tr.datagrid_editrow td textarea {font-size: 11px; width: 500px; height: 300px; border: 1px #c0c0c0 inset; background: #f5f5f5}
+tr.datagrid_editrow td textarea.small {height: 100px;}
+tr.datagrid_editrow td textarea.medium {height: 200px;}
+tr.datagrid_editrow td textarea.large {height: 300px;}
+tr.datagrid_editrow td input.large{width: 400px; border: 1px #c0c0c0 inset; background: #f5f5f5}
+tr.datagrid_editrow td input.medium{width: 200px; border: 1px #c0c0c0 inset; background: #f5f5f5}
+tr.datagrid_editrow td input.small{width: 50px; border: 1px #c0c0c0 inset; background: #f5f5f5}
+tr.datagrid_buttonrow td {text-align: right; padding-left: 14px; font-weight: normal; font-size: 14px; font-family: arial; height: 18px; background: #D4D0C8; border: 1px #D4D0C8 solid;}
+tr.datagrid_buttonrow td input {width: 75px; height: 23px; border: 1px outset;}
+tr.file td { padding-left: 4px; padding-right: 4px; font-weight: normal; font: 12px arial; height: 15px; }
+
+
+/* EXPLORER STYLES */
+table.explorer {width: 700px; background: #FFFFFF; border: 2px inset; }
+table.explorer caption {font-family: arial; border: 1px black solid; font-size: 12px; text-align: left; padding-left: 4px; background: #0A246A; color: white; font-weight: bold;}
+table.explorer tr td { font-family: arial; font-size: 12px; }
+table.explorer tr td a { text-decoration: none; color: black; background: white; padding-left: 4px; padding-right: 4px;}
+table.explorer tr td a:hover { color: white; background: #0A246A;}
+.menuskin{ position:absolute; width:165px; background-color:menu; border:2px outset; font:normal 12px Verdana; line-height:18px; z-index:100; visibility:hidden;}
+.menuskin a{ text-decoration:none; color:black; padding-left:10px; padding-right:10px;}
+#mouseoverstyle{ background-color:highlight; }
+#mouseoverstyle a{ color:white; }
+
+
+/* sub menus */
+div.tabs {width: 650px; text-align: right;}
+table.tabs {width: 400px; border: 0px #808080 solid; text-align: center; height: 20px;}
+table.tabs a, table.tabs a:visited, table.tabs a:active {color: blue; text-decoration: none;}
+table.tabs a:hover {color: red; text-decoration: none;}
+
+/* WINDOWS TOOLBAR LIKE */
+table.tb {background: menu; width: 100%; border: 0px; border-bottom: 1px #808080 solid; border-left: 1px white solid; height: 30px;padding: 4px;}
+table.tb a {margin-right: 5px; margin-left: 5px; font: messagebox; color: black; border: 1px menu solid; padding-left: 2px; padding-right: 2px; padding: 2px;}
+table.tb a:hover {border: 1px black solid; background-color: #B6BDD2;}

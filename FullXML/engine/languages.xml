@@ -1,0 +1,142 @@
+<languages>
+	<!-- 
+	*****************************************************************************
+	** LCID reference 
+	** http://www.themanualpage.org/asp/asp_session_lcid.php3 **
+	** http://www.microsoft.com/globaldev/reference/lcid-all.mspx
+	**
+	** LANGUAGE CODE
+	** http://www.asptutorial.info/sscript/languages.asp
+	*****************************************************************************
+	-->
+	<language id="ba" name="Bosnian" file="ba" lcid="5146"/>
+	<language id="pt-br" name="Brazilian" file="pt-br" lcid="1046" encoding="iso-8859-1"/>
+	<language id="da" name="Danish" file="da" lcid="1030" encoding="iso-8859-1"/>
+	<language id="nl" name="Dutch" file="nl" lcid="1043" encoding="utf-8"/>
+	<language id="nl-be" name="Dutch - Belgium" file="nl" lcid="2067"/>
+	<language id="en-gb" name="English - England" file="en" lcid="2057"/>
+	<language id="en-us" name="English - USA" file="en" lcid="1033"/>
+	<language id="en-nz" name="English - New Zealand" file="en" lcid="5129"/>
+	<language id="en-au" name="English - Australia" file="en" lcid="3081"/>
+	<language id="fi" name="Finish" file="fi" lcid="1035"/>
+	<language id="fr" name="French (France)" file="fr" lcid="1036" encoding="iso-8859-1"/>
+	<language id="fr-ca" name="French (Canada)" file="fr" lcid="3084" encoding="iso-8859-1"/>
+	<language id="fr-ch" name="French (Swizerland)" file="fr" lcid="4108" encoding="iso-8859-1"/>
+	<language id="de" name="German" file="de" lcid="1031"/>
+	<language id="el" name="Greek" file="el" lcid="1032" encoding="iso-8859-7"/>
+	<language id="it" name="Italian" file="it" lcid="1040" encoding="iso-8859-1"/>
+	<language id="no" name="Norvegian" file="no" lcid="1044"/>
+	<language id="pt" name="Portuguese" file="pt" lcid="2070" encoding="iso-8859-1"/>
+	<language id="ru" name="Russian" file="ru" lcid="1049"/>
+	<language id="es" name="Spanish" file="es" lcid="1034" encoding="iso-8859-1"/>
+	<language id="sw" name="Swedish" file="sv" lcid="1053" encoding="iso-8859-1"/>
+	<language id="tr" name="Turkish" file="tr" lcid="1055" encoding="iso-8859-9"/>
+	<!--
+		Afrikaans (af)
+		Albanian (sq)
+		Basque (eu)
+		Bulgarian (bg)
+		Byelorussian (be)
+		Catalan (ca)
+		Chinese (zh)
+		Chinese/China (zh-cn)
+		Chinese/Taiwan (zh-tw)
+		Chinese/Hong Kong (zh-hk)
+		Chinese/singapore (zh-sg)
+		Croatian (hr)
+		Czech (cs)
+		Danish (da)
+		Dutch (nl)
+		Dutch/Belgium (nl-be)
+		English (en)
+		English/United Kingdom (en-gb)
+		English/United Satates (en-us)
+		English/Australian (en-au)
+		English/Canada (en-ca)
+		English/New Zealand (en-nz)
+		English/Ireland (en-ie)
+		English/South Africa (en-za)
+		English/Jamaica (en-jm)
+		English/Belize (en-bz)
+		English/Trinidad (en-tt)
+		Estonian (et)
+		Faeroese (fo)
+		Farsi (fa)
+		Finnish (fi)
+		French (fr)
+		French/Belgium (fr-be)
+		French/France (fr-fr)
+		French/Switzerland (fr-ch)
+		French/Canada (fr-ca)
+		French/Luxembourg (fr-lu)
+		Gaelic (gd)
+		Galician (gl)
+		German (de)
+		German/Austria (de-at)
+		German/Germany (de-de)
+		German/Switzerland (de-ch)
+		German/Luxembourg (de-lu)
+		German/Liechtenstein (de-li)
+		Greek (el)
+		Hindi (hi)
+		Hungarian (hu)
+		Icelandic (is)
+		Indonesian (id or in)
+		Irish (ga)
+		Italian (it)
+		Italian/ Switzerland (it-ch)
+		Japanese (ja)
+		Korean (ko)
+		Latvian (lv)
+		Lithuanian (lt)
+		Macedonian (mk)
+		Malaysian (ms)
+		Maltese (mt)
+		Norwegian (no)
+		Polish (pl)
+		Portuguese (pt)
+		Portuguese/Brazil (pt-br)
+		Rhaeto-Romanic (rm)
+		Romanian (ro)
+		Romanian/Moldavia (ro-mo)
+		Russian (ru)
+		Russian /Moldavia (ru-mo)
+		Scots Gaelic (gd)
+		Serbian (sr)
+		Slovack (sk)
+		Slovenian (sl)
+		Sorbian (sb)
+		Spanish (es or es-do)
+		Spanish/Argentina (es-ar)
+		Spanish/Colombia (es-co)
+		Spanish/Mexico (es-mx)
+		Spanish/Spain (es-es)
+		Spanish/Guatemala (es-gt)
+		Spanish/Costa Rica (es-cr)
+		Spanish/Panama (es-pa)
+		Spanish/Venezuela (es-ve)
+		Spanish/Peru (es-pe)
+		Spanish/Ecuador (es-ec)
+		Spanish/Chile (es-cl)
+		Spanish/Uruguay (es-uy)
+		Spanish/Paraguay (es-py)
+		Spanish/Bolivia (es-bo)
+		Spanish/El salvador (es-sv)
+		Spanish/Honduras (es-hn)
+		Spanish/Nicaragua (es-ni)
+		Spanish/Puerto Rico (es-pr)
+		Sutu (sx)
+		Swedish (sv)
+		Swedish/Findland (sv-fi)
+		Thai (ts)
+		Tswana (tn)
+		Turkish (tr)
+		Ukrainian (uk)
+		Urdu (ur)
+		Vietnamese (vi)
+		Xshosa (xh)
+		Yiddish (ji)
+		Zulu (zu)
+
+	-->
+</languages>

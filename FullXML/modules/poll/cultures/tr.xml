@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<culture module="poll" code="tr" contact="eminantalya@hotmail.com" encoding="iso-8859-9" name="turkish" translatorname="Emin CAKI"  version="0">
+	
+	<section id="general">
+		<string id="modulehelp">anket modülünde yardım</string>
+	</section>
+	<section id="contenttypes">
+		<string id="poll">Anket</string>
+	</section>
+	<section id="contenttype_poll">
+		<string id="defaultname">Yeni anket</string>
+		<string id="pollvote">Vote!</string>
+		<string id="selectapoll">Bir anket seç:</string>
+		<string id="newpoll">Yeni anket oluştur</string>
+		<string id="editpoll">Seçilen anketi düzenle</string>
+	</section>
+	<section id="tools">
+		<string id="polls">Anketler</string>
+	</section>
+	<section id="tool_polls">
+		<string id="polls">Anketler</string>
+		<string id="poll">Anket</string>
+		<string id="pollquestion">Anket sorusu</string>
+		<string id="pollchoice">Seç</string>
+	</section>
+</culture>

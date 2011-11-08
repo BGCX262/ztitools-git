@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<culture code="nl" module="poll" contact="Chris@fullxml.nl" encoding="utf-8" name="nederlands" translatorname="Christian Baerends" version="2">
+	<section id="general">
+		<string id="modulehelp">hulp voor poll module</string>
+	</section>
+	<section id="contenttypes">
+		<string id="poll">Poll</string>
+	</section>
+	<section id="contenttype_poll">
+		<string id="defaultname">Nieuwe poll</string>
+		<string id="pollvote">Stem!</string>
+		<string id="selectapoll">Selecteer een poll:</string>
+		<string id="newpoll">Nieuwe poll</string>
+		<string id="editpoll">Wijzig de poll</string>
+	</section>
+	<section id="tools">
+		<string id="polls">Polls</string>
+	</section>
+	<section id="tool_polls">
+		<string id="polls">Polls</string>
+		<string id="poll">Poll</string>
+		<string id="pollquestion">Poll vraag</string>
+		<string id="pollchoice">Keuze</string>
+	</section>
+</culture>

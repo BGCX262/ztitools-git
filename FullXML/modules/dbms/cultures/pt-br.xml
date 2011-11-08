@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<culture code="pt-br" module="dbms" contact="eduardo.azambuja@uol.com.br" encoding="iso-8859-1" name="brazilian" translatorname="Eduardo Azambuja" version="1">
+	<section id="help"/>
+	<section id="general"/>
+	<section id="contenttypes">
+		<string id="adoxsl">Ado XSL</string>
+	</section>
+	<section id="contenttype_adoxsl">
+		<string id="defaultname">Novo XSL ADO</string>
+		<string id="connectionstring">String de conexão ADO</string>
+		<string id="sqlquery">Consulta SQL</string>
+		<string id="xsltemplate">Caminho da template XSL</string>
+	</section>
+</culture>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="poll" code="fr" contact="john@fullxml.com" encoding="iso-8859-1" name="french" translatorname="John Roland"  version="0">
+	<strings>
+		<string id="modulehelp">Aide sur le module sondage...</string>
+		<!-- Content type : poll -->
+		<string id="polls">Sondages</string>
+		<string id="poll">Sondage</string>
+		<string id="pollquestion">Question</string>
+		<string id="pollchoice">Choix</string>
+		<string id="pollvote">Votez!</string>
+		<string id="selectapoll">Selectionnez un sondage :</string>
+		<string id="newpoll">Créer un nouveau sondage</string>
+		<string id="editpoll">Modifier le sondage selectionné</string>
+		<!-- Content type :: existingpoll -->
+		<string id="existingpoll">Sondage existant</string>
+	</strings>
+</culture>

@@ -1,0 +1,19 @@
+<table class=poll cellpadding=0 cellspacing=0 border=0>
+	<form method=post action="{{poll_formaction}}">
+	<input type=hidden name=action value=do_pollvote>
+	<input type=hidden name=id value={{poll_ID}}">
+
+	<tr class=question>
+		<th>{{poll_question}}</th>
+	</tr>
+	<tr>
+		<td class=bar>
+			<!--#BeginBlock poll_item_block-->	
+			<input type=radio name={{poll_ID}}_choice id={{choice_ID}} value={{choice_ID}}>&nbsp;<label for={{choice_ID}}>{{choice_text}}</label><br>
+			<!--#EndBlock poll_item_block-->
+		</td>
+	</tr>
+	<tr class=bottom>
+		<td><input class=btnvote type=submit value="{{poll_vote}}"><td>
+	</tr>
+</form></table>

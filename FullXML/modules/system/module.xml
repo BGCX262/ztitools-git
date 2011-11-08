@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="system" author="John Roland" version="1.0" url="http://www.fullxml.com" independant="false" enabled="true">
+	<contenttypes>
+		<contenttype name="text" filename="contenttype_text.asp" caching="true" boxing="true"/>
+		<contenttype name="html" filename="contenttype_html.asp" caching="true" boxing="true"/>
+		<contenttype name="image" filename="contenttype_image.asp" caching="true" boxing="false"/>
+		<contenttype name="announcement" filename="contenttype_announcement.asp" caching="true" boxing="false"/>
+		<contenttype name="xmlxsl" filename="contenttype_xmlxsl.asp" caching="true" boxing="true"/>
+		<contenttype name="iframe" filename="contenttype_iframe.asp" caching="true" boxing="true"/>
+		<contenttype name="login" filename="contenttype_login.asp" caching="false" boxing="true"/>
+		<contenttype name="account" filename="contenttype_account.asp" caching="false" boxing="true"/>
+		<contenttype name="quicklinks" filename="contenttype_quicklinks.asp" caching="true" boxing="true"/>
+	</contenttypes>
+	<tools>
+		<tool name="fileexplorer" filename="tool_fileexplorer.asp"/>
+		<tool name="trackedlinks" filename="tool_trackedlinks.asp"/>
+	</tools>
+	<permissions>
+		<anonymous>
+			<webform id="webform_authentication_register"/>
+			<webform id="webform_authentication_login"/>
+			<webform id="webform_authentication_lost_password"/>
+			<action id="do_authentication_login"/>
+			<action id="do_authentication_register"/>
+		</anonymous>
+	
+		<authenticated>
+			<webform id="webform_system_fileexplorer"/>
+			<webform id="webform_authentication_profile"/>
+			<webform id="webform_system_fileexplorer_upload"/>
+			<action id="do_upload_files"/>
+			
+			<action id="do_authentication_update"/>
+			<action id="do_authentication_logoff"/>
+		</authenticated>
+	
+		<level id="0">
+						
+		</level>
+		<level id="1" autenticated="yes">
+			<action id="do_system_redirect"/>
+		</level>
+		<level id="2">
+			<webform id="webform_list_submited_contents"/>
+			<webform id="webform_insert_submited_content"/>
+			<webform id="webform_update_submited_content"/>		
+				
+			<action id="do_insert_submited_content"/>
+			<action id="do_update_submited_content"/>
+		</level>
+		<level id="3">
+			<webform id="webform_list_authored_contents"/>
+			<webform id="webform_insert_content"/>
+			<webform id="webform_update_content"/>
+			<action id="do_insert_content"/>
+			<action id="do_update_content"/>
+		</level>
+		<level id="4">
+			<webform id="webform_list_contents"/>
+			<webform id="webform_list_pending_contents"/>
+			<webform id="webform_edit_content"/>
+			<webform id="webform_moveup_content"/>
+			<webform id="webform_movedown_content"/>
+			<webform id="webform_changebox_content"/>
+		</level>
+		<level id="5">
+			<webform id="webform_webtraffic_settings"/>
+			<webform id="webform_webtraffic_summary"/>
+			<webform id="webform_webtraffic_pages"/>
+			<webform id="webform_webtraffic_users"/>
+			<webform id="webform_webtraffic_languages"/>
+			<webform id="webform_webtraffic_browsers"/>
+		</level>		
+	</permissions>
+</module>

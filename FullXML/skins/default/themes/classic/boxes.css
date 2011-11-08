@@ -1,0 +1,23 @@
+/* NORMAL.HTML */
+table.normal {width: 100%; border: 1px #cccccc solid;}
+table.normal th {border-bottom: 1px #cccccc solid; background: #eeeeee; font: 7pt verdana; color: #505050; font-weight: bold;text-align: left; padding-left: 6px; text-transform: uppercase; background-image: url(img/grad.png)}
+table.normal td {font: 8pt verdana; color: #000000; background-color: #ffffff;padding: 4px; }
+
+/* PRESENTATION */
+table.presentation {border-collapse: none; border: 1px #c0c0c0 solid; padding: 4px; background-color: #eeeeee; width: 100%}
+table.presentation td {font: 8pt verdana; text-align: justify}
+
+/* SPECIAL.HTML */
+table.special {border-collapse: none;  padding: 1px;  width: 100%; border: 1px #c0c0c0 solid}
+table.special th {background: white; font: 7pt verdana; font-weight: bold; color: c0c0c0; text-align: center; padding-left: 6px; text-transform: uppercase;}
+table.special td {font: 8pt verdana; color: #000000; background-color: #ffffff; padding-left: 6px; padding-right: 6px; padding-top: 2px; padding-bottom: 2px;}
+
+/* alternative.HTML */
+table.alternative {border-collapse: none;  padding: 0px;  width: 100%; border: 1px #cccccc solid;}
+table.alternative th {background: #CCCCCC; font: 7pt verdana; font-weight: bold; color: #333333; text-align: left; padding-left: 6px; text-transform: uppercase;}
+table.alternative td {border: 1px #cccccc solid; font: 8pt verdana; color: #000000; background-color: #ffffff; padding: 2px}
+
+/* Simple.HTML */
+table.simple {width: 100%; border: 0px; background: white;}
+table.simple th {border-bottom: 1px #505050 solid; font: 7pt verdana; color: #505050; font-weight: bold; text-align: left; text-transform: uppercase;}
+table.simple td {font: 8pt verdana; color: #000000; padding-left: 4px; padding-right: 4px;}

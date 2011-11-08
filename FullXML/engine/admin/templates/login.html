@@ -1,0 +1,32 @@
+<table border="0" cellspacing="5" cellpadding="4" width="100%" align="center" style="background-color:buttonface">
+<tr>
+ <td><fieldset><legend>{{message}}</legend><br>
+  <table border="0" cellspacing="0" cellpadding="0" width="100%" align="center" style="background-color:buttonface">
+   <tr>
+    <td>{{username}}:</td><td><input type="text" size="25" name="uid"></td>
+   </tr>
+   <tr>
+     <td>{{password}}:</td><td><input type="password" size="25" name="pwd"></td>
+   </tr>
+   <tr>
+     <td><input type="checkbox" name="rememberme" value="cookieme"></td><td>rere{{keepmelogged}}</td>
+   </tr>
+  </table>
+  </fieldset>
+ </td>
+</tr>
+<tr>
+ <td>
+  <table border="0" cellspacing="0" cellpadding="0" width="95%" align="center">
+   <tr>
+    <td width="100%" colspan="4" align="right">
+	<input type="submit" value="{{ok}}" class="buttons">
+	&nbsp;&nbsp;&nbsp;
+	<input type="button" value="{{cancel}}" class="buttons" onClick="window.close()">
+	</td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<tr><td><a href="user.asp?webform=DisplayPasswordForm&sID={{sid}}">Forgotten your password?</a> <a href="user.asp?action=DisplayRegisterForm&sID={{sid}}">register</a></td></tr>
+</table>

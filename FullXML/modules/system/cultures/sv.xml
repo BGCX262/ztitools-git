@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<culture module="system" code="sv" contact="anders.landenstad@telia.com" encoding="ISO-8859-1" name="Swedish" translatorname="A Landenstad" version="0">
+	<strings>
+		<string id="type">Typ</string>
+		<string id="description">Beskrivning</string>
+		<string id="url">URL</string>
+		<string id="help">Hjälp</string>
+		<string id="version">Version</string>
+		<!-- FULLXML 4 general vocable -->
+		<string id="goadmin">Admin konsol</string>
+		<string id="controlpanel">Kontrollpanel</string>
+		<string id="websitemanager">Webbside Manager</string>
+		<string id="settings">Inställningar</string>
+		<string id="authenticated">godkänd</string>
+		<string id="create">Ny...</string>
+		<string id="delete">Ta bort</string>
+		<string id="edit">Editera...</string>
+		<string id="ok"> OK </string>
+		<string id="cancel">Avbryt</string>
+		<string id="confirmdelete">Vill du verkligen ta bort ? </string>
+		<string id="yes">Ja</string>
+		<string id="no">Nej</string>
+		<string id="back">Bakåt</string>
+		<string id="next">Nästa</string>
+		<string id="close">Stäng</string>
+		<string id="enter">Enter</string>
+		<string id="add">Lägg till...</string>
+		<string id="default">Standard</string>
+		<string id="online">Online</string>
+		<string id="false">Falskt</string>
+		<string id="true">Sant</string>
+		<string id="culture">Språk</string>
+		<string id="exectime">Laddningstid</string>
+		<string id="id">ID</string>
+		<string id="name">Namn</string>
+		<string id="startdatetime">Start Datum/Tid</string>
+		<string id="enddatetime">Slut Datum/Tid</string>
+		<string id="writer">Skriv</string>
+		<string id="browse">Sök</string>
+		<string id="published">Utgiven</string>
+		<string id="activeusers">aktiv(a) anvädare</string>
+		<!-- webmasters -->
+		<!--
+		<string id="administrators">Administrators</string>
+		<string id="administrator">Administrator</string>
+		
+		<string id="debug">Debug mode</string>
+		<string id="type_administrator">Fullxml administrator</string>
+		<string id="type_webmaster">Webmaster</string>
+		<string id="type_poweruser">Power user</string>
+		-->
+		<!-- websites -->
+		<string id="websites">Webbsidor</string>
+		<string id="website">Webbsida</string>
+		<string id="websitename">Websidans namn</string>
+		<string id="copyright">Copyright</string>
+		<string id="slogan">Slogan</string>
+		<string id="model">Modell</string>
+		<string id="publicmodel">Offentlig modell</string>
+		<string id="customerservicemodel">Kundservice modell</string>
+		<string id="signupmodel">"Sign-up" modell</string>
+		<string id="privatemodel">Privat modell</string>
+		<string id="forprofitmodel">Kommerciell model</string>
+		<!-- Website tree -->
+		<string id="websitetree">Websidestruktur</string>
+		<!-- Menus -->
+		<string id="menus">Menyer</string>
+		<string id="menu">Meny</string>
+		<string id="addmenu">Ny meny</string>
+		<!-- Webpages -->
+		<string id="pages">Sidor</string>
+		<string id="page">Sida</string>
+		<string id="webpages">Webbsidor</string>
+		<string id="webpage">Webbsida</string>
+		<string id="addpage">Lägg till sida</string>
+		<string id="editpage">Ändra sida</string>
+		<string id="deletepage">Ta bort sida</string>
+		<string id="metatitle">META Titel</string>
+		<string id="metakeywords">META Nyckelord</string>
+		<string id="metadescription">META Beskrivning</string>
+		<string id="presentation">Presentation</string>
+		<string id="automenu">Visa automatisk meny</string>
+		<string id="menuoff">Ingen automatisk meny</string>
+		<string id="menuleft">Automatisk meny i vänsterspalten</string>
+		<string id="menuright">Automatisk meny i högerspalten</string>
+		<string id="inmenu">Använd denna sida i den automatiska menyn</string>
+		<string id="link">Länk</string>
+		<string id="target">Målram</string>
+		<string id="specialpages">Speciella sidor</string>
+		<!-- placeholders -->
+		<string id="placeholders">Spalter</string>
+		<string id="placeholder">Spalt</string>
+		<string id="paging">Sidvisning</string>
+		<string id="pagesize">Sidans storlek</string>
+		<!-- Content -->
+		<string id="insertcontent">Fyll på med innehåll</string>
+		<string id="contents">Innehåll</string>
+		<string id="content">Innehåll</string>
+		<string id="moveup">Flytta upp</string>
+		<string id="movedown">Flytta ner</string>
+		<string id="confirmdeletecontent">Vill du ta bort detta innehåll ?</string>
+		<string id="confirmmoveupcontent">Vill du flytta upp detta innehåll ?</string>
+		<string id="confirmmovedowncontent">Vill du flytta ner detta innehåll ?</string>
+		<string id="confirmchangebox">Vill du ändra utseendet på denna "box" ?</string>
+		<!-- content type : Html Text -->
+		<string id="text">Text</string>
+		<string id="html">HTML</string>
+		<string id="asp">ASP</string>
+		<string id="announcement">Meddelande</string>
+		<string id="xmlxsl">XML / XSL</string>
+		<!-- Content type : Image -->
+		<string id="image">Bild</string>
+		<string id="path">Sökväg</string>
+		<string id="width">Vidd</string>
+		<string id="height">Höjd</string>
+		<string id="align">Align</string>
+		<string id="valign">VAlign</string>
+		<string id="border">Kant</string>
+		<string id="hspace">HSpace</string>
+		<string id="vspace">VSpace</string>
+		<string id="preview">Förhandstitt</string>
+		<!-- content type : headlines -->
+		<string id="more">Mer...</string>
+		<!-- Content type : Article -->
+		<string id="title">Rubrik</string>
+		<string id="subtitle">Underrubrik</string>
+		<string id="headlines">Rubriker</string>
+		<!--  Content type : Syndication -->
+		<string id="xml">Xml källa</string>
+		<string id="xsl">Xsl källa</string>
+		<string id="cachetimeout">Cache timeout (min.)</string>
+		<!-- Content type : Sitemap -->
+		<string id="sitemap">Sidkarta</string>
+		<!-- Modules -->
+		<string id="modules">Moduler</string>
+		<string id="module">Modul</string>
+		<string id="contenttype">Innehållstyp</string>
+		<!-- Skins -->
+		<string id="skins">Skinn</string>
+		<string id="skin">Skinn</string>
+		<string id="templates">Mallar</string>
+		<string id="template">Mall</string>
+		<string id="themes">Teman</string>
+		<string id="theme">Tema</string>
+		<string id="autodetect">Automatisk detektion</string>
+		<string id="boxes">Boxar</string>
+		<string id="box">Box</string>
+		<string id="nobox">Ingen box</string>
+		<!---->
+		<!--Tool : fileexplorer -->
+		<string id="fileexplorer">Utforskare</string>
+		<string id="filename">Namn</string>
+		<string id="filesize">Storlek</string>
+		<string id="filetype">Typ</string>
+		<string id="filemodified">Modifierad</string>
+		<string id="fileupload">Fil uppladdning</string>
+		<string id="upload">Uppladdning</string>
+		<string id="uploadfiles">Ladda upp filer</string>
+		<string id="foldercreated">mapp skapad</string>
+		<string id="parentfolder">Föregående mapp</string>
+		<string id="newfolder">Ny mapp</string>
+		<string id="deletefolder">Ta bort mapp</string>
+		<string id="file">Fil</string>
+		<!-- Users -->
+		<string id="users">Användare</string>
+		<string id="user">Användare</string>
+		<string id="usersmanager">Hantering av användare</string>
+		<string id="firstname">Förnamn</string>
+		<string id="lastname">Efternamn</string>
+		<string id="address">Adress</string>
+		<string id="city">Stad</string>
+		<string id="zipcode">Postnummer</string>
+		<string id="country">Land</string>
+		<string id="phone">Telefon</string>
+		<string id="role">Roll</string>
+		<string id="administrator">Administratör</string>
+		<string id="webmaster">Webmaster</string>
+		<string id="author">Författare</string>
+		<string id="moderator">Redaktör</string>
+		<string id="contributor">Bidragare</string>
+		<string id="user">Användare</string>
+		<string id="anonymous">Anonym</string>
+		<string id="alias">Alias</string>
+		<string id="email">E-post</string>
+		<string id="signature">Signatur</string>
+		<string id="password">Lösenord</string>
+		<string id="opensession">Öppna session</string>
+		<string id="createaccount">Skapa ett konto</string>
+		<string id="myprofile">Min profil</string>
+		<string id="closesession">Stäng session</string>
+		<string id="logindetails">Mata in dina inloggningsuppgifter</string>
+		<string id="keepmelogged">Kom ihåg mig på denna dator</string>
+		<string id="loginfailed">Inloggningen misslyckades. Var god försök igen</string>
+		<string id="forgottenpassword">Glömt ditt lösenord ?</string>
+		<string id="emailisnotavailable">Denna e-postadress är redan upptagen av en annan användare (Du själv ?).</string>
+		<string id="aliasisnotavailable">Detta alias är redan aupptaget av en annan användare. Försök med ett annat alias.</string>
+		<string id="alreadyregister">Har du ett konto ? Klicka här för att öppna en session.</string>
+		<string id="uncompleteform">E-post, alias och lösenord är obligatoriska fält!</string>
+		<string id="sucessfullyregistered">Du är registrerad korrekt. Du kan nu logga in.</string>
+		<!-- Logs -->
+		<string id="logs">Loggar</string>
+		<!-- STATS -->
+		<string id="webtraffic">Webbtrafik</string>
+		<string id="summary">Summering</string>
+		<string id="webtrafficsummarydesc">Denna rapport visar en översikt över all webbtrafik.</string>
+		<string id="pageviews">Besökta sidor</string>
+		<string id="totalusers">Totalt antal användare</string>
+		<string id="mostpopularpages">Mest populära sidor</string>
+		<string id="mostactiveusers">Mest aktiva användare</string>
+		<string id="mostusedlanguages">Mest använda språk</string>
+		<string id="mostusedbrowsers">Mest använda webbläsare</string>
+		<string id="ipaddress">IP Adress</string>
+		<string id="hits">Träffar</string>
+		<string id="languages">Språk</string>
+		<string id="language">Språk</string>
+		<string id="browsers">Webbläsrae</string>
+		<string id="browser">Webbläsrae</string>
+		<string id="date">Datum</string>
+		<string id="selectadate">Välj ett datum</string>
+		<!-- Fullxml updates -->
+		<string id="fullxmlupdate">Fullxml Uppdatering</string>
+		<string id="welcomefullxmlupdate">Välkommen till Fullxml Update</string>
+		<string id="fullxmlupdatemsg">Hämta den senaste uppdateringen av Fullxml. Fullxml Update söker igenom.</string>
+		<string id="scanupdates">Sök efter uppdateringar</string>
+		<string id="noversion">Fullxml Update kunde inte finna någon information om din installation.</string>
+		<string id="downloadsize">Nedladdningsstorlek: </string>
+		<string id="startdownload">Ladda ned</string>
+		<string id="kilobyte">Kb</string>
+		<string id="fullxmlupdatedown">Fullxml Update kunde inte nås, var god försök senare.</string>
+		<string id="noupdate">Din Fullxml installation är "up-to-date".</string>
+		<string id="formerversions">Tidigare versioner</string>
+	</strings>
+</culture>

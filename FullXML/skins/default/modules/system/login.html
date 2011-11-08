@@ -1,0 +1,12 @@
+<table class=login cellpadding=0 cellspacing=0><tr><td>
+<form method=post action="{{login:url}}" name=frmLogin>
+<input type=hidden name=process value=do_authentication_login>
+<span class=message>{{value:message}}</span>
+{{login:login}}:<br>
+<input name="login:login" class=login type="text"><br>
+{{login:password}}:<br>
+<input name="login:password" class=password type="password">&nbsp;<input type="submit" value="{{login:ok}}" class=submit><br>
+<input id="RememberCheckbox" type="checkbox" name="login:RememberCheckbox" value="yes"/><label for="RememberCheckbox">{{login:rememberlogin}}</label><br>
+<center><a href="javascript:var reg = window.open('popup.asp?webform=webform_authentication_register', 'register', 'width=400, height=400');" >{{login:register}}</a><br><a href=#>{{login:forgotpassword}}</a></center>
+</td></tr></table>
+<!-- toto=default.asp?pID=account -->

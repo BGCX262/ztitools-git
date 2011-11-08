@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="system" code="it" contact="l.ceccon@inwind.it" encoding="utf-8" name="italian" translatorname="Luca Ceccon" version="0">
+	<strings>
+		<string id="type">Tipo</string>
+		<string id="description">Descrizione</string>
+		<string id="url">URL</string>
+		<string id="help">Help</string>
+		<string id="version">Versione</string>
+		<!-- FULLXML 4 general vocable -->
+		<string id="goadmin">Console Amministrazione</string>
+		<string id="controlpanel">Pannello di Controllo</string>
+		<string id="websitemanager">Website Manager</string>
+		<string id="settings">Settings</string>
+		<string id="authenticated">autenticato</string>
+		<string id="create">Crea...</string>
+		<string id="delete">Cancella</string>
+		<string id="edit">Modifica...</string>
+		<string id="ok"> OK </string>
+		<string id="cancel">Annulla</string>
+		<string id="confirmdelete">Confermi la cancellazione ? </string>
+		<string id="yes">Si</string>
+		<string id="no">No</string>
+		<string id="back">Indietro</string>
+		<string id="next">Successivo</string>
+		<string id="close">Chiudi</string>
+		<string id="enter">Invio</string>
+		<string id="add">Aggiungi...</string>
+		<string id="default">Default</string>
+		<string id="online">Online</string>
+		<string id="false">Falso</string>
+		<string id="true">Vero</string>
+		<string id="culture">Cultura</string>
+		<string id="exectime">Ora di Esecuzione</string>
+		<string id="id">ID</string>
+		<string id="name">Nome</string>
+		<string id="startdatetime">Data di Avvio</string>
+		<string id="enddatetime">Data di fine</string>
+		<string id="writer">Writer</string>
+		<string id="browse">Naviga</string>
+		<string id="published">Pubblicato</string>
+		<string id="enable">Enable</string>
+		<string id="activeusers">Utente(i) Attivi</string>
+		<!-- webmasters -->
+		<!--
+		<string id="administrators">Administrators</string>
+		<string id="administrator">Administrator</string>
+		
+		<string id="debug">Debug mode</string>
+		<string id="type_administrator">Fullxml administrator</string>
+		<string id="type_webmaster">Webmaster</string>
+		<string id="type_poweruser">Power user</string>
+		-->
+		<!-- websites -->
+		<string id="websites">Siti Web</string>
+		<string id="website">Sito Web</string>
+		<string id="websitename">Nome del sito</string>
+		<string id="copyright">Copyright</string>
+		<string id="slogan">Slogan</string>
+		<string id="model">Modello Sito</string>
+		<string id="publicmodel">Modello pubblico</string>
+		<string id="customerservicemodel">Modello Customer-Service</string>
+		<string id="signupmodel">Modello Registrazione</string>
+		<string id="privatemodel">Modello privato</string>
+		<string id="forprofitmodel">Modello commerciale</string>
+		<!-- Website tree -->
+		<string id="websitetree">Albero del Sito</string>
+		<!-- Menus -->
+		<string id="menus">Menu</string>
+		<string id="menu">Menu</string>
+		<string id="addmenu">Aggiungi Menu</string>
+		<!-- Webpages -->
+		<string id="pages">Pagine</string>
+		<string id="page">Pagina</string>
+		<string id="webpages">Pagine Web</string>
+		<string id="webpage">Pagina Web</string>
+		<string id="addpage">Aggiungi una pagina</string>
+		<string id="editpage">Modifica pagina</string>
+		<string id="deletepage">Cancella pagina</string>
+		<string id="metatitle">META Title</string>
+		<string id="metakeywords">META Keywords</string>
+		<string id="metadescription">META Descrizione</string>
+		<string id="presentation">Presentazione</string>
+		<string id="automenu">Mostra menu automatico</string>
+		<string id="menuoff">Nessun menu automatico</string>
+		<string id="menuleft">Menu automatico a sinistra</string>
+		<string id="menuright">Menu automatico a destra</string>
+		<string id="inmenu">Includi questa pagina nel menu automatico</string>
+		<string id="link">Link</string>
+		<string id="target">Target</string>
+		<string id="specialpages">Pagine speciali</string>
+		<!-- placeholders -->
+		<string id="placeholders">Segnaposto</string>
+		<string id="placeholder">Segnaposto</string>
+		<string id="paging">Paginazione</string>
+		<string id="pagesize">Dimensione Pagina</string>
+		<!-- Content -->
+		<string id="insertcontent">Inserisci contenuto</string>
+		<string id="contents">Contenuti</string>
+		<string id="content">Contenuto</string>
+		<string id="moveup">Sposta su</string>
+		<string id="movedown">Sposta giu</string>
+		<string id="confirmdeletecontent">Vuoi cancellare il contenuto ?</string>
+		<string id="confirmmoveupcontent">Vuoi spostare su questo contenuto ?</string>
+		<string id="confirmmovedowncontent">Vuoi spostare giu questo contenuto ?</string>
+		<string id="confirmchangebox">Vuoi cambiare questo contenuto ?</string>
+		<!-- content type : Html Text -->
+		<string id="text">Testo</string>
+		<string id="html">HTML</string>
+		<string id="asp">ASP</string>
+		<string id="announcement">Annuncio</string>
+		<string id="xmlxsl">XML / XSL</string>
+		<!-- Content type : Image -->
+		<string id="image">Immagine</string>
+		<string id="path">Percorso</string>
+		<string id="width">Larghezza</string>
+		<string id="height">Altezza</string>
+		<string id="align">Allineamento</string>
+		<string id="valign">Allineam Verticale</string>
+		<string id="border">Bordo</string>
+		<string id="hspace">HSpace</string>
+		<string id="vspace">VSpace</string>
+		<string id="preview">Anteprima</string>
+		<!-- content type : headlines -->
+		<string id="more">Ancora...</string>
+		<!-- Content type : Article -->
+		<string id="title">Titolo</string>
+		<string id="subtitle">Sottotitolo</string>
+		<string id="headlines">Headlines</string>
+		<!--  Content type : Syndication -->
+		<string id="xml">Sorgente Xml</string>
+		<string id="xsl">Sorgente Xsl</string>
+		<string id="cachetimeout">Cache timeout (min.)</string>
+		<!-- Content type : Sitemap -->
+		<string id="sitemap">Mappa Sito</string>
+		<!-- Modules -->
+		<string id="modules">Moduli</string>
+		<string id="module">Modulo</string>
+		<string id="contenttype">Tipo Contenuto</string>
+		<!-- Skins -->
+		<string id="skins">Skin</string>
+		<string id="skin">Skin</string>
+		<string id="templates">Template</string>
+		<string id="template">Template</string>
+		<string id="themes">Temi</string>
+		<string id="theme">Tema</string>
+		<string id="autodetect">Automatic detection</string>
+		<string id="boxes">Box</string>
+		<string id="box">Box</string>
+		<string id="nobox">Nessun box</string>
+		<!---->
+		<!--Tool : fileexplorer -->
+		<string id="fileexplorer">File explorer</string>
+		<string id="filename">Nome</string>
+		<string id="filesize">Dimesione</string>
+		<string id="filetype">Tipo</string>
+		<string id="filemodified">Modificato</string>
+		<string id="fileupload">File upload</string>
+		<string id="upload">Upload</string>
+		<string id="uploadfiles">Upload Files</string>
+		<string id="foldercreated">cartella creata</string>
+		<string id="parentfolder">Cartella superiore</string>
+		<string id="newfolder">Nuova Cartella</string>
+		<string id="deletefolder">Cancella Cartella</string>
+		<string id="file">File</string>
+		<!-- Roles -->
+		<string id="roles">Ruoli</string>
+		<string id="role">Ruolo</string>
+		<string id="administrator">Amministratore</string>
+		<string id="webmaster">Webmaster</string>
+		<string id="author">Autore</string>
+		<string id="moderator">Moderatore</string>
+		<string id="contributor">Contributor</string>
+		<string id="anonymous">Anonymous</string>
+		<!-- Users -->
+		<string id="users">Utenti</string>
+		<string id="user">Utente</string>
+		<string id="usersmanager">Gestione Utenti</string>
+		<string id="firstname">Nome</string>
+		<string id="lastname">Cognome</string>
+		<string id="address">Indirizzo</string>
+		<string id="city">Citta</string>
+		<string id="zipcode">CAP</string>
+		<string id="country">Nazione</string>
+		<string id="phone">Tel</string>
+		<string id="alias">Alias</string>
+		<string id="email">Email</string>
+		<string id="signature">Firma</string>
+		<string id="password">Password</string>
+		<string id="opensession">Apri sessione</string>
+		<string id="createaccount">Crea un account</string>
+		<string id="myprofile">Mio profilo</string>
+		<string id="closesession">Chiudi sessione</string>
+		<string id="logindetails">Inserisci i tuoi dati personali</string>
+		<string id="keepmelogged">Ricordati di me</string>
+		<string id="loginfailed">Accesso fallito. Riprovare</string>
+		<string id="forgottenpassword">Hai dimenticato la password ?</string>
+		<string id="emailisnotavailable">Questo Email è gia usato da un altro utente (sei tu?).</string>
+		<string id="aliasisnotavailable">Questo Email è gia usato da un altro utente. Inserisci un altro indirizzo.</string>
+		<string id="alreadyregister">Gia registrato ? Clicca qui per aprire una sessione.</string>
+		<string id="uncompleteform">Email, alias e password sono campi obbligatori!</string>
+		<string id="sucessfullyregistered">Registrazione effettutata con successo. Ora puoi accedere.</string>
+		<!-- Logs -->
+		<string id="logs">Log</string>
+		<!-- STATS -->
+		<string id="webtraffic">Traffico Web</string>
+		<string id="summary">Sommario</string>
+		<string id="webtrafficsummarydesc">Questo report mostra un sommario delle statistiche del traffico web.</string>
+		<string id="pageviews">Pagine visitate</string>
+		<string id="totalusers">Utenti Totali</string>
+		<string id="mostpopularpages">Pagine più viste</string>
+		<string id="mostactiveusers">Utenti più attivi</string>
+		<string id="mostusedlanguages">Linguaggi più usati</string>
+		<string id="mostusedbrowsers">Browser più usati</string>
+		<string id="ipaddress">Indirzzo IP</string>
+		<string id="hits">Hits</string>
+		<string id="languages">Lingue</string>
+		<string id="language">Lingua</string>
+		<string id="browsers">Browser</string>
+		<string id="browser">Browser</string>
+		<string id="date">Data</string>
+		<string id="selectadate">Seleziona una data</string>
+		<!-- Fullxml updates -->
+		<string id="fullxmlupdate">Fullxml Update</string>
+		<string id="welcomefullxmlupdate">Benvenuto in Fullxml Update</string>
+		<string id="fullxmlupdatemsg">Scarica gli aggiornamenti disponibili per Fullxml. Fullxml Update aggiorna solo le componenti necessarie.</string>
+		<string id="scanupdates">Ricerca aggiornamenti</string>
+		<string id="noversion">Fullxml Update non può reperire le informazioni sulla installazione locale.</string>
+		<string id="downloadsize">dimesione Download: </string>
+		<string id="startdownload">download</string>
+		<string id="kilobyte">Kb</string>
+		<string id="fullxmlupdatedown">Il sito di Fullxml Update non è reperibile, riprova più tardi.</string>
+		<string id="noupdate">La tua installazione di fullxml installation è aggiornata.</string>
+		<string id="formerversions">Versioni precedenti</string>
+	</strings>
+</culture>

@@ -1,0 +1,4 @@
+table.toolbar {width: 800px; border-top: 1px black solid; border-bottom: 1px black solid; background: #5F95C1;}
+table.toolbar td {text-align: center; border-right: 1px white solid;}
+table.toolbar td a, table.toolbar td a:active, table.toolbar td a:visited  {font: 12px verdana; font-weight: bold;  color: white; text-decoration: none;}
+table.toolbar td a:hover {color: red}

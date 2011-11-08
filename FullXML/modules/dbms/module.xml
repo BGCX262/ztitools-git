@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="dbms" author="John Roland" version="1.0" url="http://www.fullxml.com" independant="false" enabled="true">
+	<contenttypes>
+		<contenttype name="adoxsl" filename="contenttype_adoxsl.asp" caching="true" boxing="true"/>		
+	</contenttypes>	
+</module>

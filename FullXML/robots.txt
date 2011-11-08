@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /media/
+Disallow: /db/
+Disallow: /engine/
+Disallow: /FCKeditor/
+Disallow: /modules/
+Disallow: /skins/

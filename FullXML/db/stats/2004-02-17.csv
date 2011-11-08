@@ -1,0 +1,14 @@
+date,pageid,username,ipaddress,script_name,querystring,browser,language,exec
+17/02/2004 09:57:14,home,,"10.33.34.30",/fullxml4/Default.asp,,IE 6.0,fr,265
+17/02/2004 09:57:30,home,,"10.33.34.30",/fullxml4/Default.asp,,IE 6.0,fr,187
+17/02/2004 09:57:57,home,,"10.33.34.30",/fullxml4/Default.asp,,IE 6.0,fr,218
+17/02/2004 09:58:00,home,,"10.33.34.30",/fullxml4/default.asp,mID=main&pID=home,IE 6.0,fr,187
+17/02/2004 09:58:38,home,,"10.33.34.30",/fullxml4/default.asp,mID=main&pID=home,IE 6.0,fr,187
+17/02/2004 09:58:54,home,john,"10.33.34.30",/fullxml4/default.asp,mID=main&pID=home,IE 6.0,fr,250
+17/02/2004 09:59:01,home,john,"10.33.34.30",/fullxml4/default.asp,,IE 6.0,fr,250
+17/02/2004 09:59:30,{fb533040-467b-4aca-998a-fec523b9a906},john,"10.33.34.30",/fullxml4/default.asp,pID={fb533040-467b-4aca-998a-fec523b9a906},IE 6.0,fr,187
+17/02/2004 09:59:37,{fb533040-467b-4aca-998a-fec523b9a906},john,"10.33.34.30",/fullxml4/default.asp,mID=samples&pID={fb533040-467b-4aca-998a-fec523b9a906}&placeholders=off,IE 6.0,fr,171
+17/02/2004 09:59:38,{fb533040-467b-4aca-998a-fec523b9a906},john,"10.33.34.30",/fullxml4/default.asp,mID=samples&pID={fb533040-467b-4aca-998a-fec523b9a906}&placeholders=on,IE 6.0,fr,171
+17/02/2004 09:59:52,{fb533040-467b-4aca-998a-fec523b9a906},john,"10.33.34.30",/fullxml4/default.asp,pID={fb533040-467b-4aca-998a-fec523b9a906},IE 6.0,fr,218
+17/02/2004 10:00:02,{fb533040-467b-4aca-998a-fec523b9a906},john,"10.33.34.30",/fullxml4/default.asp,mID=samples&pID={fb533040-467b-4aca-998a-fec523b9a906}&placeholders=off,IE 6.0,fr,203
+17/02/2004 10:00:13,{fb533040-467b-4aca-998a-fec523b9a906},john,"10.33.34.30",/fullxml4/default.asp,mID=samples&pID={fb533040-467b-4aca-998a-fec523b9a906}&placeholders=off,IE 6.0,fr,187

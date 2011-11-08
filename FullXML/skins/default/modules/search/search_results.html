@@ -1,0 +1,26 @@
+<table class=searchresults>
+	<!-- title -->
+	<tr><th>{{search_results_title}}</th></tr>
+	
+	<!-- a search form -->
+	<form method="post" action="default.asp?pID=search">
+		<tr>
+			<td colspan=2>
+				<input type="text" size="25" name="s" value="{{search_value}}">
+				&nbsp;<input type=submit value="{{search_button_label}}">
+			</td>
+		</tr>
+	</form>
+	
+	<!-- place for a message -->
+	<tr><td><span class=message>{{search_results_message}}</span></td></tr>
+
+	<!--#BeginBlock search_item_block-->
+		<tr>
+			<td>
+				<a href="{{search_item_link}}" class="item">{{search_item_name}}</a><br>
+				<span class=link>{{search_item_link}}</span>
+			</td>
+		</tr>
+	<!--#EndBlock search_item_block-->
+</table>

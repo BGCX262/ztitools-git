@@ -1,0 +1,242 @@
+<SCRIPT LANGUAGE=VBScript RUNAT=Server>
+REM -------------------------------------------------------------------------
+REM  /Global.asa
+REM -------------------------------------------------------------------------
+REM  Descricao   : Controle dos objetos Application e Session
+REM  Criacao     : 12:00h 20/01/97
+REM  Local       : Brasilia/DF
+REM  Elaborado   : Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+REM  Versao      : 1.0.0
+REM  Copyright   : 1997 by Zevallos(r) Tecnologia em Informacao
+REM -------------------------------------------------------------------------
+REM  Site        : Zevallos(r) Tecnologia em Informacao
+REM  URL         : http://www.zevallos.com.br
+REM  Responsavel : Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+REM -------------------------------------------------------------------------
+
+SUB Application_OnStart
+
+END SUB
+
+REM -------------------------------------------------------------------------
+SUB Application_OnEnd
+
+END SUB
+REM -------------------------------------------------------------------------
+'---- CursorTypeEnum Values ----
+Const adOpenForwardOnly = 0
+Const adOpenKeyset = 1
+Const adOpenDynamic = 2
+Const adOpenStatic = 3
+
+'---- LockTypeEnum Values ----
+Const adLockReadOnly = 1
+Const adLockPessimistic = 2
+Const adLockOptimistic = 3
+Const adLockBatchOptimistic = 4
+
+'---- CommandTypeEint Values ----
+Const adCmdUnknown = 0
+Const adCmdText = &H0001
+Const adCmdTable = &H0002
+Const adCmdStoredProc = &H0004
+
+SUB Session_OnStart
+
+	Application.Lock
+
+	Application("ZTIEditFormCounter") = Application("ZTIEditFormCounter") + 1
+
+	Application.Unlock
+
+  Session("Default") = ""
+  
+REM -------------------------------------------------------------------------
+REM     Criacao de objetos padroes para uso da sessao.
+REM -------------------------------------------------------------------------
+REM Obs: Colocar dentro do Application e deixar o session para as sessoes.
+
+  Session("SessionAplication") = "ZTITools"
+  Session("ConnectionTimeout") = 15
+  Session("CommandTimeout")    = 30
+  
+  Session("ConnectionString")  = "DRIVER={SQL Server};SERVER=TOKYO;UID=zti;PWD=tcephilips1;APP=Zevallos(r);WSID=ZURICH;DATABASE=ZTINew"
+  Session("RuntimeUserName")   = "ZTI"
+  Session("RuntimePassword")   = "tcephilips1"
+  
+  Session("EditConnString")  = "Provider=SQLOLEDB.1;User ID=ZTI;Password=tcephilips1;DATABASE=ZTI;SERVER=ZYC_SQL;"
+
+  Session("SessionConnectionString") = "DRIVER={SQL Server};SERVER=TOKYO;UID=zti;PWD=tcephilips1;APP=Zevallos(r);WSID=ZURICH;DATABASE=ZTINew"
+  Session("SessionRuntimeUserName")  = "ZTI"
+  Session("SessionRuntimePassword")  = "tcephilips1"
+
+  Set objFS   = CreateObject("Scripting.FileSystemObject")
+
+  Set objConn = Server.CreateObject("ADODB.Connection")
+  objConn.ConnectionTimeout = Session("ConnectionTimeout")
+  objConn.CommandTimeout    = Session("CommandTimeout")
+  
+  objConn.Open Session("SessionConnectionString"), _
+               Session("SessionRuntimeUserName"), _
+               Session("SessionRuntimePassword")
+
+  Set objRS = Server.CreateObject("ADODB.RecordSet")
+
+  Set objCMD = Server.CreateObject("ADODB.Command")
+  Set objCMD.ActiveConnection = objConn
+  objCMD.Prepared = True
+  objCMD.CommandType = adCmdText
+
+ 
+REM -------------------------------------------------------------------------
+REM Contador de acesso e identificacao dos usuarios
+REM -------------------------------------------------------------------------
+
+REM -------------------------------------------------------------------------
+REM Le o arquivo
+REM -------------------------------------------------------------------------
+REM Obs: Colocar a leitura dentro do Application e somente tratar o incremento
+REM      e gravacao dentro do Session
+
+REM	On Error Resume Next
+	
+	strPath = Request.ServerVariables("PATH_TRANSLATED")
+	
+	strPath = Left(strPath, Len(strPath) - Len(Request.ServerVariables("PATH_INFO")) + 1)
+
+	strCounterFile = strPath & "Default.cnt" 
+
+	Set objCounter = objFS.OpenTextFile(strCounterFile, 1, FALSE)
+
+	intCounterResult = objCounter.ReadLine
+
+	intReadUserID  = objCounter.ReadLine
+
+	objCounter.Close
+
+	intCounterResult = intCounterResult + 1
+
+	Session("SiteCounter") = intCounterResult
+
+REM -------------------------------------------------------------------------
+REM Identificacao dos usuarios
+REM -------------------------------------------------------------------------
+	intUserID = Request.Cookies("UserID")("UserID")
+
+	Session("xUserID") = intUserID
+	
+	If Not intUserID > "" Then
+		intReadUserID = FormatNumber(intReadUserID, 0) + 1
+
+		intUserID = intReadUserID
+ 
+		Response.Cookies("UserID")("UserID") = intReadUserID
+		Response.Cookies("UserID")("Session") = Session.SessionID
+
+		Response.Cookies("UserID").Domain = Request.ServerVariables("HTTP_HOST")
+		Response.Cookies("UserID").Secure = FALSE
+		Response.Cookies("UserID").Expires = now + 90
+	
+	End If
+
+	Session("UserID") = intUserID
+	
+REM -------------------------------------------------------------------------
+REM Grava no arquivo
+REM -------------------------------------------------------------------------
+	Set objCounter = objFS.CreateTextFile(strCounterFile, True)
+
+	objCounter.WriteLine intCounterResult
+
+	objCounter.WriteLine intReadUserID
+
+	objCounter.Close
+	Set objCounter = Nothing
+  
+	Set objFS = Nothing
+
+REM -------------------------------------------------------------------------
+REM Cria nova Sessao
+REM -------------------------------------------------------------------------
+
+	Set objBC = Server.CreateObject("cyScape.browserObj")
+
+	strBrowser = objBC.Browser
+	strVersion = objBC.FullVersion
+
+  objRS.Open "ZTISession", objConn, adOpenDynamic, adLockOptimistic
+
+  objRS.AddNew
+
+  objRS("nSession")       = Session.SessionID
+  objRS("cIP")            = Request.ServerVariables("remote_addr")
+  objRS("dConexao")       = now
+  objRS("BrowserName")    = strBrowser
+  objRS("BrowserVersion") = strVersion
+  objRS("nUserID")        = Session("UserID")
+  objRS("nSiteCounter")   = Session("SiteCounter")
+  objRS("cClient")        = Session("SessionAplication")
+  objRS("zseResolveIP")   = objBC.ResolveIP
+  objRS("zseLanguage")    = objBC.Language
+  objRS("zsePlatform")    = objBC.Platform
+  objRS("zseOSDetails")   = objBC.OSDetails
+
+  objRS.Update
+  
+	Session("ZTISession") = "OK"
+
+  objRS.Close
+  Set objRS   = nothing
+
+  objConn.Close
+  Set objConn = nothing
+
+END SUB
+
+REM -------------------------------------------------------------------------
+SUB Session_OnEnd
+
+REM -------------------------------------------------------------------------
+REM Fechamento Session
+REM -------------------------------------------------------------------------
+  Set objRS = Server.CreateObject("ADODB.RecordSet")
+  Set objConn = Server.CreateObject("ADODB.Connection")
+  
+  objConn.ConnectionTimeout = Session("ConnectionTimeout")
+  objConn.CommandTimeout    = Session("CommandTimeout")
+
+  objConn.Open Session("SessionConnectionString"), _
+               Session("SessionRuntimeUserName"), _
+               Session("SessionRuntimePassword")
+
+  sql = "SELECT dDesconexao, nSiteCounter FROM ZTISession WHERE nSiteCounter=" & Session("SiteCounter") & " AND cClient='" & Session("SessionAplication") & "'"
+
+  objRS.Open sql, objConn, adOpenDynamic, adLockOptimistic
+
+  objRS("dDesconexao") = now
+
+  objRS.Update
+
+  objConn.Close
+  Set objConn = nothing
+
+  objRS.Close
+		  
+REM -------------------------------------------------------------------------
+	
+	Application.Lock
+
+	Application("EMPASIALCounter") = Application("EMPASIALCounter") - 1
+
+	Application.Unlock
+
+  If Session("InEdition") > "" Then
+    Application.Lock
+    Application(Session("InEdition")) = ""
+    Application.Unlock                                    
+  
+  End If                                          
+                                              
+ END SUB       
+
+</SCRIPT>

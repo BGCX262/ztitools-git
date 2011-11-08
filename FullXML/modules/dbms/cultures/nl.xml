@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<culture code="nl" module="dbms" contact="chris@fullxml.nl" encoding="utf-8" name="nederlands" translatorname="Christian Baerends" version="1">
+	<section id="help"/>
+	<section id="general"/>
+	<section id="contenttypes">
+		<string id="adoxsl">Ado Xsl</string>
+	</section>
+	<section id="contenttype_adoxsl">
+		<string id="defaultname">Nieuwe ado xsl</string>
+		<string id="connectionstring">ADO connection string</string>
+		<string id="sqlquery">SQL Query</string>
+		<string id="xsltemplate">XSL template path</string>
+	</section>
+</culture>

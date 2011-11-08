@@ -1,0 +1,4 @@
+/* Login contenttype */
+table.login input.login {width: 140px; font: 8pt verdana; border-top: 1px black solid; border-left: 1px black solid; border-bottom: 1px #f0f0f0 solid; border-right: 1px #f0f0f0 solid;}
+table.login input.password {width: 100px; font: 8pt verdana; border-top: 1px black solid; border-left: 1px black solid; border-bottom: 1px #f0f0f0 solid; border-right: 1px #f0f0f0 solid;}
+table.login input.submit {width: 30px; font: 8pt verdana; font-weight: bold; border-bottom: 1px black solid; border-right: 1px black solid; border-top: 1px #f0f0f0 solid; border-left: 1px #f0f0f0 solid;}

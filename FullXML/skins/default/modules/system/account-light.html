@@ -1,0 +1,99 @@
+<table class=register cellspacing=0 cellpadding=0>
+<form method=post action="{{form:action}}" name=frmAccount onsubmit="if (!CheckAccountForm()) return false;">
+<input type=hidden name=process value={{value:process}}>
+
+<caption>{{account:subtitle}}</caption>
+
+<tr>
+	<td colspan=2 class=message>
+		{{value:message}}
+	</td>
+</tr>
+
+<tr>
+	<td class=label>
+		<span class=span.largebold>{{label:email}}</span>
+	</td>
+	<td class=input>
+		<input type=text name=account:email value="{{value:email}}" {{disable}}>
+	</td>
+</tr>
+
+<tr>
+	<td class=label>
+		<span class=span.largebold>{{label:screenname}}</span>
+	</td>
+	<td class=input>
+		<input type=text name=account:screenname value="{{value:screenname}}">
+	</td>
+</tr>
+<tr>
+	<td colspan=2>
+		&nbsp;
+	</td>
+</tr>
+<tr>
+	<td colspan=2>
+		<span class=span.largebold>{{label:changepassword}}</span>
+	</td>
+</tr>
+<tr>
+	<td class=label>
+		<span class=span.largebold>{{label:password}}</span>
+	</td>
+	<td class=input>
+		<input type=password name=account:password class=password>
+	</td>
+</tr>
+
+<tr>
+	<td class=label>
+		<span class=span.largebold>{{label:confirmpassword}}</span>
+	</td>
+	<td class=input>
+		<input type=password name=account:cpassword class=password>
+	</td>
+</tr>
+
+<tr>
+	<td class=buttons colspan=2>
+		<input type=submit class=buttons value="{{label:submit}}" >
+	</td>
+</tr>
+
+<script language="javascript">
+	function CheckAccountForm()
+	{
+		if (document.forms["frmAccount"].elements["account:email"].value.length==0 ||
+			document.forms["frmAccount"].elements["account:screenname"].value.length==0)
+		{
+			alert("{{label:uncompleteform}}");
+			return false;
+		}
+		
+		if (document.forms["frmAccount"].elements["account:password"].value != document.forms["frmAccount"].elements["account:cpassword"].value)
+		{
+			alert("{{label:unmatchingpasswords}}");
+			return false;
+		}
+		/*
+		if (document.forms["frmAccount"].elements["account:email"].value.length==0 ||
+			document.forms["frmAccount"].elements["account:screenname"].value.length==0 ||
+			document.forms["frmAccount"].elements["account:password"].value.length==0)
+		{
+			alert("{{label:uncompleteform}}");
+			return false;
+		}
+		
+		if (document.forms["frmAccount"].elements["account:password"].value != document.forms["frmAccount"].elements["account:cpassword"].value)
+		{
+			alert("{{label:wrongpasswords}}");
+			return false;
+		}
+		*/
+		return true;		
+	}
+</script>
+
+</form>
+</table>

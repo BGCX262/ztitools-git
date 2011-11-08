@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="search" code="en" contact="john@fullxml.com" encoding="utf-8" name="english" translatorname="John Roland" version="2">
+	<section id="contenttypes">
+		<string id="box">Search Box</string>
+		<string id="results">Search Results</string>
+	</section>
+	<section id="contenttype_box">
+		<string id="defaultname">Search:</string>
+		<string id="search_button_label">ok</string>
+	</section>
+	<section id="contenttype_results">
+		<string id="defaultname">Search results</string>
+		<string id="search_results_title">Search results</string>
+		<string id="search_too_short">Search must be at least 4 characters !</string>
+		<string id="pagesfound">page(s) found for your search:</string>
+		<string id="searchtook">Search took</string>
+		<string id="seconds">seconds</string>
+		<string id="noresults">No pages were found containing </string>
+	</section>
+</culture>

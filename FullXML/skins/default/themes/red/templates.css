@@ -1,0 +1,25 @@
+body {font: 12px Verdana ; color: black; background: #FFE7E7; border: 0px; margin: 0px;}
+span {font: Verdana;}
+small {font: 11px Verdana;}
+
+.website_name {font: 20px tahoma; font-weight: bold; color: #C00000; }
+.website_slogan {font: 12px tahoma; font-weight: bold; color: #FF8080; }
+.website_copyright {font: 11px verdana; color: white; text-align: center; width: 100%; font-weight: bold;}
+
+.webpage_name {padding-left: 6px; font: 12px Verdana; color: white; font-weight: bold;}
+
+
+table.header {width: 800px; height:80px; border: 0px; background: #FFf0f0;  }		/*z-index: 5;filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr='#ffffff', startColorstr='#99CCFF', gradientType='1');*/
+table.main {width: 800px; height: 500px;}
+
+td.trail {color: #5F95C1; background: #C00000; width: 600px;}
+td.infos {color: #5F95C1; background: #C00000; width: 200px; font: 10px verdana; font-weight: bold; text-align: right; color: #ffffff; padding-right: 4px;}
+
+
+td.left {background: #FFf0f0; width: 150px;}
+td.right {background: #FFf0f0; width: 150px;}
+td.center {background: #FFf0f0; width: 490px; font: 12px arial}
+td.separator {background: #FFf0f0; width: 5px;}
+td.bottom {background: #C00000;}
+
+a.sessionlink {font: 10px verdana; font-weight: bold; text-align: right; color: #ffffff; text-decoration: none;}

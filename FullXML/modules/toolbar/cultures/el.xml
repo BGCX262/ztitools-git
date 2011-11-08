@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-7"?>
+<culture module="toolbar" code="el" contact="info@ploegos.net" encoding="iso-8859-7" name="greek" translatorname="Christos Delivorias" version="0">
+	<strings>
+		<string id="toolbareditor">Διορθωτής μπάρας εργαλείων</string>
+		<string id="toolbar">Μπάρα εργαλείων</string>
+		<string id="toolbaritem">Αντικείμενο μπάρας εργαλείων</string>
+		<string id="itemname">Όνομα αντικειμένου</string>
+		<string id="externallink">Εξωτερική σύνδεση</string>
+		<string id="internallink">Εσωτερική σύνδεση</string>
+		<string id="fxpage">Σελίδα του Fullxml</string>
+		<string id="link">Υπερσύνδεση</string>
+		<string id="target">Στόχος</string>
+		<string id="samewindow">’νοιγμα σε αυτό το παράθυρο</string>
+		<string id="newwindow">’νοιγμα σε νέο παράθυρο</string>
+		<string id="deletedpage">Παραπομπή σε διαγραμένη σελίδα</string>
+		<string id="login">Είσοδος</string>
+	</strings>
+</culture>

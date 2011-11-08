@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="toolbar" code="tr" contact="eminantalya@hotmail.com" encoding="iso-8859-9" name="turkish" translatorname="Emin CAKI" version="0">
+	<section id="general">
+		<string id="toolbareditor">Araç Çubuğu Editörü</string>
+		<string id="toolbar">Araç Çubuğu</string>
+		<string id="toolbaritem">Araç Çubuğu Nesnesi</string>
+		<string id="itemname">Nesne Adı</string>
+		<string id="externallink">Harici Link</string>
+		<string id="internallink">Dahili Link</string>
+		<string id="fxpage">Fullxml Sayfası</string>
+		<string id="link">Link</string>
+		<string id="target">Hedef</string>
+		<string id="samewindow">Bu Pencerede Aç</string>
+		<string id="newwindow">Yeni Pencerede Aç</string>
+		<string id="deletedpage">Silinmiş Sayfa Referansı</string>
+		<string id="login">Giriş</string>
+	</section>
+</culture>

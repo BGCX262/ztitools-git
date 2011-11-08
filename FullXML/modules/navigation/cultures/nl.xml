@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="navigation" code="nl" contact="Chris@fullxml.nl" encoding="utf-8" name="nederlands" translatorname="Christian Baerends" version="1">
+	
+	<!-- Content type list, used by contextual menu -->
+	<section id="contenttypes">
+		<string id="allmenu">Alle menus</string>
+		<string id="singlemenu">Enkel menu</string>
+		<string id="horizontalmenu">Horizontaal menu</string>
+		<string id="subpagelist">Sub-Pagina lijst</string>
+		<string id="sitemap">Sitemap</string>
+	</section>
+	<section id="contenttype_singlemenu">
+		<string id="defaultname">Enkel menu</string>
+		<string id="menu">Menu</string>
+	</section>
+	<section id="contenttype_allmenu">
+		<string id="defaultname">Alle menus</string>
+	</section>
+	<section id="contenttype_horizontalmenu">
+		<string id="defaultname">Horizontaal menu</string>
+	</section>
+	
+	<section id="contenttype_subpagelist">
+		<string id="defaultname">Sub-pagina lijst</string>
+	</section>
+	
+	<section id="contenttype_sitemap">
+		<string id="defaultname">Sitemap</string>
+	</section>
+</culture>

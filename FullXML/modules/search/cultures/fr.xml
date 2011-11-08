@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="search" code="fr" contact="john@fullxml.com" encoding="iso-8859-1" name="french" translatorname="John Roland" version="0">
+	<strings>
+		<!-- content type names -->
+		<string id="results">Resultats de la recherche</string>
+		<string id="box">Boite de recherche</string>
+		<!-- search box relates strings -->
+		<string id="search_button_label">ok</string>
+		<!-- search results relates strings -->
+		<string id="search_results_title">Résultats de la recherche: </string>
+		<string id="search_too_short">La critère de recherche doit être d&#39;au moins 4 characteres !</string>
+		<string id="pagesfound">page(s) trouvées correspondant à votre recherche:</string>
+		<string id="searchtook">Recherche executée en </string>
+		<string id="seconds">secondes</string>
+		<string id="noresults">Aucune page trouvée contenant  </string>
+	</strings>
+</culture>

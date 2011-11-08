@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="system" code="ba" contact="postmaster@bosna.dk" encoding="utf-8" name="bosnian" translatorname="Rasim Durakovic" version="0">
+	<strings>
+		<string id="type">Type</string>
+		<string id="description">Opis</string>
+		<string id="url">URL</string>
+		<string id="help">Pomoc</string>
+		<string id="version">Verzija</string>
+		<!-- FULLXML 4 general vocable -->
+		<string id="goadmin">Admin konzola</string>
+		<string id="controlpanel">Control Panel</string>
+		<string id="websitemanager">Website Manager</string>
+		<string id="settings">Konfiguracija</string>
+		<string id="authenticated">authenticated</string>
+		<string id="create">Kreiraj...</string>
+		<string id="delete">Obriši</string>
+		<string id="edit">Obradi...</string>
+		<string id="ok"> OK </string>
+		<string id="cancel">Odbaci</string>
+		<string id="confirmdelete">Da li stvarno želite da obrišete ? </string>
+		<string id="yes">Da</string>
+		<string id="no">Ne</string>
+		<string id="back">Nazad</string>
+		<string id="next">Sljedeci</string>
+		<string id="close">Zatvori</string>
+		<string id="enter">Enter</string>
+		<string id="add">Dodaj...</string>
+		<string id="default">Default</string>
+		<string id="online">Online</string>
+		<string id="false">False</string>
+		<string id="true">True</string>
+		<string id="culture">Culture</string>
+		<string id="exectime">Execution vrijeme</string>
+		<string id="id">ID</string>
+		<string id="name">Ime</string>
+		<string id="startdatetime">Start DateTime</string>
+		<string id="enddatetime">End DateTime</string>
+		<string id="writer">Autor</string>
+		<string id="browse">Pretraži</string>
+		<string id="published">Publicirano</string>
+		<string id="enable">Enable</string>
+		<string id="inprogress">In progress</string>
+		<string id="activeusers">aktivni posjetioc(i)</string>
+		<!-- webmasters -->
+		<!--
+		<string id="administrators">Administratori</string>
+		<string id="administrator">Administrator</string>
+		
+		<string id="debug">Debug mode</string>
+		<string id="type_administrator">Fullxml administrator</string>
+		<string id="type_webmaster">Webmaster</string>
+		<string id="type_poweruser">Power user</string>
+		-->
+		<!-- websites -->
+		<string id="websites">Websites</string>
+		<string id="website">Website</string>
+		<string id="websitename">Website ime</string>
+		<string id="copyright">Copyright</string>
+		<string id="slogan">Slogan</string>
+		<string id="model">Website model</string>
+		<string id="publicmodel">Javni model</string>
+		<string id="customerservicemodel">The Customer-Service model</string>
+		<string id="signupmodel">Clanstvo model</string>
+		<string id="privatemodel">Privatni model</string>
+		<string id="forprofitmodel">Profitabilni model</string>
+		<!-- Website tree -->
+		<string id="websitetree">Website tree</string>
+		<!-- Menus -->
+		<string id="menus">Meniji</string>
+		<string id="menu">Menu</string>
+		<string id="addmenu">Dodaj menu</string>
+		<string id="editmenu">Obradi menu</string>
+		<!-- Webpages -->
+		<string id="pages">Stranice</string>
+		<string id="page">Strana</string>
+		<string id="webpages">Web stranice</string>
+		<string id="webpage">Web strana</string>
+		<string id="addpage">Dodaj stranu</string>
+		<string id="editpage">Obradi stranu</string>
+		<string id="deletepage">Obriši stranu</string>
+		<string id="metatitle">META Naziv</string>
+		<string id="metakeywords">META kljucne rijeci</string>
+		<string id="metadescription">META Opis</string>
+		<string id="presentation">Prezentacija</string>
+		<string id="automenu">Pokaži automatski menu</string>
+		<string id="menuoff">Nema automatskog menija</string>
+		<string id="menuleft">Automatski menu u lijevom dijelu</string>
+		<string id="menuright">Automatski menu u lijevom dijelu</string>
+		<string id="inmenu">Ukljuci ovu stranicu u automatski menu</string>
+		<string id="link">Link</string>
+		<string id="target">Target</string>
+		<string id="specialpages">Specijalne stranice</string>
+		<!-- placeholders -->
+		<string id="placeholders">Placeholders</string>
+		<string id="placeholder">Placeholder</string>
+		<string id="paging">Paging</string>
+		<string id="pagesize">Page size</string>
+		<!-- Content -->
+		<string id="insertcontent">Ubaci sadržaj</string>
+		<string id="contents">Sadržaji</string>
+		<string id="content">Sadržaji</string>
+		<string id="moveup">Pomjeri gore</string>
+		<string id="movedown">Pomjeri dole</string>
+		<string id="confirmdeletecontent">Da li želite da izbrišete ovaj sadržaj ?</string>
+		<string id="confirmmoveupcontent">Da li želite da pomjerite ovaj sadržaj GORE ?</string>
+		<string id="confirmmovedowncontent">Da li želite da pomjerite ovaj sadržaj DOLE ?</string>
+		<string id="confirmchangebox">Da li zelite da izmijenite ovaj content box ?</string>
+		<!-- content type : Html Text -->
+		<string id="text">Tekst</string>
+		<string id="html">HTML</string>
+		<string id="asp">ASP</string>
+		<string id="announcement">Announcement</string>
+		<string id="xmlxsl">XML / XSL</string>
+		<!-- Content type : Image -->
+		<string id="image">Slika</string>
+		<string id="path">Path</string>
+		<string id="width">Širina</string>
+		<string id="height">Visina</string>
+		<string id="align">Pozicija</string>
+		<string id="valign">VPozicija</string>
+		<string id="border">Ram</string>
+		<string id="hspace">HSpace</string>
+		<string id="vspace">VSpace</string>
+		<string id="preview">Pokaži</string>
+		<!-- content type : headlines -->
+		<string id="more">Više...</string>
+		<!-- Content type : Article -->
+		<string id="title">Naslov</string>
+		<string id="subtitle">Sub naslov</string>
+		<string id="headlines">Headlines</string>
+		<!--  Content type : Syndication -->
+		<string id="xml">Xml source</string>
+		<string id="xsl">Xsl source</string>
+		<string id="cachetimeout">Cache timeout (min.)</string>
+		<!-- Content type : Sitemap -->
+		<string id="sitemap">Site map</string>
+		<!-- Content type : Iframe -->
+		<string id="iframe">Iframe</string>
+		<string id="frameborder">Frame ram</string>
+		<string id="scrolling">Scrolling (da / ne)</string>
+		<string id="marginwidth">Margina širina</string>
+		<string id="marginheight">Margina visina</string>
+		<string id="bordercolor">Border boja</string>
+		<!-- Modules -->
+		<string id="modules">Moduli</string>
+		<string id="module">Modul</string>
+		<string id="contenttype">Content type</string>
+		<!-- Skins -->
+		<string id="skins">Kože</string>
+		<string id="skin">Koža</string>
+		<string id="templates">Templates</string>
+		<string id="template">Template</string>
+		<string id="themes">Teme</string>
+		<string id="theme">Tema</string>
+		<string id="autodetect">Automatsko detektiranje</string>
+		<string id="boxes">Boxes</string>
+		<string id="box">Box</string>
+		<string id="nobox">No box</string>
+		<!---->
+		<!--Tool : fileexplorer -->
+		<string id="fileexplorer">File explorer</string>
+		<string id="filename">Ime</string>
+		<string id="filesize">Velicina</string>
+		<string id="filetype">Type</string>
+		<string id="filemodified">Modificirano</string>
+		<string id="fileupload">File upload</string>
+		<string id="upload">Upload</string>
+		<string id="uploadfiles">Upload Fajlova</string>
+		<string id="foldercreated">mapa kreirana</string>
+		<string id="parentfolder">Glavna mapa</string>
+		<string id="newfolder">Nova mapa</string>
+		<string id="deletefolder">Obriši mapu</string>
+		<string id="file">File</string>
+		<!-- Roles -->
+		<string id="roles">Roles</string>
+		<string id="role">Role</string>
+		<string id="administrator">Administrator</string>
+		<string id="webmaster">Webmaster</string>
+		<string id="author">Autor</string>
+		<string id="moderator">Moderator</string>
+		<string id="contributor">Contributor</string>
+		<string id="anonymous">Anonymous</string>
+		<!-- Users -->
+		<string id="users">Korisnici</string>
+		<string id="user">Korisnik</string>
+		<string id="usersmanager">Users manager</string>
+		<string id="firstname">Ime</string>
+		<string id="lastname">Prezime</string>
+		<string id="address">Adresa</string>
+		<string id="city">Grad</string>
+		<string id="zipcode">Poštanski broj</string>
+		<string id="country">Država</string>
+		<string id="phone">Telefon</string>
+		<string id="alias">Alias</string>
+		<string id="email">Email</string>
+		<string id="signature">Potpis</string>
+		<string id="password">Koda</string>
+		<string id="opensession">Login</string>
+		<string id="createaccount">Kreiraj account</string>
+		<string id="myprofile">Moj profil</string>
+		<string id="closesession">Logout</string>
+		<string id="logindetails">Molimo upišite vaše Login Detalje</string>
+		<string id="keepmelogged">Cuvaj me logiranog na ovom kompjuteru</string>
+		<string id="loginfailed">Login Greška. Molimo probajte ponovo!</string>
+		<string id="forgottenpassword">Yaboravili ste vašu kodu ?</string>
+		<string id="emailisnotavailable">Ovaj Email je vec iskorišten od strane drugog korisnika.</string>
+		<string id="aliasisnotavailable">Ovaj Alias vec koristi drugi korisnik. Molimo izaberite neki drugi.</string>
+		<string id="alreadyregister">Vec ste registrovani ? Kliknite ovdje da otvorite session.</string>
+		<string id="uncompleteform">Email, alias and password are mandotary fields!</string>
+		<string id="sucessfullyregistered">Uspješno ste registrovani. Sada se možete logirati.</string>
+		<!-- Logs -->
+		<string id="logs">Logs</string>
+		<!-- STATS -->
+		<string id="webtraffic">Web Traffic</string>
+		<string id="summary">Summary</string>
+		<string id="webtrafficsummarydesc">This report shows an executive summary of your web traffic statistics.</string>
+		<string id="pageviews">Page views</string>
+		<string id="totalusers">Total users</string>
+		<string id="mostpopularpages">Najpopularnije stranice</string>
+		<string id="mostactiveusers">Najaktivniji korisnici</string>
+		<string id="mostusedlanguages">Najcešce korišteni jezici</string>
+		<string id="mostusedbrowsers">Najviše korišteni pretraživaci</string>
+		<string id="ipaddress">IP Adresa</string>
+		<string id="hits">Hits</string>
+		<string id="languages">Jezici</string>
+		<string id="language">Jezik</string>
+		<string id="browsers">Browsers</string>
+		<string id="browser">Browser</string>
+		<string id="date">Datum</string>
+		<string id="selectadate">Izaberi datum</string>
+		<!-- Fullxml updates -->
+		<string id="fullxmlupdate">Fullxml Update</string>
+		<string id="welcomefullxmlupdate">Dobrodošli na Fullxml Update</string>
+		<string id="fullxmlupdatemsg">Skini zadnji update za Fullxml. Fullxml Update skenira tvoju instalaciju i predlaže vam instalacije koje su vam potrebne.</string>
+		<string id="scanupdates">Skeniraj updates</string>
+		<string id="noversion">Fullxml Update ne može pronaci lokalnu informaciju o vašoj instalaciji.</string>
+		<string id="downloadsize">Download velicina: </string>
+		<string id="startdownload">download</string>
+		<string id="kilobyte">Kb</string>
+		<string id="fullxmlupdatedown">Fullxml Update stranica se ne može kontaktirati, molimo provjerite opet kasnije.</string>
+		<string id="noupdate">Vaša fullxml instalacija je up-to-date.</string>
+		<string id="formerversions">Former verzije</string>
+		<!-- tool :: links -->
+		<string id="links">Linkovi</string>
+		<string id="link.label">Label</string>
+		<string id="link.url">Url</string>
+		<string id="link.count">Count</string>
+	</strings>
+</culture>

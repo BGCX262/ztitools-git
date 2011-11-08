@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="poll" author="John Roland" version="1.0" url="http://www.fullxml.com" independant="false" enabled="true">
+	<contenttypes>
+		<contenttype name="poll" filename="contenttype_poll.asp" caching="false" boxing="true"/>
+	</contenttypes>
+	<tools>
+		<tool name="polls" filename="tool_polls.asp"/>
+	</tools>
+	<permissions>
+		<level id="2">						
+		</level>
+		<level id="3">
+			<webform id="poll_editpoll"/>
+			<process id="do_insert_poll"/>
+		</level>
+		<level id="4">
+			<webform id="poll_editpoll"/>
+			<process id="do_insert_poll"/>
+			<process id="do_update_poll"/>
+			<process id="do_delete_poll"/>
+		</level>
+		<level id="5">
+			<webform id="poll_editpoll"/>
+			<process id="do_insert_poll"/>
+			<process id="do_update_poll"/>
+			<process id="do_delete_poll"/>
+		</level>
+	</permissions>
+</module>

@@ -1,0 +1,162 @@
+<scriptlet>
+<comment>
+-------------------------------------------------------------------------
+ /Connection.sct
+-------------------------------------------------------------------------
+ Descricao   : Objeto da Gerencia os Connections
+ Criacao     : 1/30/99 2:23AM
+ Local       : Brasilia/DF
+ Elaborado   : Ruben Zevallos Jr. - zevallos@zevallos.com.br
+ Versao      : 1.0.0
+ Copyright   : 1999 by Zevallos(r) Tecnologia em Informacao
+-------------------------------------------------------------------------
+</comment>
+
+<Registration
+	Description="ZTITools.Connection - Dicionario de Dados - 1/30/99 3:19AM"
+	ProgID="ZTITools.Connection"
+	Version="2.00"
+	ClassID="{D255FFE0-B7F9-11d2-B5D3-00A0C923EC47}"
+>
+</Registration>
+
+<public>
+	<property name=ConnectionType/>
+	<property name=DriverID/>
+	<property name=DBQ/>
+	<property name=ServerAddress/>
+	<property name=DataBase/>
+	<property name=UserId/>
+	<property name=Password/>
+	<property name=DefaultDir/>
+
+	<method name=Connection></method>
+	<method name=Clear></method>
+</public>
+
+<implements type="ASP"/>
+
+<script language=VBScript>
+REM -------------------------------------------------------------------------
+REM Constantes do Sistema
+REM -------------------------------------------------------------------------
+Const conDBSQL     = 1
+Const conDBDBase   = 2
+Const conDBAccess  = 3
+Const conDBExcel   = 4
+Const conDBFoxPro  = 5
+Const conDBText    = 6
+Const conDBParadox = 7
+
+REM -------------------------------------------------------------------------
+REM Variaveis Globais
+REM -------------------------------------------------------------------------
+Dim ConnectionType
+Dim DriverID
+Dim DBQ
+Dim ServerAddress
+Dim DataBase
+Dim UserId
+Dim Password
+Dim DefaultDir
+
+Clear
+
+REM -------------------------------------------------------------------------
+REM Diretorio Default onde estao os arquivos
+REM -------------------------------------------------------------------------
+Function Clear
+  ConnectionType = 0
+  DriverID       = 0
+  DBQ            = ""
+  ServerAddress  = ""
+  DataBase       = ""
+  UserId         = ""
+  Password       = ""
+  DefaultDir     = ""
+
+End Function
+REM -------------------------------------------------------------------------
+REM Final da Metodo Clear
+
+REM -------------------------------------------------------------------------
+REM Retorna o contador do form
+REM -------------------------------------------------------------------------
+Function Connection
+  Dim strCS
+
+  strCS = ""
+  
+  Select Case ConnectionType
+    Case conDBSQL
+      strCS = "{SQL Server}"
+                            
+    Case conDBAccess
+      strCS = "{Microsoft Access Driver (*.mdb)}"
+
+    Case conDBDBase
+      strCS = "{Microsoft dBASE Driver (*.dbf)}"
+ 
+    Case conDBFoxPro
+      strCS = "{Microsoft FoxPro Driver (*.dbf)}"
+
+    Case conDBParadox
+      strCS = "{Microsoft Paradox Driver (*.db )}"
+
+    Case conDBText
+      strCS = "{Microsoft Text Driver (*.txt;*.csv)}"
+                            
+    Case conDBExcel
+      strCS = "{Microsoft Excel Driver (*.xls)}"
+
+  End Select
+
+
+  If strCS > "" Then
+    strCS  = "DRIVER=" & strCS
+  
+    If sDBQ > "" Then
+      strCS  = strCS & ";DBQ=" & DBQ
+  
+    End If
+  
+    If ServerAddress > "" Then
+      strCS  = strCS & ";SERVER=" & ServerAddress
+  
+    End If
+
+    If UserId > "" Then
+      strCS  = strCS & ";UID=" & UserId
+  
+    End If
+  
+    If Password > "" Then
+      strCS  = strCS & ";PWD=" & Password
+  
+    End If
+
+    If DriverID > 0 Then
+      strCS  = strCS & ";DriverID=" & DriverID
+  
+    End If
+  
+    If DefaultDir > "" Then
+      strCS  = strCS & ";DefaultDir=" & DriverID
+  
+    End If
+
+    If DataBase > "" Then
+      strCS  = strCS & ";DATABASE=" & DataBase
+  
+    End If
+  
+    strCS = strCS & ";"
+  End If  
+
+  Connection = strCS
+
+End Function
+REM -------------------------------------------------------------------------
+REM Final do Metodo Connection
+</script>
+</scriptlet>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<culture code="pt-br" module="navigation" contact="eduardo.azambuja@uol.com.br" encoding="ISO-8859-1" name="brazilian" translatorname="Eduardo Azambuja" version="1">
+	<section id="contenttypes">
+		<string id="allmenu">Bloco de Todos os Menus</string>
+		<string id="singlemenu">Bloco de Menu Único</string>
+		<string id="horizontalmenu">Menu horizontal</string>
+		<string id="subpagelist">Lista de sub-página</string>
+		<string id="sitemap">Mapa do site</string>
+	</section>
+	<section id="contenttype_singlemenu">
+		<string id="defaultname">Menu Único</string>
+		<string id="menu">Menu</string>
+	</section>
+	<section id="contenttype_allmenu">
+		<string id="defaultname">Todos os Menus</string>
+	</section>
+	<section id="contenttype_horizontalmenu">
+		<string id="defaultname">Menu horizontal</string>
+	</section>
+	<section id="contenttype_subpagelist">
+		<string id="defaultname">Lista de sub-página</string>
+	</section>
+	<section id="contenttype_sitemap">
+		<string id="defaultname">Mapa do site</string>
+	</section>
+</culture>

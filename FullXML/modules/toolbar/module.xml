@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="toolbar" author="John Roland" version="1.0" url="http://www.fullxml.com" independant="true" enabled="false">
+	<contenttypes></contenttypes>
+	<functions>
+		<function name="Toolbar_Render" filename="function_toolbar.asp" description="Draw the toolbar"></function>
+	</functions>
+	<tools>
+		<tool name="toolbareditor" filename="tool_toolbar.asp" description="The toolbar editor"></tool>
+	</tools>
+	<xmls>
+		<xml name="toolbar" documentelement="toolbar"></xml>
+	</xmls>
+	<templates>
+		<template name="toolbar" filname="toolbar.html"></template>
+	</templates>
+	<css>
+		<css name="toolbar" filname="toolbar.css"></css>
+	</css>
+</module>

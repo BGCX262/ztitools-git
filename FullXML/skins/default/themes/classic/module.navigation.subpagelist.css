@@ -1,0 +1,11 @@
+table.subpagelist {border: 0px #cccccc solid; background: white; }
+table.subpagelist td {width: 100px; text-align: center;}
+
+table.subpagelist td.parentpage {background: #ACC500; }
+table.subpagelist td.subpage {background: #f0f0f0; }
+
+table.subpagelist td.parentpage a {font: 8pt; color: FFFFFF; font-weight: bold; text-decoration: none; width: 100px}
+table.subpagelist td.parentpage a:hover {color: red; background: d0d0d0}
+
+table.subpagelist td.subpage a {font: 8pt; color: 333333; font-weight: bold; text-decoration: none; width: 100px}
+table.subpagelist td.subpage a:hover {color: red; background: d0d0d0}

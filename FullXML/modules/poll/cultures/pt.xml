@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="poll" code="pt" contact="pedgsilva@portugalmail.pt" encoding="iso-8859-1" name="portuguese" translatorname="Eduardo Azambuja"  version="0">
+	<strings>
+		<string id="modulehelp">ajuda do módulo de sondagem</string>
+		<!-- Content type : poll -->
+		<string id="polls">Sondagens</string>
+		<string id="poll">Sondagem</string>
+		<string id="pollquestion">Questão da Sondagem</string>
+		<string id="pollchoice">Escolha</string>
+		<string id="pollvote">Votar </string>
+		<string id="selectapoll">Selecione uma Sondagem:</string>
+		<string id="newpoll">Criar uma nova Sondagem</string>
+	</strings>
+</culture>

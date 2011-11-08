@@ -1,0 +1,81 @@
+<style>
+	input.text, textarea.text {border: 1px inset}
+</style>
+
+<table border="0" cellspacing="5" cellpadding="4" width="100%" align="center" bgcolor="buttonface" id=tblfrm>
+<form action="{{form:action}}" method="post">
+<input type=hidden name=process value="{{form:process}}">
+<input type=hidden name=afterprocesswebform value="{{form:afterprocesswebform}}">			
+
+	<tr>
+	<td><fieldset><legend>{{label:message}}</legend><br>
+	
+	<table border="0" cellspacing="0" cellpadding="0" width="100%" align="center">
+		<tr>
+			<td align=right>&nbsp;{{label:screenname}}:</td><td><input type="text" size="35" name="screenname" value="{{value:screenname}}" class=text></td>
+		</tr>
+		<tr>
+			<td align=right>&nbsp;{{label:email}}:</td><td><input type="text" size="35" name="email" value="{{value:email}}" class=text></td>
+		</tr>
+		
+		<tr>
+			<td height=10 colspan=2>&nbsp;</td>
+		</tr>
+		<tr>
+			<td align=right>&nbsp;{{label:firstname}}:</td><td><input type="text" size="35" name="firstname" value="{{value:firstname}}" class=text></td>
+		</tr>
+		<tr>
+			<td align=right>&nbsp;{{label:lastname}}:</td><td><input type="text" size="35" name="lastname" value="{{value:lastname}}" class=text></td>
+		</tr>
+		<tr>
+			<td align=right>&nbsp;{{label:address}}:</td><td><input type="text" size="35" name="address1" value="{{value:address1}}" class=text></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td><td><input type="text" size="35" name="address2" value="{{value:address2}}" class=text></td>
+		</tr>
+		<tr>
+			<td align=right>&nbsp;{{label:zipcode}} / {{label:city}}:</td><td><input type="text" size="7" name="zipcode" value="{{value:zipcode}}" class=text> <input type="text" size="14" name="city" value="{{value:city}}" class=text></td>
+		</tr>	
+		<tr>
+			<td align=right>&nbsp;{{label:country}}:</td><td><input type="text" size="15" name="country" value="{{value:country}}" class=text></td>
+		</tr>
+		<tr>
+			<td height=10 colspan=2>&nbsp;</td>
+		</tr>
+		<tr>
+			<td align=right>&nbsp;{{label:phone}}:</td><td><input type="text" size="15" name="phone" value="{{value:phone}}" class=text></td>
+		</tr>
+		<tr valign=top>
+			<td align=right>&nbsp;{{label:signature}}:</td><td><textarea name="signature" cols=25 rows=4 scrollbars=off style="width: 250px" class=text>{{value:signature}}</textarea></td>
+		</tr>
+		<tr>
+			<td height=10 colspan=2>&nbsp;</td>
+		</tr>
+		<tr>
+			<td align=right>&nbsp;{{label:password}}:</td><td><input type="password" size="35" name="password" class=text></td>
+		</tr>
+		<tr>
+			<td align=right>&nbsp;{{label:confirmpassword}}:</td><td><input type="password" size="35" name="password2" class=text></td>
+		</tr> 
+	</table>
+	</fieldset>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<table border="0" cellspacing="0" cellpadding="0" width="95%" align="center">
+	<tr>
+		<td width="100%" align="right">
+		<input type="submit" value="{{form:ok}}" class="buttons">
+		&nbsp;&nbsp;&nbsp;
+		<input type="button" value="{{form:cancel}}" class="buttons" onClick="window.close()">
+		</td>
+	</tr>
+	</table></td></form></tr></table>
+<script>
+	document.title = "{{label:caption}}";
+	
+	function CheckForm()
+	{
+	}
+</script>

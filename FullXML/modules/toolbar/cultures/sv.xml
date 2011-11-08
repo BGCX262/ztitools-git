@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="toolbar" code="sv" contact="anders.landenstad@telia.com" encoding="ISO 8859-1" name="Swedish" translatorname="A Landenstad" version="0">
+	<strings>
+		<string id="toolbareditor">Verktygseditor</string>
+		<string id="toolbar">Verktyg</string>
+		<string id="toolbaritem">Verktygspunkt</string>
+		<string id="itemname">Punktnamn</string>
+		<string id="externallink">Extern länk</string>
+		<string id="internallink">Intern länk</string>
+		<string id="fxpage">Fullxml sida</string>
+		<string id="link">Länk</string>
+		<string id="target">Mål</string>
+		<string id="samewindow">Öppna i detta fönster</string>
+		<string id="newwindow">Öppna i ett nytt fönster</string>
+		<string id="deletedpage">Referenser till en borttagen sida</string>
+		<string id="login">Inloggning</string>
+	</strings>
+</culture>

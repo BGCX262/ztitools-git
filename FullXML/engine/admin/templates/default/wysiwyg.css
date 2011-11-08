@@ -1,0 +1,8 @@
+/* PLACEHOLDERS STYLES */
+div.placeholder {border: 1px #a0a0a0 solid; background: url(../../media/grid.png); margin: 0px; padding: 0px;}
+div.placeholderhide {border: 0px; margin: 0px; padding: 0px; }
+
+/* ADMINISTRATOR TOOLBAR */
+table.admintoolbar {background: menu; width: 100%; border: 0px; border-bottom: 1px #808080 solid; border-left: 1px white solid; height: 30px;padding: 4px;}
+table.admintoolbar a {font: messagebox; color: black; border: 1px menu solid; padding-left: 2px; padding-right: 2px; padding: 2px;}
+table.admintoolbar a:hover {border: 1px black solid; background-color: #B6BDD2;}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<culture code="nl" module="search" contact="Chris@fullxml.nl" encoding="utf-8" name="nederlands" translatorname="Christian Baerends" version="2">
+	<section id="contenttypes">
+		<string id="box">Zoekscherm</string>
+		<string id="results">Zoekresultaten</string>
+	</section>
+	<section id="contenttype_box">
+		<string id="defaultname">Zoeken:</string>
+		<string id="search_button_label">ok</string>
+	</section>
+	<section id="contenttype_results">
+		<string id="defaultname">Zoekresultaten</string>
+		<string id="search_results_title">Zoekresultaten</string>
+		<string id="search_too_short">Geef zoekterm minimaal 4 karakters !</string>
+		<string id="pagesfound">pagina(s) gevonden op jouw zoekaktie:</string>
+		<string id="searchtook">Zoeken duurde</string>
+		<string id="seconds">seconden</string>
+		<string id="noresults">Geen paginas gevonden met zoekterm</string>
+	</section>
+</culture>

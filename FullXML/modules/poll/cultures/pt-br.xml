@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<culture code="pt-br" module="poll" contact="eduardo.azambuja@uol.com.br" encoding="ISO-8859-1" name="brazilian" translatorname="Eduardo Azambuja" version="2">
+	<section id="general">
+		<string id="modulehelp">ajuda do módulo de enquetes</string>
+	</section>
+	<section id="contenttypes">
+		<string id="poll">Enquete</string>
+	</section>
+	<section id="contenttype_poll">
+		<string id="defaultname">Nova enquete</string>
+		<string id="pollvote">Votar!</string>
+		<string id="selectapoll">Selecione uma enquete:</string>
+		<string id="newpoll">Criar uma nova enquete</string>
+		<string id="editpoll">Editar a enquete selecionada</string>
+	</section>
+	<section id="tools">
+		<string id="polls">Enquetes</string>
+	</section>
+	<section id="tool_polls">
+		<string id="polls">Enquetes</string>
+		<string id="poll">Enquete</string>
+		<string id="pollquestion">Questão da Enquete</string>
+		<string id="pollchoice">Escolha</string>
+	</section>
+</culture>

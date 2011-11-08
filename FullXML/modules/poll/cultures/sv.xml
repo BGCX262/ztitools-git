@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="poll" code="sv" contact="anders.landenstad@telia.com" encoding="ISO 8859-1" name="Swedish" translatorname="A Landenstad"  version="0">
+	<strings>
+		<string id="modulehelp">Hjälp</string>
+		<!-- Content type : poll -->
+		<string id="polls">Omröstningar</string>
+		<string id="poll">Omröstning</string>
+		<string id="pollquestion">Omröstningsfråga</string>
+		<string id="pollchoice">Val</string>
+		<string id="pollvote">Rösta!</string>
+		<string id="selectapoll">Välj en omröstning:</string>
+		<string id="newpoll">Skapa en ny omröstningsfråga</string>
+		<string id="editpoll">Ändra den valda omröstningenl</string>
+		<!-- Content type :: existingpoll -->
+		<string id="existingpoll">Befintliga omröstningar</string>
+	</strings>
+</culture>

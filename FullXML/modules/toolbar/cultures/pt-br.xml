@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<culture code="pt-br" module="toolbar" contact="eduardo.azambuja@uol.com.br" encoding="iso-8859-1" name="brazilian" translatorname="Eduardo Azambuja" version="1">
+	<section id="general">
+		<string id="toolbareditor">Editor da Barra de Ferramentas</string>
+		<string id="toolbar">Barra de Ferramentas</string>
+		<string id="toolbaritem">Item da Barra de Ferramentas</string>
+		<string id="itemname">Nome do Item</string>
+		<string id="externallink">Link Externo</string>
+		<string id="internallink">Link Interno</string>
+		<string id="fxpage">Página no Fullxml</string>
+		<string id="link">Link</string>
+		<string id="target">Destino</string>
+		<string id="samewindow">Abrir nesta janela</string>
+		<string id="newwindow">Abrir em uma nova janela</string>
+		<string id="deletedpage">Referenciar a uma página deletada</string>
+		<string id="login">Login</string>
+	</section>
+</culture>

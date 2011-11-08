@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="navigation" code="en" contact="john@fullxml.com" encoding="utf-8" name="english" translatorname="John Roland" version="1">
+	
+	<!-- Content type list, used by contextual menu -->
+	<section id="contenttypes">
+		<string id="allmenu">All menus block</string>
+		<string id="singlemenu">Single menu block</string>
+		<string id="horizontalmenu">Horizontal menu</string>
+		<string id="subpagelist">Sub-Page list</string>
+		<string id="sitemap">Site map</string>
+	</section>
+	<section id="contenttype_singlemenu">
+		<string id="defaultname">Single menu</string>
+		<string id="menu">Menu</string>
+	</section>
+	<section id="contenttype_allmenu">
+		<string id="defaultname">All menus</string>
+	</section>
+	<section id="contenttype_horizontalmenu">
+		<string id="defaultname">Horizontal menu</string>
+	</section>
+	
+	<section id="contenttype_subpagelist">
+		<string id="defaultname">Subpage list</string>
+	</section>
+	
+	<section id="contenttype_sitemap">
+		<string id="defaultname">Site map</string>
+	</section>
+</culture>

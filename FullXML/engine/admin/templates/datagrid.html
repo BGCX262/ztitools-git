@@ -1,0 +1,24 @@
+<div id=myholder>
+<table class="datagrid" cellpadding="0" cellspacing="0" id=mytable>
+	<form name=frmDataGrid id=frmDatagrid action="{{form_action}}" method="post">
+	<input type=hidden name=process value="{{form_process}}"> 
+	<caption>{{caption}}</caption>
+	
+	<tr class="datagrid_column">
+		<th width="16">&nbsp;</th>
+		<!--#BeginBlock HeadersColumns-->
+			<th><a href="javascript: sort_by_col({{header_rank}}, 'str')">{{header_name}}</a></th>
+		<!--#EndBlock HeadersColumns-->
+	</tr>
+		
+	<!--#BeginBlock DatasRows-->
+		<tr class="datagrid_row" onclick="document.location='{{editrow_link}}';">
+			<th>&nbsp;</th>
+			<!--#BeginBlock DatasColumns-->
+				<td>{{data_value}}</td>
+			<!--#EndBlock DatasColumns-->
+		</tr>
+	<!--#EndBlock DatasRows-->
+	{{newrow}}
+	</form>
+</table>

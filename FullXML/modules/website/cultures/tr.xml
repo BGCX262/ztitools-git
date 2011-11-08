@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="website" code="tr" contact="eminantalya@hotmail.com" encoding="iso-8859-9" name="turkish" translatorname="Emin CAKI" version="1">
+
+	<section id="general">
+        <string id="modulehelp">web site modülünde yardým</string>
+	</section>
+	
+	<section id="contenttypes">
+		<string id="name">Website adý</string>
+		<string id="slogan">Website sloganý</string>
+		<string id="copyright">Website copyright</string>
+		<string id="pagename">Websayfa adý</string>
+	</section>
+
+	
+	<section id="contenttype_name">
+		<string id="defaultname">Website adý</string>		
+	</section>
+	
+	<section id="contenttype_slogan">
+		<string id="defaultname">Website sloganý</string>		
+	</section>
+	
+	<section id="contenttype_copyright">
+		<string id="defaultname">Website copyright</string>		
+	</section>
+
+	<section id="contenttype_pagename">
+		<string id="defaultname">Websayfa adý</string>		
+	</section>
+</culture>

@@ -1,0 +1,7 @@
+table.poll {border: 0px; width: 100%; background: white;}
+table.poll tr, table.poll th, table.poll td  {background: white;}
+table.poll tr.question th {font: 9pt verdana; color: red; font-weight: bold; text-transform: normal;}
+table.poll tr.choice th {font-weight: normal; font: 8pt verdana; color: 003366;}
+table.poll tr.bottom input.btnvote { font-size: 9pt; background: #9FBFDA; border-top: 1px #cccccc solid; border-left: 1px #cccccc solid; border-bottom: 1px #808080 solid; border-right: 1px #808080 solid;}
+table.poll tr.bottom td {text-align: center; font: 8pt verdana;}
+table.poll td.bar {padding: 2px;}

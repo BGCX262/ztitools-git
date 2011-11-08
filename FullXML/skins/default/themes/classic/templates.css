@@ -1,0 +1,27 @@
+/************************** 
+  PAGE TEMPLATES STYLESHEET
+ **************************/
+
+/* the global div */
+div.global {position: relative; text-align: center; width: 100%; background: ffffff; margin: 4px;}
+
+
+/* the "header" table */
+table.header {background-color: #ACC500; width: 100%; height:64px; border: 1px #808080 solid; padding: 5px;}
+table.header td.headerleft {width: 100%}
+table.header td.headerright {width: 460px; text-align: right;}
+
+
+/* the "main" table */
+table.main {width: 100%; padding: 0px;}
+table.main tr.content td.left {background: #ffffff; width: 150px;}
+table.main tr.content td.right {background: #ffffff; width: 150px;}
+table.main tr.content td.center {background: #FFFFFF; width: 100%; border-left: 1px c0c0c0 dotted; border-right: 1px c0c0c0 dotted; padding-left: 4px; padding-right: 4px;}
+table.main tr.content td.centeralt {background: #FFFFFF; width: 100%; border-left: 1px c0c0c0 dotted; padding-left: 4px; padding-right: 4px; }
+table.main tr.content td.separator {background: #FFFFFF; width: 5px;}
+table.main td.bottom {background: #ACC500; height: 18px;}
+
+/* the tab table */
+table.main tr.tab table.tab {width: 100%; border: 0px;}
+table.main tr.tab table.tab td.left {width: 100%; border-bottom: 1px c0c0c0 solid;}
+table.main tr.tab table.tab td.right {width: 200px; text-align: center; background-image: url(img/tab_200.png);}

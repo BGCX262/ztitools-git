@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<culture module="toolbar" code="da" contact="jan@coyle.dk" encoding="utf-8" name="danish" translatorname="Jan Borup Coyle" version="0">
+	<strings>
+		<string id="toolbareditor">Værktøjslinie editor</string>
+		<string id="toolbar">Værktøjslinie</string>
+		<string id="toolbaritem">Værktøjslinie punkt</string>
+		<string id="itemname">Punktnavn</string>
+		<string id="externallink">Eksternt link</string>
+		<string id="internallink">Internt link</string>
+		<string id="fxpage">Fullxml side</string>
+		<string id="link">Link</string>
+		<string id="target">Målramme</string>
+		<string id="samewindow">Åben i dette vindue</string>
+		<string id="newwindow">Åben i nyt vindue</string>
+		<string id="deletedpage">Reference til slettet side</string>
+		<string id="login">Login</string>
+	</strings>
+</culture>

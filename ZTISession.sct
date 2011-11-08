@@ -1,0 +1,823 @@
+<scriptlet>
+<comment>
+-------------------------------------------------------------------------
+ /ZTISession.sct
+-------------------------------------------------------------------------
+ Descricao   : Objeto da Sistema de Informacoes para sites
+ Criacao     : 2/5/99 12:08AM
+ Local       : Brasilia/DF
+ Elaborado   : Ruben Zevallos Jr. - zevallos@zevallos.com.br
+ Versao      : 1.0.0
+ Copyright   : 1999 by Zevallos(r) Tecnologia em Informacao
+-------------------------------------------------------------------------
+</comment>
+
+<Registration
+	Description="ZTITools.Session - Sistema de informacoes para sites - 2/5/99 12:07AM"
+	ProgID="ZTITools.Session"
+	Version="1.00 "
+	ClassID="{91E97C80-BC9F-11d2-B5D6-00A0C923EC47}"
+>
+</Registration>
+
+<public>
+	<property name=Connection internalName=ssobjConnection/>
+
+	<property name=UserID internalName=sintUserID/>
+	<property name=SiteCounter internalName=sintSiteCounter/>
+	<property name=CounterPath internalName=sstrCounterPath/>
+	<property name=CounterFile internalName=sstrCounterFile/>
+
+	<property name=Domain internalName=sstrDomain/>
+	<property name=DomainCode internalName=sintDomainCode/>
+	<property name=DomainName internalName=sstrDomainName/>
+	<property name=DomainClient internalName=sstrDomainClient/>
+
+	<property name=Sequence internalName=sstrSequence/>
+	<property name=PageCode internalName=sintPageCode/>
+
+	<method name=Clear internalName=SessionClear/>
+	<method name=Open internalName=SessionOpen/>
+	<method name=ResolveIP internalName=SessionResolveIP/>
+	<method name=Close internalName=SessionClose/>
+	<method name=AddPage internalName=SessionAddPage/>
+	<method name=GetPage internalName=SessionGetPage/>
+	<method name=CreateTables internalName=SessionCreateTables/>
+	<method name=AddLine internalName=SessionAddLine/>
+
+	<method name=ZTI internalName=SessionZTI/>
+
+</public>
+
+<implements type="ASP"/>
+
+<script language=VBScript>
+REM -------------------------------------------------------------------------
+REM Ado Constants
+REM -------------------------------------------------------------------------
+'---- CursorTypeEnum Values ----
+Const adOpenForwardOnly = 0
+Const adOpenKeyset = 1
+Const adOpenDynamic = 2
+Const adOpenStatic = 3
+
+'---- LockTypeEnum Values ----
+Const adLockReadOnly = 1
+Const adLockPessimistic = 2
+Const adLockOptimistic = 3
+Const adLockBatchOptimistic = 4
+
+'---- CommandTypeEnum Values ----
+Const adCmdUnknown = &H0008
+Const adCmdText = &H0001
+Const adCmdTable = &H0002
+Const adCmdStoredProc = &H0004
+Const adCmdFile = &H0100
+Const adCmdTableDirect= "" 
+
+REM -------------------------------------------------------------------------
+REM Constantes do Sistema
+REM -------------------------------------------------------------------------
+Const conSessionFile = "ZTISession2"
+
+REM -------------------------------------------------------------------------
+REM Variaveis Globais
+REM -------------------------------------------------------------------------
+	Dim ssobjConnection
+	Dim sintUserID
+	Dim sintSiteCounter
+
+  Dim sstrDomain
+  Dim sintDomainCode
+  Dim sstrDomainName
+  Dim sstrDomainClient
+
+	Dim sstrCounterPath
+	Dim sstrCounterFile
+	
+	Dim sstrSequence
+
+	Dim sstrZTI
+
+  Dim sstrOldServerAddress 
+  Dim sstrOLdDataBase      
+  Dim sstrOldUserId        
+  Dim sstrOldPassword      
+
+  Dim sstrNewServerAddress
+  Dim sstrNewDataBase     
+  Dim sstrNewUserId       
+  Dim sstrNewPassword     
+
+  Dim sobjConn, sobjRS, sobjCMD
+  
+  Dim sstrIPResolved
+  sstrIPResolved = False
+  
+  SessionClear
+
+REM -------------------------------------------------------------------------
+REM Apaga todas as variaveis
+REM -------------------------------------------------------------------------
+Sub SessionClear
+	Set ssobjConnection = Nothing
+
+	sintUserID       = ""
+	sintSiteCounter  = 0
+  sstrDomain       = ""
+  sintDomainCode   = 0
+  sstrDomainName   = ""
+  sstrDomainClient = 0
+
+	sstrCounterPath = Request.ServerVariables("PATH_TRANSLATED")
+	sstrCounterPath = Left(sstrCounterPath, Len(sstrCounterPath) - Len(Request.ServerVariables("PATH_INFO")) + 1)
+
+	sstrCounterFile = "Default.cnt"
+	
+	sstrDomain = Request.ServerVariables("HTTP_HOST")
+	
+	sstrSequence = 0
+	
+	sstrZTI = False
+
+  sstrOldServerAddress = ""
+  sstrOLdDataBase      = "" 
+  sstrOldUserId        = "" 
+  sstrOldPassword      = "" 
+
+  sstrNewServerAddress = ""
+  sstrNewDataBase      = ""
+  sstrNewUserId        = ""
+  sstrNewPassword      = ""
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Metodo Clear
+
+REM -------------------------------------------------------------------------
+REM Abre uma Sessao
+REM -------------------------------------------------------------------------
+Function SessionOpen
+  Dim objBC, objFS, objCounter
+  Dim intUserID
+  Dim strFile
+
+  Set objFS   = CreateObject("Scripting.FileSystemObject")
+  
+  strFile = sstrCounterPath & sstrCounterFile
+  
+	On Error Resume Next
+
+	Set objCounter = objFS.OpenTextFile(strFile, 1, FALSE)
+
+	sintSiteCounter = objCounter.ReadLine + 0
+	sintUserID      = objCounter.ReadLine + 0
+
+	objCounter.Close
+
+	sintSiteCounter = sintSiteCounter + 1
+
+	On Error Goto 0
+
+  REM -----------------------------------------------------------------------
+  REM Identificacao dos usuarios
+  REM -----------------------------------------------------------------------
+	intUserID = Request.Cookies("UserID")("UserID")
+
+	If Not intUserID > "" Then
+		sintUserID = FormatNumber(sintUserID, 0) + 1
+
+		Response.Cookies("UserID")("UserID") = sintUserID
+		Response.Cookies("UserID")("Session") = Session.SessionID
+
+		Response.Cookies("UserID").Domain = Request.ServerVariables("HTTP_HOST")
+		Response.Cookies("UserID").Secure = FALSE
+		Response.Cookies("UserID").Expires = now + 90
+		
+	Else
+		sintUserID = intUserID
+	
+	End If
+
+  REM -----------------------------------------------------------------------
+  REM Grava no arquivo
+  REM -----------------------------------------------------------------------
+	Set objCounter = objFS.CreateTextFile(strFile, True)
+
+	objCounter.WriteLine sintSiteCounter
+
+	objCounter.WriteLine sintUserID
+
+	objCounter.Close
+	Set objCounter = Nothing
+  
+	Set objFS = Nothing
+
+  REM -----------------------------------------------------------------------
+  REM Grava os dados da nova sessao
+  REM -----------------------------------------------------------------------
+	Set objBC = Server.CreateObject("cyScape.browserObj")
+
+  SessionAddLine sstrDomain, Session.SessionID, sintSiteCounter, sintUserID, now, now, objBC.Browser, objBC.FullVersion, Request.ServerVariables("remote_addr"), "", objBC.Language, objBC.Platform, objBC.OSDetails, Left(Request.ServerVariables("HTTP_REFERER"), 255), Left(Request.ServerVariables("URL"), 255)
+  
+	SessionOpen = True
+
+  Set objBC = nothing
+
+End Function
+REM -------------------------------------------------------------------------
+REM Final da Metodo SessionOpen
+
+REM -------------------------------------------------------------------------
+REM Fechamento Session
+REM -------------------------------------------------------------------------
+Sub SessionClose
+
+  SessionResolveIP
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Metodo SessionClose
+
+REM -------------------------------------------------------------------------
+REM Cria as informacoes da Zevallos
+REM -------------------------------------------------------------------------
+Sub SessionZTI
+
+  sstrOldServerAddress  = ssobjConnection.ServerAddress
+  sstrOLdDataBase       = ssobjConnection.DataBase     
+  sstrOldUserId         = ssobjConnection.UserId       
+  sstrOldPassword       = ssobjConnection.Password     
+
+  ssobjConnection.ServerAddress  = "(local)"
+  ssobjConnection.DataBase       = "ZTI"
+  ssobjConnection.UserId         = "ZTI"
+  ssobjConnection.Password       = "tcephilips1"
+
+  sstrServerAddress  = ssobjConnection.ServerAddress
+  sstrDataBase       = ssobjConnection.DataBase     
+  sstrUserId         = ssobjConnection.UserId       
+  sstrPassword       = ssobjConnection.Password     
+
+  sstrZTI = True
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Metodo SessionAddPage
+
+REM -------------------------------------------------------------------------
+REM Cria as informacoes da Zevallos
+REM -------------------------------------------------------------------------
+Sub SessionZTIEnd
+  ssobjConnection.ServerAddress  = sstrOldServerAddress
+  ssobjConnection.DataBase       = sstrOLdDataBase     
+  ssobjConnection.UserId         = sstrOldUserId       
+  ssobjConnection.Password       = sstrOldPassword     
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Metodo SessionZTIEnd
+
+REM -------------------------------------------------------------------------
+REM Retorna o contador do form
+REM -------------------------------------------------------------------------
+Sub SessionAddPage
+
+  sstrSequence = sstrSequence + 1
+
+  SessionOpenConnection
+
+  SessionUpdateZSE
+  
+  REM -----------------------------------------------------------------------
+  REM Atualiza a Pagina
+  REM -----------------------------------------------------------------------
+  sql = "SELECT * FROM ZTISessionPage" & _
+        " WHERE sepDomain = " & sintDomainCode & _
+        " AND sepURL = '" & Trim(Request.ServerVariables("HTTP_HOST")) & "'"
+
+  sobjCMD.CommandText = sql
+  
+  sobjRS.Open sobjCMD, , adOpenDynamic, adLockPessimistic
+
+  If Not sobjRS.EOF AND Not sobjRS.BOF Then
+    sintPageCode  = sobjRS("sepCode")
+
+    sobjRS("sepLastAccess")  = now
+    sobjRS("sepUser")        = sintUserID
+    sobjRS("sepSiteCounter") = sintSiteCounter
+
+    sintPageValue      = sobjRS("sepValue") + 1
+    sobjRS("sepValue") = sintPageValue
+    
+  Else
+    sobjRS.Close
+    
+    sql = "SELECT * FROM ZTISessionPage"
+
+    sobjCMD.CommandText = sql
+    sobjRS.Open sobjCMD, , adOpenDynamic, adLockReadOnly
+
+    sintPageCode = 0
+
+    If Not sobjRS.EOF And Not sobjRS.BOF Then
+      sobjRS.MoveLast
+
+      sintPageCode = sobjRS("sepCode")
+      
+    End If
+    
+    sobjRS.Close
+
+    sobjCMD.CommandType = adCmdTable
+    sobjCMD.CommandText = "ZTISessionPage"
+  
+    sobjRS.Open sobjCMD, , adOpenDynamic, adLockPessimistic
+
+    sobjRS.AddNew
+
+    Response.Write "<BR>Session4"
+    
+    sobjRS("sepCode")        = sintPageCode + 1
+    sobjRS("sepDomain")      = sintDomainCode
+    sobjRS("sepURL")         = LCase(Request.ServerVariables("HTTP_HOST"))  
+    sobjRS("sepFile")        = LCase(Request.ServerVariables("SCRIPT_NAME"))
+    sobjRS("sepQueryString") = LCase(Request.ServerVariables("QUERY_STRING"))
+    sobjRS("sepLastAccess")  = now
+    sobjRS("sepCreated")     = now
+    sobjRS("sepUser")        = sintUserID
+    sobjRS("sepSiteCounter") = sintSiteCounter
+    sobjRS("sepValue")       = 0
+    
+  End If
+                                                                
+  sobjRS.Update
+
+  sobjRS.Close
+  
+  sobjCMD.CommandType = adCmdTable
+  sobjCMD.CommandText = "ZTISessionPageLog"
+  
+  sobjRS.Open sobjCMD, , adOpenDynamic, adLockOptimistic
+
+  sobjRS.AddNew
+  
+  sobjRS("splSiteCounter") = sintSiteCounter
+  sobjRS("splSequence")    = sstrSequence
+  sobjRS("splPage")        = sintPageCode
+  sobjRS("splSeconds")     = 1
+
+  SessionCloseConnection
+  
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Metodo SessionAddPage
+
+REM -------------------------------------------------------------------------
+REM Retorna o contador do form
+REM -------------------------------------------------------------------------
+Sub SessionGetPage
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Metodo SessionGetPage
+
+
+REM -------------------------------------------------------------------------
+REM Retorna o contador do form
+REM -------------------------------------------------------------------------
+Sub SessionResolveIP
+  Dim objBC
+  Dim sql
+
+  If Not sstrIPResolved Then
+
+    SessionOpenConnection
+
+    SessionUpdateZSE
+
+    SessionCloseConnection
+
+    sstrIPResolved = True
+    
+  End If
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Metodo SessionGetPage
+
+REM -------------------------------------------------------------------------
+REM Retorna o contador do form
+REM -------------------------------------------------------------------------
+Sub SessionUpdateZSE
+
+  sql = "SELECT zseEnd, zseResolveIP, zsePages FROM ZTISession2 WHERE zseDomain = " & sintDomainCode & " AND zseSiteCounter = " & sintSiteCounter
+
+  sobjCMD.CommandText = sql
+  
+  sobjRS.Open sobjCMD, , adOpenDynamic, adLockPessimistic
+
+  If Not sobjRS.EOF AND Not sobjRS.BOF Then
+    If Not sstrIPResolved Then
+    	Set objBC = Server.CreateObject("cyScape.browserObj")
+          
+      sobjRS("zseResolveIP") = objBC.ResolveIP
+
+      Set objBC = Nothing
+      
+    End If
+    
+    sobjRS("zseEnd")       = now
+    sobjRS("zsePages")     = sstrSequence
+
+    sobjRS.Update
+  
+    sobjRS.Close
+    
+  End If
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Metodo SessionUpdadeZSE
+
+REM -------------------------------------------------------------------------
+REM Retorna o contador do form
+REM -------------------------------------------------------------------------
+Sub SessionAddLine(ByVal strDomain, ByVal strSessionID, ByVal intSiteCounter, ByVal intUserID, ByVal datStart, ByVal datEnd, ByVal strBrowser, ByVal strFullVersion, ByVal strIP, ByVal strResolveIP, ByVal strLanguage, ByVal strPlatform, ByVal strOSDetais, ByVal strHTTPReferer, ByVal strURL)
+   
+  SessionOpenConnection
+
+  sobjCMD.CommandType = adCmdTable
+  sobjCMD.CommandText = conSessionFile
+  
+  sobjRS.Open sobjCMD, , adOpenDynamic, adLockPessimistic
+
+  sobjRS.AddNew
+
+  sintDomainCode = GetTable("ZTIDomains", "domURL", strDomain, "", "")
+
+  sobjRS("zseDomain")      = sintDomainCode
+  sobjRS("zseSession")     = strSessionID
+  sobjRS("zseSiteCounter") = intSiteCounter             
+  sobjRS("zseUserID")      = intUserID      
+  sobjRS("zseStart")       = datStart
+  sobjRS("zseEnd")         = datEnd
+  sobjRS("zseBrowser")     = GetTable("ZTISessionBrowser", "broName", strBrowser, "broVersion", strFullVersion)
+  sobjRS("zseIP")          = strIP
+  sobjRS("zseResolveIP")   = strResolveIP
+  sobjRS("zseLanguage")    = strLanguage
+  sobjRS("zsePlatform")    = GetTable("ZTISessionPlatform", "plaPlatform", strPlatform, "plaOSDetails", strOSDetais)
+  sobjRS("zseHTTPReferer") = strHTTPReferer
+  sobjRS("zseURL")         = strURL
+  sobjRS("zsePages")       = 0
+
+  sobjRS.Update
+
+  SessionCloseConnection
+  
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Metodo SessionAddLine
+
+REM -------------------------------------------------------------------------
+REM Retorna o contador do form
+REM -------------------------------------------------------------------------
+Sub SessionOpenConnection
+
+  Set sobjConn = Server.CreateObject("ADODB.Connection")
+
+  sobjConn.ConnectionTimeout = ssobjConnection.ConnectionTimeout
+  sobjConn.CommandTimeout    = ssobjConnection.CommandTimeout
+
+  sobjConn.Open ssobjConnection.Connection, ssobjConnection.UserID, ssobjConnection.Password
+
+  Set sobjRS = Server.CreateObject("ADODB.RecordSet")
+  sobjRS.CacheSize  = 150
+  sobjRS.CursorType = adOpenDynamic
+  sobjRS.LockType   = adLockPessimistic
+
+  Set sobjCMD = Server.CreateObject("ADODB.Command")
+  Set sobjCMD.ActiveConnection = sobjConn
+
+  sobjCMD.Prepared    = True
+  sobjCMD.CommandType = adCmdText
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Metodo SessionGetPage
+
+REM -------------------------------------------------------------------------
+REM Retorna o contador do form
+REM -------------------------------------------------------------------------
+Sub SessionCloseConnection
+
+  On Error Resume Next
+
+  sobjRS.Close
+  Set sobjRS = nothing
+
+  Set sobjCMD = nothing
+
+  sobjConn.Close
+  Set sobjConn = nothing
+
+  If sstrZTI Then
+    SessionZTIEnd
+    
+  End If
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Metodo SessionGetPage
+
+REM -------------------------------------------------------------------------
+REM  Retorna ou cria item na Tabela
+REM -------------------------------------------------------------------------
+Public Function GetTable(ByVal strTable, ByVal strColumn, ByVal strValue, ByVal strColumn2, ByVal strValue2)
+  Dim sql, strLeft, intCode
+  Dim objRS
+
+  strLeft = Left(strColumn, 3)
+
+  If IsNull(strValue) Then
+    strValue = ""
+    
+  End If
+  
+  strValue = Trim(strValue)
+  
+
+  sql = "SELECT * FROM " & strTable & " WHERE " & strColumn & " = '" & strValue & "'"
+
+  If strColumn2 > "" Then
+    sql = sql & " AND " & strColumn2 & " = '" & Trim(strValue2) & "'"
+    
+  End If
+  
+  sobjCMD.CommandText = sql
+  sobjCMD.CommandType = adCmdText
+
+  Set objRS = Server.CreateObject("ADODB.RecordSet")
+  objRS.CacheSize  = 150
+  objRS.CursorType = adOpenDynamic
+  objRS.LockType   = adLockPessimistic
+
+  objRS.Open sobjCMD, , adOpenDynamic, adLockPessimistic
+
+  If Not objRS.EOF And Not objRS.BOF Then
+    GetTable = objRS(strLeft & "Code")
+    
+  Else
+    objRS.Close
+
+    sql = "SELECT * FROM " & strTable
+
+    objCMD.CommandText = sql
+    objCMD.CommandType = adCmdText
+
+    objRS.Open objCMD, , adOpenDynamic, adLockReadOnly
+
+    intCode = 0
+
+    If Not objRS.EOF And Not objRS.BOF Then
+      objRS.MoveLast
+
+      intCode = objRS(strLeft & "Code")
+
+      If strTable = "ZTIDomains" Then
+        sstrDomainName   = objRS("domName")  
+        sstrDomainClient = objRS("domClient") 
+        
+      End If
+    End If
+
+    objRS.Close
+
+    objCMD.CommandText = strTable
+    objCMD.CommandType = adCmdTable
+
+    objRS.Open objCMD, , adOpenDynamic, adLockPessimistic
+
+    objRS.AddNew
+
+    objRS(strLeft & "Code") = intCode + 1
+    objRS(strColumn) = strValue
+
+    If strColumn2 > "" Then
+      objRS(strColumn2) = Trim(strValue2)
+      
+    End If
+    
+    If strTable = "ZTIDomains" Then
+      objRS("domName")   = sstrDomainName
+      objRS("domClient") = sstrDomainClient
+      
+    End If
+
+    GetTable = intCode + 1
+
+  End If
+
+  objRS(strLeft & "Value") = objRS(strLeft & "Value") + 1
+
+  objRS.Update
+
+  On Error Resume Next
+
+  objRS.Close
+  Set objRS = nothing
+
+End Function
+REM -------------------------------------------------------------------------
+REM Final da Function GetTable
+
+REM -------------------------------------------------------------------------
+REM Retorna o contador do form
+REM -------------------------------------------------------------------------
+Sub SessionCreateTables
+  Dim sql
+
+  SessionOpenConnection
+ 
+	sql = "zseDomain            int NOT NULL, "
+	sql = sql & "zseSiteCounter int NULL, "
+	sql = sql & "zseSession     int NOT NULL, "
+	sql = sql & "zseUserID      int NULL, "
+	sql = sql & "zseStart       datetime NOT NULL, "
+	sql = sql & "zseEnd         datetime NULL, "
+	sql = sql & "zseBrowser     int NULL, "
+	sql = sql & "zseIP          char (20) NOT NULL, "
+	sql = sql & "zseResolveIP   varchar (80) NULL, "
+	sql = sql & "zseLanguage    varchar (20) NULL, "
+	sql = sql & "zsePlatform    int NULL, "
+	sql = sql & "zseHTTPReferer varchar (255) NULL, "
+	sql = sql & "zseURL         varchar (255) NULL, "
+	sql = sql & "zsePages       int NULL"
+
+  CreateTable sql, "ZTISession2"
+
+  CreateIndexClustered "Domain", "zseDomain, zseSiteCounter"
+  CreateIndex "Start", "zseStart"
+	
+  REM -----------------------------------------------------------------------
+	sql = "sepCode              int NULL ,"
+	sql = sql & "sepDomain      int NULL ,"
+	sql = sql & "sepURL         varchar (255) NULL ,"
+	sql = sql & "sepFile        varchar (40) NULL ,"
+	sql = sql & "sepQueryString varchar (255) NULL ,"
+	sql = sql & "sepLastAccess  datetime NULL ,"
+	sql = sql & "sepCreated     datetime NULL ,"
+	sql = sql & "sepUser        int NULL ,"
+	sql = sql & "sepSiteCounter int NULL ,"
+	sql = sql & "sepTitle       varchar (255) NULL ,"
+	sql = sql & "sepValue       int NULL"
+
+  CreateTable sql, "ZTISessionPage"
+
+  CreateIndexClustered "Code", "sepCode"
+  CreateIndex "Domain", "sepDomain, sepURL, sepQueryString"
+
+  REM -----------------------------------------------------------------------
+	sql = "splSiteCounter    int NULL ,"
+	sql = sql & "splSequence int NULL ,"
+	sql = sql & "splPage     int NULL ,"
+	sql = sql & "splSeconds  int NULL"
+
+  CreateTable sql, "ZTISessionPageLog"
+
+  CreateIndexClustered "SiteCounter", "splSiteCounter, splSequence"
+
+  REM -----------------------------------------------------------------------
+	sql = "domCode         int NULL ,"
+	sql = sql & "domName   varchar (20) NULL ,"
+	sql = sql & "domURL    varchar (60) NULL ,"
+	sql = sql & "domClient int NULL ,"
+	sql = sql & "domValue  int NULL"
+
+  CreateTable sql, "ZTIDomains"
+
+  CreateIndexClustered "Code", "domCode"
+  CreateIndex "Domain", "domName"
+
+  REM -----------------------------------------------------------------------
+	sql = "cliCode        int NULL ,"
+	sql = sql & "cliName  varchar (40) NULL, "
+	sql = sql & "cliPath  varchar (80) NULL, "
+	sql = sql & "cliValue int NULL"
+
+  CreateTable sql, "ZTIClients"
+
+  CreateIndexClustered "Code", "cliCode"
+  CreateIndex "Name", "cliName"
+
+  REM -----------------------------------------------------------------------
+	sql = "broCode          int NULL ,"
+	sql = sql & "broName    varchar (20) NULL, "
+	sql = sql & "broVersion varchar (5)  NULL, "
+	sql = sql & "broValue   int NULL )"
+
+  CreateTable sql, "ZTISessionBrowser"
+
+  CreateIndexClustered "Code", "broCode"
+  CreateIndex "Name", "broName"
+  CreateIndex "NameVersion", "broName, broVersion"
+
+  REM -----------------------------------------------------------------------
+	sql = "claCode          int NULL ,"
+	sql = sql & "claClass   varchar (20) NULL, "
+	sql = sql & "claCity    varchar (40) NULL, "
+	sql = sql & "claState   varchar (40) NULL, "
+	sql = sql & "claZIP     varchar (10) NULL, "
+	sql = sql & "claCountry varchar (3) NULL, "
+	sql = sql & "claValue   int NULL"
+
+  CreateTable sql, "ZTISessionClassC"
+
+  CreateIndexClustered "Code", "claCode"
+  CreateIndex "Class", "claClass"
+
+  REM -----------------------------------------------------------------------
+	sql = "plaCode      int NULL ,"
+	sql = sql & "plaPlatform  varchar (30) NULL ,"
+	sql = sql & "plaOSDetails varchar (30) NULL ,"
+	sql = sql & "plaValue     int NULL"
+
+  CreateTable sql, "ZTISessionPlatform"
+
+  CreateIndexClustered "Code", "plaCode"
+  CreateIndex "Platform", "plaPlatform"
+  CreateIndex "PlatformOSDetails", "plaPlatform, plaOSDetails"
+
+  REM -----------------------------------------------------------------------
+  sobjConn.Close
+  
+  Set sobjConn = Nothing  
+  
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Metodo CreateTables
+
+REM -------------------------------------------------------------------------
+REM Criacao de tabelas
+REM -------------------------------------------------------------------------
+Public Sub CreateTable(ByVal strSQL, ByVal strTableName)
+
+  Session("CreateTableTableName") = strTableName
+  
+  On Error Resume Next
+
+  sobjConn.Execute("DROP TABLE " & strTableName)
+
+  On Error Goto 0
+
+  strSQL = "CREATE TABLE " & strTableName & " (" & strSQL & ")"
+
+  sobjConn.Execute(strSQL)
+
+  Response.Write "<P>Criada a tabela " & strTableName
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Sub CreateTable
+
+REM -------------------------------------------------------------------------
+REM Criacao de Indices Clustered
+REM -------------------------------------------------------------------------
+Public Sub CreateIndex(ByVal strIndexName, ByVal strFields)
+
+  On Error Resume Next
+
+REM  ConnExecute sobjConn, "DROP INDEX " & strIndexName & "_" &  Session("CreateTableTableName")
+
+  On Error Goto 0
+
+  sobjConn.Execute("CREATE INDEX " & strIndexName & "_" &  Session("CreateTableTableName") & " ON " & _
+                   Session("CreateTableTableName") & "(" & strFields & ")")
+
+  Response.Write "<BR>Criado o Indice " & strIndexName & "_" & Session("CreateTableTableName")
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Sub CreateIndex
+
+REM -------------------------------------------------------------------------
+REM Criacao de Indices Clustered
+REM -------------------------------------------------------------------------
+Public Sub CreateIndexClustered(ByVal strIndexName, ByVal strFields)
+
+  On Error Resume Next
+
+  ConnExecute sobjConn, "DROP TABLE " & strTableName
+
+  On Error Goto 0
+
+  sobjConn.Execute(sobjConn, "CREATE CLUSTERED INDEX " & strIndexName & "_" &  Session("CreateTableTableName") & " ON " & _
+              Session("CreateTableTableName") & "(" & strFields & ")")
+
+  Response.Write "<BR>Criado o Indice " & strIndexName & "_" & Session("CreateTableTableName")
+
+End Sub
+REM -------------------------------------------------------------------------
+REM Final da Sub CreateIndex
+
+</script>
+</scriptlet>

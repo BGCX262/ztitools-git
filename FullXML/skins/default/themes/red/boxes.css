@@ -1,0 +1,24 @@
+/* DOTTED.HTML */
+span.box_simple_title 	{color:#336699; background-color: #ffffff; font-size: 15px; font-family: verdana,arial,helvetica; margin-bottom:10px; font-weight: bold;}
+span.box_simple_dot 	{width:100%;border-bottom:1 dotted #B1B18C; vertical-align:super; margin-top:-15; background-color: #ffffff;}
+span.box_simple_text 	{color:#000000; background-color: #ffffff;}
+
+/* PRESENTATION */
+table.presentation {border-collapse: none; border: 1px #FF8080 solid; padding: 4px; background-color: #FFC0C0; width: 100%}
+table.presentation td {font: 11px verdana; text-align: justify}
+
+
+/* NORMAL.HTML */
+table.normal {border-collapse: none;  padding: 4px;  width: 100%}
+table.normal th {text-align: left; padding: 0px; padding-left: 6px;; background: #FF8080; color: #000000; text-transform: uppercase; font: 11px verdana; font-weight: bold;}
+table.normal td {font: 11px verdana; color: #000000; background-color: #ffffff;}
+
+/* SPECIAL.HTML */
+table.special { padding: 4px;  width: 100%}
+table.special th {text-align: left; padding: 0px; padding-left: 6px; background: #FF8080; color: #FFFFFF; text-transform: uppercase; font: 11px verdana; font-weight: bold; }
+table.special td {font: 11px verdana; color: #000000; background-color: #f0f0f0;}
+
+/* SIMPLE.HTML */
+table.simple {border-collapse: none;  padding: 4px;  width: 100%; border: 1px #FF8080 solid; background-color: #ffffff;}
+table.simple th {text-align: left; padding: 0px; padding-left: 6px; color: #FF8080; font: 10px verdana; font-weight: bold;  }
+table.simple td {font: 10px verdana; color: #000000; padding: 10px}
